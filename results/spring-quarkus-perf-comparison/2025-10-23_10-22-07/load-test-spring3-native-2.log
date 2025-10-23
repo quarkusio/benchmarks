@@ -1,0 +1,48 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-10-20T13:30:25.973-04:00  INFO 110301 --- [           main] org.acme.SpringBoot3Application          : Starting AOT-processed SpringBoot3Application using Java 25 with PID 110301 (/home/hyperfoil/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/springboot3 started by hyperfoil in /home/hyperfoil/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3)
+2025-10-20T13:30:25.973-04:00  INFO 110301 --- [           main] org.acme.SpringBoot3Application          : No active profile set, falling back to 1 default profile: "default"
+2025-10-20T13:30:25.996-04:00  INFO 110301 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-20T13:30:25.996-04:00  INFO 110301 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-20T13:30:25.997-04:00  INFO 110301 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-20T13:30:26.002-04:00  INFO 110301 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-20T13:30:26.002-04:00  INFO 110301 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 29 ms
+2025-10-20T13:30:26.019-04:00  INFO 110301 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-20T13:30:26.040-04:00  INFO 110301 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c37a4d7
+2025-10-20T13:30:26.040-04:00  INFO 110301 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-20T13:30:26.045-04:00  INFO 110301 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-20T13:30:26.050-04:00  INFO 110301 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-20T13:30:26.052-04:00  INFO 110301 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-20T13:30:26.060-04:00  INFO 110301 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-20T13:30:26.087-04:00  WARN 110301 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): org.acme.domain.StoreFruitPriceId
+2025-10-20T13:30:26.087-04:00  WARN 110301 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): org.acme.domain.StoreFruitPriceId
+2025-10-20T13:30:26.088-04:00  INFO 110301 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-20T13:30:26.089-04:00  INFO 110301 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20T13:30:26.097-04:00  WARN 110301 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-20T13:30:26.113-04:00  WARN 110301 --- [           main] i.m.c.i.binder.jvm.JvmGcMetrics          : GC notifications will not be available because no GarbageCollectorMXBean of the JVM provides any. GCs=[young generation scavenger, complete scavenger]
+2025-10-20T13:30:26.116-04:00  INFO 110301 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-10-20T13:30:26.119-04:00  INFO 110301 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-20T13:30:26.120-04:00  INFO 110301 --- [           main] org.acme.SpringBoot3Application          : Started SpringBoot3Application in 0.161 seconds (process running for 0.201)
+2025-10-20T13:30:50.094-04:00  INFO 110301 --- [io-8080-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-20T13:30:50.094-04:00  INFO 110301 --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-20T13:30:50.095-04:00  INFO 110301 --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-20T13:33:38.403-04:00  INFO 110301 --- [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-20T13:33:38.404-04:00  INFO 110301 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-20T13:33:38.407-04:00  INFO 110301 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20T13:33:38.407-04:00  INFO 110301 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-20T13:33:38.408-04:00  INFO 110301 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
