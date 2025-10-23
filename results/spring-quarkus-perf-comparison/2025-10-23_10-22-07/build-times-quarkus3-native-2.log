@@ -1,0 +1,129 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< org.acme:quarkus3 >--------------------------
+[INFO] Building quarkus3 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ quarkus3 ---
+[INFO] Deleting /home/hyperfoil/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ quarkus3 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- quarkus:3.28.4:generate-code (default) @ quarkus3 ---
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ quarkus3 ---
+[INFO] Recompiling the module because of changed source code.
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 7 source files with javac [debug release 21] to target/classes
+[INFO] 
+[INFO] --- quarkus:3.28.4:generate-code-tests (default) @ quarkus3 ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ quarkus3 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/hyperfoil/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ quarkus3 ---
+[INFO] Recompiling the module because of changed dependency.
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 3 source files with javac [debug release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ quarkus3 ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ quarkus3 ---
+[INFO] Building jar: /home/hyperfoil/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus3.jar
+[INFO] 
+[INFO] --- quarkus:3.28.4:build (default) @ quarkus3 ---
+[INFO] [io.quarkus.deployment.pkg.jar.NativeImageSourceJarBuilder] Building native image source jar: /home/hyperfoil/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus3-native-image-source-jar/quarkus3-runner.jar
+[INFO] [io.quarkus.deployment.pkg.steps.NativeImageBuildStep] Building native image from /home/hyperfoil/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus3-native-image-source-jar/quarkus3-runner.jar
+[INFO] [io.quarkus.deployment.pkg.steps.NativeImageBuildStep] Running Quarkus native-image plugin on GRAALVM 25.0.0 JDK 25+37-jvmci-b01
+[INFO] [io.quarkus.deployment.pkg.steps.NativeImageBuildRunner] /home/hyperfoil/.sdkman/candidates/java/25-graalce/bin/native-image -J-Dlogging.initial-configurator.min-level=500 -J-Duser.language=en -J-Duser.country=US -J-Dsun.nio.ch.maxUpdateArraySize=100 -J-Djava.util.logging.manager=org.jboss.logmanager.LogManager -J-DCoordinatorEnvironmentBean.transactionStatusManagerEnable=false -J-Dvertx.logger-delegate-factory-class-name=io.quarkus.vertx.core.runtime.VertxLogDelegateFactory -J-Dvertx.disableDnsResolver=true -J-Dio.netty.leakDetection.level=DISABLED -J-Dio.netty.allocator.maxOrder=3 -H:+UnlockExperimentalVMOptions -H:IncludeLocales=en-US -H:-UnlockExperimentalVMOptions -J-Dfile.encoding=UTF-8 -J--add-exports=org.graalvm.nativeimage.builder/com.oracle.svm.core.jdk=ALL-UNNAMED --features=io.quarkus.runner.Feature,io.quarkus.hibernate.orm.runtime.graal.DisableLoggingFeature,io.quarkus.runtime.graal.DisableLoggingFeature,io.quarkus.hibernate.orm.runtime.graal.RegisterServicesForReflectionFeature,org.hibernate.graalvm.internal.GraalVMStaticFeature,io.quarkus.caffeine.runtime.graal.CacheConstructorsFeature,io.quarkus.hibernate.validator.runtime.DisableLoggingFeature,io.quarkus.jdbc.postgresql.runtime.graal.SQLXMLFeature,io.quarkus.runtime.graal.SkipConsoleServiceProvidersFeature -J--add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED -J--add-exports=java.security.jgss/sun.security.jgss=ALL-UNNAMED -J--add-opens=java.base/java.text=ALL-UNNAMED -J--add-opens=java.base/java.io=ALL-UNNAMED -J--add-opens=java.base/java.lang.invoke=ALL-UNNAMED -J--add-opens=java.base/java.util=ALL-UNNAMED -H:+UnlockExperimentalVMOptions -H:BuildOutputJSONFile=quarkus3-runner-build-output-stats.json -H:-UnlockExperimentalVMOptions -H:+UnlockExperimentalVMOptions -H:+GenerateBuildArtifactsFile -H:-UnlockExperimentalVMOptions -H:+UnlockExperimentalVMOptions -H:+AllowFoldMethods -H:-UnlockExperimentalVMOptions -J-Djava.awt.headless=true --no-fallback --link-at-build-time -H:+UnlockExperimentalVMOptions -H:+ReportExceptionStackTraces -H:-UnlockExperimentalVMOptions -H:-AddAllCharsets --enable-url-protocols=http,https -H:NativeLinkerOption=-no-pie --enable-monitoring=heapdump -H:+UnlockExperimentalVMOptions -H:-UseServiceLoaderFeature -H:-UnlockExperimentalVMOptions -J--add-exports=org.graalvm.nativeimage/org.graalvm.nativeimage.impl=ALL-UNNAMED --exclude-config io\.netty\.netty-codec /META-INF/native-image/io\.netty/netty-codec/generated/handlers/reflect-config\.json --exclude-config io\.netty\.netty-handler /META-INF/native-image/io\.netty/netty-handler/generated/handlers/reflect-config\.json quarkus3-runner -jar quarkus3-runner.jar
+Warning: Option 'DynamicProxyConfigurationResources' is deprecated and might be removed in a future release: This can be caused by a proxy-config.json file in your META-INF directory. Consider including proxy configuration in the reflection section of reachability-metadata.md instead.. Please refer to the GraalVM release notes.
+========================================================================================================================
+GraalVM Native Image: Generating 'quarkus3-runner' (executable)...
+========================================================================================================================
+For detailed information and explanations on the build output, visit:
+https://github.com/oracle/graal/blob/master/docs/reference-manual/native-image/BuildOutput.md
+------------------------------------------------------------------------------------------------------------------------
+[1/8] Initializing...                                                                                    (4.1s @ 0.26GB)
+ Java version: 25+37, vendor version: GraalVM CE 25+37.1
+ Graal compiler: optimization level: 2, target machine: x86-64-v3
+ C compiler: gcc (redhat, x86_64, 15.2.1)
+ Garbage collector: Serial GC (max heap size: 80% of RAM)
+ 11 user-specific feature(s):
+ - com.oracle.svm.thirdparty.gson.GsonFeature
+ - io.quarkus.caffeine.runtime.graal.CacheConstructorsFeature
+ - io.quarkus.hibernate.orm.runtime.graal.DisableLoggingFeature: Disables INFO logging during the analysis phase
+ - io.quarkus.hibernate.orm.runtime.graal.RegisterServicesForReflectionFeature: Makes methods of reachable hibernate services accessible through getMethods()`
+ - io.quarkus.hibernate.validator.runtime.DisableLoggingFeature: Disables INFO logging during the analysis phase for the [org.hibernate.validator.internal.util.Version] categories
+ - io.quarkus.jdbc.postgresql.runtime.graal.SQLXMLFeature
+ - io.quarkus.runner.Feature: Auto-generated class by Quarkus from the existing extensions
+ - io.quarkus.runtime.graal.DisableLoggingFeature: Adapts logging during the analysis phase
+ - io.quarkus.runtime.graal.SkipConsoleServiceProvidersFeature: Skip unsupported console service providers when quarkus.native.auto-service-loader-registration is false
+ - org.eclipse.angus.activation.nativeimage.AngusActivationFeature
+ - org.hibernate.graalvm.internal.GraalVMStaticFeature: Hibernate ORM's static reflection registrations for GraalVM
+------------------------------------------------------------------------------------------------------------------------
+ 5 experimental option(s) unlocked:
+ - '-H:+AllowFoldMethods' (origin(s): command line)
+ - '-H:BuildOutputJSONFile' (origin(s): command line)
+ - '-H:-UseServiceLoaderFeature' (origin(s): command line)
+ - '-H:+GenerateBuildArtifactsFile' (origin(s): command line)
+ - '-H:AddOpens' (alternative API option(s): --add-opens java.base/java.lang=ALL-UNNAMED; origin(s): command line)
+------------------------------------------------------------------------------------------------------------------------
+Build resources:
+ - 28.45GB of memory (42.6% of system memory, using available memory)
+ - 22 thread(s) (100.0% of 22 available processor(s), determined at start)
+[2/8] Performing analysis...  [*******]                                                                 (15.3s @ 2.78GB)
+   22,086 types,  28,852 fields, and 104,502 methods found reachable
+    7,293 types,     233 fields, and   6,396 methods registered for reflection
+       63 types,      69 fields, and      55 methods registered for JNI access
+        0 downcalls and 0 upcalls registered for foreign access
+        4 native libraries: dl, pthread, rt, z
+[3/8] Building universe...                                                                               (4.3s @ 2.79GB)
+[4/8] Parsing methods...      [*]                                                                        (1.8s @ 2.74GB)
+[5/8] Inlining methods...     [****]                                                                     (1.0s @ 3.16GB)
+[6/8] Compiling methods...    [****]                                                                    (14.0s @ 2.28GB)
+[7/8] Laying out methods...   [***]                                                                      (5.9s @ 2.91GB)
+[8/8] Creating image...       [**]                                                                       (4.2s @ 2.08GB)
+  43.42MB (45.90%) for code area:    69,474 compilation units
+  44.83MB (47.38%) for image heap:  484,958 objects and 75 resources
+   6.36MB ( 6.72%) for other data
+  94.61MB in total image size, 88.74MB in total file size
+------------------------------------------------------------------------------------------------------------------------
+Top 10 origins of code area:                                Top 10 object types in image heap:
+  13.29MB java.base                                           12.31MB byte[] for code metadata
+   9.73MB org.hibernate.orm.hibernate-core-7.1.4.Final.jar     6.47MB byte[] for java.lang.String
+   2.27MB svm.jar (Native Image)                               4.42MB com.oracle.svm.core.hub.DynamicHubCompanion
+   1.78MB quarkus3-runner.jar                                  4.16MB java.lang.String
+   1.64MB org.postgresql.postgresql-42.7.8.jar                 3.46MB java.lang.Class
+   1.48MB c.f.jackson.core.jackson-databind-2.20.0.jar         1.37MB byte[] for general heap data
+ 874.60kB jdk.proxy4                                         887.74kB java.lang.Object[]
+ 865.87kB modified-io.vertx.vertx-core-4.5.21.jar            823.97kB java.util.HashMap$Node
+ 673.42kB o.jboss.narayana.jta.narayana-jta-7.2.2.Final.jar  789.00kB c.o.svm.core.hub.DynamicHub$ReflectionMetadata
+ 623.00kB io.netty.netty-buffer-4.1.127.Final.jar            760.53kB java.lang.String[]
+   9.12MB for 131 more packages                                9.38MB for 5130 more object types
+------------------------------------------------------------------------------------------------------------------------
+Recommendations:
+ FUTR: Use '--future-defaults=all' to prepare for future releases.
+ HEAP: Set max heap for improved and more predictable memory usage.
+ CPU:  Enable more CPU features with '-march=native' for improved performance.
+------------------------------------------------------------------------------------------------------------------------
+                       4.2s (7.8% of total time) in 598 GCs | Peak RSS: 4.47GB | CPU load: 13.65
+------------------------------------------------------------------------------------------------------------------------
+Build artifacts:
+ /home/hyperfoil/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus3-native-image-source-jar/build-artifacts.json (build_info)
+ /home/hyperfoil/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus3-native-image-source-jar/quarkus3-runner (executable)
+ /home/hyperfoil/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus3-native-image-source-jar/quarkus3-runner-build-output-stats.json (build_info)
+========================================================================================================================
+Finished generating 'quarkus3-runner' in 52.6s.
+[INFO] [io.quarkus.deployment.pkg.steps.NativeImageBuildRunner] objcopy --strip-debug quarkus3-runner
+[INFO] [io.quarkus.deployment.QuarkusAugmentor] Quarkus augmentation completed in 55525ms
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  58.720 s
+[INFO] Finished at: 2025-10-20T12:24:25-04:00
+[INFO] ------------------------------------------------------------------------
