@@ -1,9 +1,8 @@
 package org.acme;
 
-import io.quarkus.test.junit.main.Launch;
-import io.quarkus.test.junit.main.LaunchResult;
-import io.quarkus.test.junit.main.QuarkusMainLauncher;
-import io.quarkus.test.junit.main.QuarkusMainTest;
+import io.quarkus.test.junit.QuarkusTest;
+import jakarta.inject.Inject;
+import org.acme.model.BenchmarkData;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,11 +13,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@QuarkusMainTest
-public class GreetingCommandTest {
+@QuarkusTest
+class ImageGeneratorTest {
+
+    @Inject
+    ImageGenerator imageGenerator;
 
     @BeforeEach
     public void setup() throws IOException {
@@ -39,23 +40,14 @@ public class GreetingCommandTest {
 
 
     @Test
-    public void testLaunchWithNoArguments(QuarkusMainLauncher launcher) {
+    public void testGeneration() throws IOException {
+        BenchmarkData data = new BenchmarkData();
+        imageGenerator.generate(data, new File("target/images/test1.svg"));
+        File image = new File("target/images/test1.svg");
 
-        // It would be nice to suppress output but redirecting stderr doesn't suppress the stack trace
-
-        LaunchResult result = launcher.launch();
-        assertTrue(result.getOutput().contains("latest.json"), result.getOutput());
-        assertEquals(result.exitCode(), 1);
-    }
-
-    @Test
-    @Launch({"src/test/resources/data.json", "target"})
-    public void testLaunchWithFilename(LaunchResult result) {
-        String output = result.getOutput();
-        assertTrue(output.contains("data.json"), output);
-
-        File image = new File("target/data.svg");
         assertTrue(image.exists());
+        assertTrue(image.length() > 100);
     }
 
 }
+
