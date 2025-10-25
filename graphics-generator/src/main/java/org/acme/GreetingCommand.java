@@ -1,19 +1,24 @@
 package org.acme;
 
-import picocli.CommandLine;
+import jakarta.inject.Inject;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Parameters;
+
+import java.io.File;
 
 @Command(name = "greeting", mixinStandardHelpOptions = true)
 public class GreetingCommand implements Runnable {
 
-    @Parameters(paramLabel = "<name>", defaultValue = "picocli",
-        description = "Your name.")
-    String name;
+    @Parameters(paramLabel = "<filename>", defaultValue = "latest.json",
+            description = "A filename of json-formatted data")
+    String filename;
+
+    @Inject
+    DataIngester ingester;
 
     @Override
     public void run() {
-        System.out.printf("Hello %s, go go commando!%n", name);
+        ingester.ingest(new File(filename));
     }
 
 }

@@ -5,11 +5,6 @@ import io.quarkus.test.junit.main.LaunchResult;
 import io.quarkus.test.junit.main.QuarkusMainLauncher;
 import io.quarkus.test.junit.main.QuarkusMainTest;
 import org.junit.jupiter.api.Test;
-import picocli.CommandLine;
-import picocli.CommandLine.Command;
-import picocli.CommandLine.Parameters;
-
-import java.net.UnknownHostException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -18,16 +13,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class GreetingCommandTest {
 
     @Test
-    public void testBasicLaunch(QuarkusMainLauncher launcher) {
+    public void testLaunchWithNoArguments(QuarkusMainLauncher launcher) {
         LaunchResult result = launcher.launch();
-        assertTrue(result.getOutput().contains("Hello picocli, go go commando!"),result.getOutput());
-        assertEquals(result.exitCode(), 0);
-     }
+        assertTrue(result.getOutput().contains("latest.json"), result.getOutput());
+        assertEquals(result.exitCode(), 1);
+    }
 
     @Test
-    @Launch({ "Alice" })
-    public void testLaunchWithArguments(LaunchResult result) {
-        assertTrue(result.getOutput().contains("Hello Alice, go go commando!"),result.getOutput());
+    @Launch({"src/test/resources/data.json"})
+    public void testLaunchWithFilename(LaunchResult result) {
+        String output = result.getOutput();
+        assertTrue(output.contains("data.json"), output);
     }
 
 }
