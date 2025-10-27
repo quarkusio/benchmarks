@@ -1,0 +1,29 @@
+name: Generate graphics
+on:
+  push:
+    paths:
+      - graphics-generator
+      - results
+  pull_request:
+    types: [assigned, opened, synchronize, reopened, ready_for_review, edited]
+    paths:
+      - graphics-generator
+
+
+env:
+  # Workaround testsuite locale issue
+  LANG: en_US.UTF-8
+
+jobs:
+  build-test:
+    name: "Build & Test"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+      - name: Build
+        run: |
+          ./mvnw -B install
