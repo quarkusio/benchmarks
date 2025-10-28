@@ -3,7 +3,6 @@ package io.quarkus.infra.performance.graphics.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public record Config(
-        @JsonProperty("jvm")
         Jvm jvm,
 
         @JsonProperty("CMD_PREFIX")
