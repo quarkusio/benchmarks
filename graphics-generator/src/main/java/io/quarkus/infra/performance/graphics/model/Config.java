@@ -11,7 +11,6 @@ public record Config(
         @JsonProperty("num_iterations")
         int numIterations,
 
-        @JsonProperty("quarkus")
         FrameworkBuild quarkus,
 
         @JsonProperty("repo")
