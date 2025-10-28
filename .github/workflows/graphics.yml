@@ -30,4 +30,4 @@ jobs:
           java-version: 21
       - name: Build
         working-directory: graphics-generator
-        run: ./mvnw -B clean verify
+        run: ./mvnw -B verify
