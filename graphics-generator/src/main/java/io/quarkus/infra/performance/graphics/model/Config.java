@@ -22,7 +22,6 @@ public record Config(
         @JsonProperty("cgroup")
         Cgroup cgroup,
 
-        @JsonProperty("springboot")
         FrameworkBuild springboot
 ) {
 }
