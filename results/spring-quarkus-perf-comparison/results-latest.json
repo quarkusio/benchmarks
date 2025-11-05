@@ -1,0 +1,49 @@
+{
+  "timing": {
+    "start": "2025-11-05T19:22:36Z",
+    "stop": "2025-11-05T19:23:24Z"
+  },
+  "results": {
+    "quarkus3-jvm": {
+      "build": {
+        "timings": [
+          8.54
+        ],
+        "avBuildTime": 8.54
+      }
+    }
+  },
+  "config": {
+    "jvm": {
+      "args": "",
+      "memory": "",
+      "graalvm": {
+        "version": "25.0.1-graalce"
+      },
+      "version": "25.0.1-tem"
+    },
+    "CMD_PREFIX": "",
+    "num_iterations": 1,
+    "quarkus": {
+      "native_build_options": "",
+      "version": "3.29.0"
+    },
+    "repo": {
+      "branch": "fix-push-results",
+      "url": "https://github.com/edeandrea/spring-quarkus-perf-comparison.git"
+    },
+    "profiler": {
+      "name": "none",
+      "events": "cpu"
+    },
+    "cgroup": {
+      "mem_max": "14G",
+      "name": "spring-quarkus-perf-comparison",
+      "cpu": "0,2,4,6,8,10,12,14"
+    },
+    "springboot": {
+      "native_build_options": "",
+      "version": "3.5.7"
+    }
+  }
+}
