@@ -18,9 +18,9 @@ public class BarChart implements Chart {
     private final Theme theme;
     private int labelSize = 24;
 
-    private static final Font titleFont = new Font("Arial", Font.BOLD, 24);
-    private static final Font keyFont = new Font("Arial", Font.BOLD, 18);
-    private static final Font labelFont = new Font("Arial", Font.PLAIN, 14);
+    private static final Font titleFont = new Font(Theme.FONT, Font.BOLD, 24);
+    private static final Font keyFont = new Font(Theme.FONT, Font.BOLD, 18);
+    private static final Font labelFont = new Font(Theme.FONT, Font.PLAIN, 14);
 
     public BarChart(SVGGraphics2D g, Theme theme) {
         this.g = g;

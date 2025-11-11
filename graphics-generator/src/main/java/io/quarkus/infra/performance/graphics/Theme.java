@@ -9,6 +9,8 @@ import io.quarkus.infra.performance.graphics.model.Framework;
 
 public record Theme(Color background, Color text, Map<Framework, Color> chartElements) {
 
+    public static final String FONT = "Open Sans";
+
     public static Theme LIGHT = new Theme(Color.WHITE, Color.BLACK,
             Map.of(Framework.QUARKUS3_JVM, decode("#4695EB"), Framework.QUARKUS3_NATIVE, decode("#FF0000"),
                     Framework.QUARKUS3_SPRING_COMPAT, decode("#0D1C2C"), Framework.SPRING3_JVM, decode("#676767"),
