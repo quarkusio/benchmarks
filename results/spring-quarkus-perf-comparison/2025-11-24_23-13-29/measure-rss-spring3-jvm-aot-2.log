@@ -1,0 +1,50 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.8)
+
+2025-11-24T18:00:16.677-05:00  INFO 2374544 --- [           main] org.acme.SpringBoot3Application          : Starting AOT-processed SpringBoot3Application v1.0 using Java 25.0.1 with PID 2374544 (/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/springboot3.jar started by jenkins in /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3)
+2025-11-24T18:00:16.681-05:00  INFO 2374544 --- [           main] org.acme.SpringBoot3Application          : No active profile set, falling back to 1 default profile: "default"
+2025-11-24T18:00:17.373-05:00  INFO 2374544 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-24T18:00:17.391-05:00  INFO 2374544 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-24T18:00:17.392-05:00  INFO 2374544 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-11-24T18:00:17.423-05:00  INFO 2374544 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-24T18:00:17.424-05:00  INFO 2374544 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 740 ms
+2025-11-24T18:00:17.647-05:00  INFO 2374544 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-24T18:00:17.898-05:00  INFO 2374544 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4d84049a
+2025-11-24T18:00:17.899-05:00  INFO 2374544 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-24T18:00:17.991-05:00  INFO 2374544 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-24T18:00:18.101-05:00  INFO 2374544 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.36.Final
+2025-11-24T18:00:18.175-05:00  INFO 2374544 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000025: Second-level cache region factory [org.hibernate.cache.jcache.internal.JCacheRegionFactory]
+2025-11-24T18:00:18.538-05:00  INFO 2374544 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-24T18:00:18.641-05:00  INFO 2374544 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.7
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-24T18:00:19.222-05:00  WARN 2374544 --- [           main] org.hibernate.orm.cache                  : HHH90001006: Missing cache[org.acme.domain.Store] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2025-11-24T18:00:19.320-05:00  INFO 2374544 --- [           main] org.ehcache.jsr107.Eh107CacheManager     : Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=urn.X-ehcache.jsr107-default-config,Cache=org.acme.domain.Store
+2025-11-24T18:00:19.322-05:00  INFO 2374544 --- [           main] org.ehcache.core.EhcacheManager          : Cache 'org.acme.domain.Store' created in EhcacheManager.
+2025-11-24T18:00:19.954-05:00  INFO 2374544 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-24T18:00:19.958-05:00  INFO 2374544 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-24T18:00:20.364-05:00  WARN 2374544 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-24T18:00:20.751-05:00  INFO 2374544 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-11-24T18:00:20.818-05:00  INFO 2374544 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-24T18:00:20.822-05:00  INFO 2374544 --- [           main] org.acme.SpringBoot3Application          : Started SpringBoot3Application in 5.115 seconds (process running for 5.772)
+2025-11-24T18:00:46.837-05:00  INFO 2374544 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-24T18:00:46.837-05:00  INFO 2374544 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-24T18:00:46.839-05:00  INFO 2374544 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-11-24T18:00:48.129-05:00  INFO 2374544 --- [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-24T18:00:48.132-05:00  INFO 2374544 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-24T18:00:48.139-05:00  INFO 2374544 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-24T18:00:48.142-05:00  INFO 2374544 --- [ionShutdownHook] org.ehcache.core.EhcacheManager          : Cache 'org.acme.domain.Store' removed from EhcacheManager.
+2025-11-24T18:00:48.149-05:00  INFO 2374544 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-24T18:00:48.152-05:00  INFO 2374544 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

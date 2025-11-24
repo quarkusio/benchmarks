@@ -1,0 +1,9 @@
+Running 30s test @ http://localhost:8080/fruits
+  2 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    16.61ms   17.81ms 375.39ms   90.28%
+    Req/Sec   5883.81   1110.89  6389.00     96.77
+  182398 requests in 30.014s, 145.75MB read
+Requests/sec: 6077.10
+Transfer/sec:   4.86MB
+Socket errors: connectionErrors 1796, requestTimeouts 0

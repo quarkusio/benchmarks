@@ -1,6 +1,201 @@
 {
   "timing": {
-    "start": "2025-11-24T19:49:55Z"
+    "start": "2025-11-24T22:15:59Z",
+    "stop": "2025-11-24T23:13:48Z"
+  },
+  "results": {
+    "quarkus3-jvm": {
+      "build": {
+        "timings": [
+          9.77,
+          9.98,
+          9.71
+        ],
+        "avBuildTime": 9.82
+      },
+      "startup": {
+        "timings": [
+          2814,
+          2892,
+          2803
+        ],
+        "avStartTime": 2836.3333333333335
+      },
+      "rss": {
+        "startup": [
+          232.5703125,
+          240.4140625,
+          239.859375
+        ],
+        "firstRequest": [
+          269.66796875,
+          277.2734375,
+          276.25
+        ],
+        "avStartupRss": 237.61458333333334,
+        "avFirstRequestRss": 274.3971354166667
+      },
+      "load": {
+        "throughput": [
+          18612.19,
+          17982.05,
+          18558.59
+        ],
+        "connectionErrors": [
+          0,
+          0,
+          0
+        ],
+        "requestTimeouts": [
+          0,
+          0,
+          0
+        ],
+        "rss": [
+          760.6640625,
+          739.92578125,
+          720.08984375
+        ],
+        "throughputDensity": [
+          24.468344066142862,
+          24.3025050020853,
+          25.772603462024595
+        ],
+        "avThroughput": 18384.27666666667,
+        "avMaxRss": 740.2265625,
+        "maxThroughputDensity": 25.772603462024595,
+        "avConnectionErrors": 0,
+        "avRequestTimeouts": 0
+      }
+    },
+    "spring3-jvm": {
+      "build": {
+        "timings": [
+          5.68,
+          5.64,
+          5.64
+        ],
+        "avBuildTime": 5.653333333333333
+      },
+      "startup": {
+        "timings": [
+          6166,
+          5940,
+          6159
+        ],
+        "avStartTime": 6088.333333333333
+      },
+      "rss": {
+        "startup": [
+          517.84765625,
+          506.359375,
+          513.453125
+        ],
+        "firstRequest": [
+          526.88671875,
+          519.4765625,
+          522.0234375
+        ],
+        "avStartupRss": 512.5533854166666,
+        "avFirstRequestRss": 522.7955729166666
+      },
+      "load": {
+        "throughput": [
+          5928.56,
+          6087.37,
+          6150.72
+        ],
+        "connectionErrors": [
+          1740,
+          1796,
+          1807
+        ],
+        "requestTimeouts": [
+          0,
+          0,
+          0
+        ],
+        "rss": [
+          709.87109375,
+          712.83984375,
+          704.66015625
+        ],
+        "throughputDensity": [
+          8.351600807805115,
+          8.539604026588195,
+          8.728633150953751
+        ],
+        "avThroughput": 6055.55,
+        "avMaxRss": 709.1236979166666,
+        "maxThroughputDensity": 8.728633150953751,
+        "avConnectionErrors": 1781,
+        "avRequestTimeouts": 0
+      }
+    },
+    "spring3-jvm-aot": {
+      "build": {
+        "timings": [
+          10.95,
+          10.94,
+          10.91
+        ],
+        "avBuildTime": 10.933333333333332
+      },
+      "startup": {
+        "timings": [
+          5520,
+          5572,
+          5587
+        ],
+        "avStartTime": 5559.666666666667
+      },
+      "rss": {
+        "startup": [
+          486.71875,
+          514.06640625,
+          495.078125
+        ],
+        "firstRequest": [
+          512.40234375,
+          522.66015625,
+          503.2890625
+        ],
+        "avStartupRss": 498.62109375,
+        "avFirstRequestRss": 512.7838541666666
+      },
+      "load": {
+        "throughput": [
+          6209.22,
+          5880.21,
+          6077.1
+        ],
+        "connectionErrors": [
+          1823,
+          1726,
+          1796
+        ],
+        "requestTimeouts": [
+          0,
+          0,
+          0
+        ],
+        "rss": [
+          714.765625,
+          680.24609375,
+          699
+        ],
+        "throughputDensity": [
+          8.687071373920647,
+          8.644239274619135,
+          8.693991416309013
+        ],
+        "avThroughput": 6055.509999999999,
+        "avMaxRss": 698.00390625,
+        "maxThroughputDensity": 8.693991416309013,
+        "avConnectionErrors": 1781.6666666666667,
+        "avRequestTimeouts": 0
+      }
+    }
   },
   "config": {
     "jvm": {
@@ -40,12 +235,12 @@
   },
   "env": {
     "host": {
-      "memory": "-bash: fastfetch: command not found",
-      "os": "-bash: fastfetch: command not found",
-      "kernel": "-bash: fastfetch: command not found",
-      "cpu": "-bash: fastfetch: command not found",
-      "type": "-bash: fastfetch: command not found",
-      "gpu": "-bash: fastfetch: command not found"
+      "memory": "376Gi",
+      "os": "Red Hat Enterprise Linux 9.6 (Plow)",
+      "kernel": "5.14.0-570.60.1.el9_6.x86_64",
+      "cpu": "Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz (64 cpus)",
+      "type": "Dell Inc. PowerEdge FC640",
+      "gpu": "Matrox Electronics Systems Ltd. Integrated Matrox G200eW3 Graphics Controller"
     }
   }
 }
