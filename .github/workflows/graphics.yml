@@ -65,7 +65,7 @@ jobs:
       - name: Publish latest images for inspection
         if: github.repository == 'quarkusio/benchmarks' && ! endsWith(github.ref, '/main') && github.event_name == 'pull_request'
         id: artifact-upload-step
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: images
           path: ./images/*svg
