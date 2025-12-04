@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Download PR Artifact
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} # token with actions:read permissions on target repo
           run-id: ${{ github.event.workflow_run.id }}
