@@ -37,11 +37,13 @@ public class Results {
             swap(Framework.SPRING3_JVM, Framework.SPRING_JVM);
             swap(Framework.SPRING3_NATIVE, Framework.SPRING_NATIVE);
             swap(Framework.SPRING3_JVM_AOT, Framework.SPRING_JVM_AOT);
+            swap(Framework.SPRING3_VIRTUAL, Framework.SPRING_VIRTUAL);
             swap(Framework.QUARKUS3_SPRING3_COMPAT, Framework.QUARKUS3_SPRING_COMPAT);
 
             swap(Framework.SPRING4_JVM, Framework.SPRING_JVM);
             swap(Framework.SPRING4_NATIVE, Framework.SPRING_NATIVE);
             swap(Framework.SPRING4_JVM_AOT, Framework.SPRING_JVM_AOT);
+            swap(Framework.SPRING4_VIRTUAL, Framework.SPRING_VIRTUAL);
             swap(Framework.QUARKUS3_SPRING4_COMPAT, Framework.QUARKUS3_SPRING_COMPAT);
         }
 
