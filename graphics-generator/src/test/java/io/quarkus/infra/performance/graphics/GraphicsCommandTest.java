@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.Comparator;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -43,11 +44,8 @@ public class GraphicsCommandTest {
         Files.deleteIfExists(new File("./tempfile.json").toPath());
 
         // Tidy up generated svg files from the default-args test
-        try (DirectoryStream<Path> stream = Files.newDirectoryStream(Path.of("."), "latest*.svg")) {
-            for (Path file : stream) {
-                Files.deleteIfExists(file);
-            }
-        }
+        deleteDir(Path.of("tuned"));
+        deleteDir(Path.of("../graphics"));
     }
 
     @BeforeEach
@@ -69,6 +67,21 @@ public class GraphicsCommandTest {
 
     }
 
+    private static void deleteDir(Path dir) throws IOException {
+      if (Files.isDirectory(dir)) {
+          Files.walk(dir)
+            .sorted(Comparator.reverseOrder())
+            .forEach(path -> {
+            try {
+              Files.delete(path);
+            }
+            catch (IOException e) {
+              // Eat it and move on
+            }
+          });
+        }
+    }
+
     private static void deleteSvgFiles(Path targetDir) throws IOException {
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(targetDir, "*-light.svg")) {
             for (Path file : stream) {
@@ -83,12 +96,16 @@ public class GraphicsCommandTest {
     }
 
     @Test
-    public void testLaunchWithNoArguments(QuarkusMainLauncher launcher) {
-
+    public void testLaunchWithNoArguments(QuarkusMainLauncher launcher) throws IOException {
         // It would be nice to suppress output but redirecting stderr doesn't suppress the stack trace
         LaunchResult result = launcher.launch();
         assertTrue(result.getOutput().contains("latest.json"), result.getOutput());
         assertEquals(0, result.exitCode());
+
+        var tunedDir = Path.of("tuned");
+        assertTrue(Files.exists(tunedDir));
+        assertTrue(Files.isDirectory(tunedDir));
+        assertTrue(Files.list(tunedDir).count() > 0);
     }
 
     @Test

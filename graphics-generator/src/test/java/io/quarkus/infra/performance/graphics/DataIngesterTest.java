@@ -3,7 +3,7 @@ package io.quarkus.infra.performance.graphics;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import java.io.File;
+import java.nio.file.Path;
 import java.time.Instant;
 
 import jakarta.inject.Inject;
@@ -22,7 +22,7 @@ class DataIngesterTest {
 
     @Test
     public void testIngest() {
-        File file = new File("src/test/resources/data.json");
+        var file = Path.of("src/test/resources/data.json");
         BenchmarkData data = dataIngester.ingest(file);
         assertNotNull(data);
 
