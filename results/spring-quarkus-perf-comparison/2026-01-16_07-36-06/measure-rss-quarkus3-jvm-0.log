@@ -1,0 +1,12 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2 (file:/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus-app/lib/main/io.netty.netty-common-4.1.130.Final.jar)
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2026-01-15 22:36:33,183 INFO  [io.quarkus] (main) quarkus3 1.0 on JVM (powered by Quarkus 3.30.6) started in 2.883s. Listening on: http://0.0.0.0:8080
+2026-01-15 22:36:33,188 INFO  [io.quarkus] (main) Profile prod activated. 
+2026-01-15 22:36:33,188 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, config-yaml, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-postgresql, narayana-jta, rest, rest-jackson, smallrye-context-propagation, smallrye-health, vertx]
+2026-01-15 22:37:03,588 INFO  [io.quarkus] (main) quarkus3 stopped in 0.028s
