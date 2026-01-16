@@ -64,9 +64,7 @@ public class GraphicsCommand implements Runnable {
   }
 
   private void processDirectory(Path directory) throws IOException {
-    Files.walkFileTree(
-      directory,
-      new SimpleFileVisitor<>() {
+    Files.walkFileTree(directory, new SimpleFileVisitor<>() {
         @Override
         public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
           if (file.getFileName().toString().endsWith(".json")) {
