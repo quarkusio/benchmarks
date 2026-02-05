@@ -1,0 +1,283 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.acme:springboot3 >------------------------
+[INFO] Building springboot3 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ springboot3 ---
+[INFO] Deleting /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target
+[INFO] 
+[INFO] >>> native:0.10.6:compile (default-cli) > package @ springboot3 >>>
+[INFO] 
+[INFO] --- properties:1.3.0:set-system-properties (default) @ springboot3 ---
+[INFO] Set 1 system property
+[INFO] 
+[INFO] --- native:0.10.6:add-reachability-metadata (add-reachability-metadata) @ springboot3 ---
+[INFO] Downloaded GraalVM reachability metadata repository from file:/home/jenkins/.m2/repository/org/graalvm/buildtools/graalvm-reachability-metadata/0.10.6/graalvm-reachability-metadata-0.10.6-repository.zip
+[INFO] [graalvm reachability metadata repository for ch.qos.logback:logback-classic:1.5.25]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for ch.qos.logback:logback-classic:1.5.25]: Configuration directory is ch.qos.logback/logback-classic/1.4.9
+[INFO] [graalvm reachability metadata repository for com.zaxxer:HikariCP:6.3.3]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for com.zaxxer:HikariCP:6.3.3]: Configuration directory is com.zaxxer/HikariCP/5.0.1
+[INFO] [graalvm reachability metadata repository for org.hibernate.orm:hibernate-core:6.6.41.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.hibernate.orm:hibernate-core:6.6.41.Final]: Configuration directory is org.hibernate.orm/hibernate-core/6.6.0.Final
+[INFO] [graalvm reachability metadata repository for org.glassfish.jaxb:jaxb-runtime:4.0.6]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.glassfish.jaxb:jaxb-runtime:4.0.6]: Configuration directory is org.glassfish.jaxb/jaxb-runtime/3.0.2
+[INFO] [graalvm reachability metadata repository for com.fasterxml.jackson.core:jackson-databind:2.19.4]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for com.fasterxml.jackson.core:jackson-databind:2.19.4]: Configuration directory is com.fasterxml.jackson.core/jackson-databind/2.15.2
+[INFO] [graalvm reachability metadata repository for org.apache.tomcat.embed:tomcat-embed-core:10.1.50]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.apache.tomcat.embed:tomcat-embed-core:10.1.50]: Configuration directory is org.apache.tomcat.embed/tomcat-embed-core/10.0.20
+[INFO] [graalvm reachability metadata repository for org.hibernate.validator:hibernate-validator:8.0.3.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.hibernate.validator:hibernate-validator:8.0.3.Final]: Configuration directory is org.hibernate.validator/hibernate-validator/7.0.4.Final
+[INFO] [graalvm reachability metadata repository for org.hibernate.validator:hibernate-validator:8.0.3.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.hibernate.validator:hibernate-validator:8.0.3.Final]: Latest version not found!
+[INFO] [graalvm reachability metadata repository for org.hibernate.validator:hibernate-validator:8.0.3.Final]: missing.
+[INFO] [graalvm reachability metadata repository for org.hdrhistogram:HdrHistogram:2.2.2]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.hdrhistogram:HdrHistogram:2.2.2]: Configuration directory is org.hdrhistogram/HdrHistogram/2.1.12
+[INFO] [graalvm reachability metadata repository for org.postgresql:postgresql:42.7.9]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.postgresql:postgresql:42.7.9]: Configuration directory is org.postgresql/postgresql/42.7.3
+[INFO] [graalvm reachability metadata repository for javax.cache:cache-api:1.1.1]: Configuration directory is javax.cache/cache-api/1.1.1
+[INFO] [graalvm reachability metadata repository for org.jboss.logging:jboss-logging:3.6.1.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.jboss.logging:jboss-logging:3.6.1.Final]: Configuration directory is org.jboss.logging/jboss-logging/3.5.0.Final
+[INFO] [graalvm reachability metadata repository for com.github.ben-manes.caffeine:caffeine:3.2.3]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for com.github.ben-manes.caffeine:caffeine:3.2.3]: Configuration directory is com.github.ben-manes.caffeine/caffeine/3.1.2
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ springboot3 ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ springboot3 ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 19 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- hibernate-enhance:6.6.41.Final:enhance (enhance) @ springboot3 ---
+[WARNING] Skipping Hibernate bytecode enhancement plugin execution since no feature is enabled
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ springboot3 ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ springboot3 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 5 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ springboot3 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- spring-boot:3.5.10:process-aot (process-aot) @ springboot3 ---
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.10)
+
+2026-02-05T09:39:17.116-05:00  INFO 1965974 --- [           main] org.acme.SpringBoot3Application          : Starting SpringBoot3Application using Java 25.0.1 with PID 1965974 (/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/classes started by jenkins in /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3)
+2026-02-05T09:39:17.119-05:00  INFO 1965974 --- [           main] org.acme.SpringBoot3Application          : No active profile set, falling back to 1 default profile: "default"
+2026-02-05T09:39:17.995-05:00  INFO 1965974 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-05T09:39:18.049-05:00  INFO 1965974 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interface.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ springboot3 ---
+[INFO] Building jar: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/springboot3.jar
+[INFO] 
+[INFO] --- spring-boot:3.5.10:repackage (repackage) @ springboot3 ---
+[INFO] Replacing main artifact /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/springboot3.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/springboot3.jar.original
+[INFO] 
+[INFO] <<< native:0.10.6:compile (default-cli) < package @ springboot3 <<<
+[INFO] 
+[INFO] 
+[INFO] --- native:0.10.6:compile (default-cli) @ springboot3 ---
+[INFO] Found GraalVM installation from GRAALVM_HOME variable.
+[INFO] [graalvm reachability metadata repository for ch.qos.logback:logback-classic:1.5.25]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for ch.qos.logback:logback-classic:1.5.25]: Configuration directory is ch.qos.logback/logback-classic/1.4.9
+[INFO] [graalvm reachability metadata repository for com.zaxxer:HikariCP:6.3.3]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for com.zaxxer:HikariCP:6.3.3]: Configuration directory is com.zaxxer/HikariCP/5.0.1
+[INFO] [graalvm reachability metadata repository for org.hibernate.orm:hibernate-core:6.6.41.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.hibernate.orm:hibernate-core:6.6.41.Final]: Configuration directory is org.hibernate.orm/hibernate-core/6.6.0.Final
+[INFO] [graalvm reachability metadata repository for org.glassfish.jaxb:jaxb-runtime:4.0.6]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.glassfish.jaxb:jaxb-runtime:4.0.6]: Configuration directory is org.glassfish.jaxb/jaxb-runtime/3.0.2
+[INFO] [graalvm reachability metadata repository for com.fasterxml.jackson.core:jackson-databind:2.19.4]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for com.fasterxml.jackson.core:jackson-databind:2.19.4]: Configuration directory is com.fasterxml.jackson.core/jackson-databind/2.15.2
+[INFO] [graalvm reachability metadata repository for org.apache.tomcat.embed:tomcat-embed-core:10.1.50]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.apache.tomcat.embed:tomcat-embed-core:10.1.50]: Configuration directory is org.apache.tomcat.embed/tomcat-embed-core/10.0.20
+[INFO] [graalvm reachability metadata repository for org.hibernate.validator:hibernate-validator:8.0.3.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.hibernate.validator:hibernate-validator:8.0.3.Final]: Configuration directory is org.hibernate.validator/hibernate-validator/7.0.4.Final
+[INFO] [graalvm reachability metadata repository for org.hibernate.validator:hibernate-validator:8.0.3.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.hibernate.validator:hibernate-validator:8.0.3.Final]: Latest version not found!
+[INFO] [graalvm reachability metadata repository for org.hibernate.validator:hibernate-validator:8.0.3.Final]: missing.
+[INFO] [graalvm reachability metadata repository for org.hdrhistogram:HdrHistogram:2.2.2]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.hdrhistogram:HdrHistogram:2.2.2]: Configuration directory is org.hdrhistogram/HdrHistogram/2.1.12
+[INFO] [graalvm reachability metadata repository for org.postgresql:postgresql:42.7.9]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.postgresql:postgresql:42.7.9]: Configuration directory is org.postgresql/postgresql/42.7.3
+[INFO] [graalvm reachability metadata repository for javax.cache:cache-api:1.1.1]: Configuration directory is javax.cache/cache-api/1.1.1
+[INFO] [graalvm reachability metadata repository for org.jboss.logging:jboss-logging:3.6.1.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.jboss.logging:jboss-logging:3.6.1.Final]: Configuration directory is org.jboss.logging/jboss-logging/3.5.0.Final
+[INFO] [graalvm reachability metadata repository for com.github.ben-manes.caffeine:caffeine:3.2.3]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for com.github.ben-manes.caffeine:caffeine:3.2.3]: Configuration directory is com.github.ben-manes.caffeine/caffeine/3.1.2
+[INFO] Executing: /home/jenkins/.sdkman/candidates/java/25.0.1-graalce/bin/native-image -cp /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/classes:/home/jenkins/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.5.10/spring-boot-starter-data-jpa-3.5.10.jar:/home/jenkins/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.10/spring-boot-starter-3.5.10.jar:/home/jenkins/.m2/repository/org/springframework/boot/spring-boot/3.5.10/spring-boot-3.5.10.jar:/home/jenkins/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.10/spring-boot-starter-logging-3.5.10.jar:/home/jenkins/.m2/repository/ch/qos/logback/logback-classic/1.5.25/logback-classic-1.5.25.jar:/home/jenkins/.m2/repository/ch/qos/logback/logback-core/1.5.25/logback-core-1.5.25.jar:/home/jenkins/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/home/jenkins/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/home/jenkins/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/home/jenkins/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/jenkins/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar:/home/jenkins/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.5.10/spring-boot-starter-jdbc-3.5.10.jar:/home/jenkins/.m2/repository/com/zaxxer/HikariCP/6.3.3/HikariCP-6.3.3.jar:/home/jenkins/.m2/repository/org/springframework/spring-jdbc/6.2.15/spring-jdbc-6.2.15.jar:/home/jenkins/.m2/repository/org/hibernate/orm/hibernate-core/6.6.41.Final/hibernate-core-6.6.41.Final.jar:/home/jenkins/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/jenkins/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/jenkins/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/home/jenkins/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/home/jenkins/.m2/repository/com/fasterxml/classmate/1.7.3/classmate-1.7.3.jar:/home/jenkins/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.6/jaxb-runtime-4.0.6.jar:/home/jenkins/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.6/jaxb-core-4.0.6.jar:/home/jenkins/.m2/repository/org/eclipse/angus/angus-activation/2.0.3/angus-activation-2.0.3.jar:/home/jenkins/.m2/repository/org/glassfish/jaxb/txw2/4.0.6/txw2-4.0.6.jar:/home/jenkins/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/jenkins/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/home/jenkins/.m2/repository/org/springframework/data/spring-data-jpa/3.5.8/spring-data-jpa-3.5.8.jar:/home/jenkins/.m2/repository/org/springframework/data/spring-data-commons/3.5.8/spring-data-commons-3.5.8.jar:/home/jenkins/.m2/repository/org/springframework/spring-orm/6.2.15/spring-orm-6.2.15.jar:/home/jenkins/.m2/repository/org/springframework/spring-context/6.2.15/spring-context-6.2.15.jar:/home/jenkins/.m2/repository/org/springframework/spring-aop/6.2.15/spring-aop-6.2.15.jar:/home/jenkins/.m2/repository/org/springframework/spring-tx/6.2.15/spring-tx-6.2.15.jar:/home/jenkins/.m2/repository/org/springframework/spring-beans/6.2.15/spring-beans-6.2.15.jar:/home/jenkins/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/home/jenkins/.m2/repository/org/springframework/spring-aspects/6.2.15/spring-aspects-6.2.15.jar:/home/jenkins/.m2/repository/org/aspectj/aspectjweaver/1.9.25.1/aspectjweaver-1.9.25.1.jar:/home/jenkins/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.5.10/spring-boot-starter-web-3.5.10.jar:/home/jenkins/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.10/spring-boot-starter-json-3.5.10.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.4/jackson-databind-2.19.4.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.4/jackson-annotations-2.19.4.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.4/jackson-core-2.19.4.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.19.4/jackson-datatype-jdk8-2.19.4.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.4/jackson-datatype-jsr310-2.19.4.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.19.4/jackson-module-parameter-names-2.19.4.jar:/home/jenkins/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.5.10/spring-boot-starter-tomcat-3.5.10.jar:/home/jenkins/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.50/tomcat-embed-core-10.1.50.jar:/home/jenkins/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.50/tomcat-embed-websocket-10.1.50.jar:/home/jenkins/.m2/repository/org/springframework/spring-web/6.2.15/spring-web-6.2.15.jar:/home/jenkins/.m2/repository/org/springframework/spring-webmvc/6.2.15/spring-webmvc-6.2.15.jar:/home/jenkins/.m2/repository/org/springframework/spring-expression/6.2.15/spring-expression-6.2.15.jar:/home/jenkins/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.5.10/spring-boot-starter-validation-3.5.10.jar:/home/jenkins/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.50/tomcat-embed-el-10.1.50.jar:/home/jenkins/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.3.Final/hibernate-validator-8.0.3.Final.jar:/home/jenkins/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/jenkins/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.5.10/spring-boot-starter-actuator-3.5.10.jar:/home/jenkins/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.5.10/spring-boot-actuator-autoconfigure-3.5.10.jar:/home/jenkins/.m2/repository/org/springframework/boot/spring-boot-actuator/3.5.10/spring-boot-actuator-3.5.10.jar:/home/jenkins/.m2/repository/io/micrometer/micrometer-observation/1.15.8/micrometer-observation-1.15.8.jar:/home/jenkins/.m2/repository/io/micrometer/micrometer-commons/1.15.8/micrometer-commons-1.15.8.jar:/home/jenkins/.m2/repository/io/micrometer/micrometer-jakarta9/1.15.8/micrometer-jakarta9-1.15.8.jar:/home/jenkins/.m2/repository/io/micrometer/micrometer-core/1.15.8/micrometer-core-1.15.8.jar:/home/jenkins/.m2/repository/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar:/home/jenkins/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/home/jenkins/.m2/repository/org/postgresql/postgresql/42.7.9/postgresql-42.7.9.jar:/home/jenkins/.m2/repository/org/checkerframework/checker-qual/3.52.0/checker-qual-3.52.0.jar:/home/jenkins/.m2/repository/org/hibernate/orm/hibernate-jcache/6.6.41.Final/hibernate-jcache-6.6.41.Final.jar:/home/jenkins/.m2/repository/javax/cache/cache-api/1.1.1/cache-api-1.1.1.jar:/home/jenkins/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/home/jenkins/.m2/repository/com/github/ben-manes/caffeine/caffeine/3.2.3/caffeine-3.2.3.jar:/home/jenkins/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/jenkins/.m2/repository/com/google/errorprone/error_prone_annotations/2.43.0/error_prone_annotations-2.43.0.jar:/home/jenkins/.m2/repository/com/github/ben-manes/caffeine/jcache/3.2.3/jcache-3.2.3.jar:/home/jenkins/.m2/repository/org/osgi/org.osgi.service.component.annotations/1.5.1/org.osgi.service.component.annotations-1.5.1.jar:/home/jenkins/.m2/repository/org/osgi/osgi.annotation/8.1.0/osgi.annotation-8.1.0.jar:/home/jenkins/.m2/repository/org/osgi/org.osgi.namespace.extender/1.0.1/org.osgi.namespace.extender-1.0.1.jar:/home/jenkins/.m2/repository/org/osgi/org.osgi.util.function/1.0.0/org.osgi.util.function-1.0.0.jar:/home/jenkins/.m2/repository/org/osgi/org.osgi.util.promise/1.0.0/org.osgi.util.promise-1.0.0.jar:/home/jenkins/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/jenkins/.m2/repository/com/typesafe/config/1.4.5/config-1.4.5.jar:/home/jenkins/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.4/jakarta.xml.bind-api-4.0.4.jar:/home/jenkins/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.4/jakarta.activation-api-2.1.4.jar:/home/jenkins/.m2/repository/org/springframework/spring-core/6.2.15/spring-core-6.2.15.jar:/home/jenkins/.m2/repository/org/springframework/spring-jcl/6.2.15/spring-jcl-6.2.15.jar:/home/jenkins/.m2/repository/net/bytebuddy/byte-buddy/1.17.8/byte-buddy-1.17.8.jar:/home/jenkins/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.10/spring-boot-autoconfigure-3.5.10.jar --no-fallback -o /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/springboot3 -H:ConfigurationFileDirectories=/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/org.hdrhistogram/HdrHistogram/2.1.12,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/org.glassfish.jaxb/jaxb-runtime/3.0.2,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/org.hibernate.validator/hibernate-validator/7.0.4.Final,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/org.postgresql/postgresql/42.7.3,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/com.zaxxer/HikariCP/5.0.1,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/org.hibernate.orm/hibernate-core/6.6.0.Final,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/ch.qos.logback/logback-classic/1.4.9,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/org.apache.tomcat.embed/tomcat-embed-core/10.0.20,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/org.jboss.logging/jboss-logging/3.5.0.Final,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/com.fasterxml.jackson.core/jackson-databind/2.15.2,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/javax.cache/cache-api/1.1.1,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/com.github.ben-manes.caffeine/caffeine/3.1.2,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/org.hdrhistogram/HdrHistogram/2.1.12,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/org.glassfish.jaxb/jaxb-runtime/3.0.2,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/org.hibernate.validator/hibernate-validator/7.0.4.Final,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/org.postgresql/postgresql/42.7.3,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/com.zaxxer/HikariCP/5.0.1,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/org.hibernate.orm/hibernate-core/6.6.0.Final,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/ch.qos.logback/logback-classic/1.4.9,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/org.apache.tomcat.embed/tomcat-embed-core/10.0.20,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/org.jboss.logging/jboss-logging/3.5.0.Final,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/com.fasterxml.jackson.core/jackson-databind/2.15.2,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/javax.cache/cache-api/1.1.1,/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/graalvm-reachability-metadata/5e97bab756d4c7d62b8958e63c891f3c18296024/com.github.ben-manes.caffeine/caffeine/3.1.2
+Warning: Using a deprecated option --report-unsupported-elements-at-runtime from 'META-INF/native-image/org.acme/springboot3/native-image.properties' in 'file:///home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/classes/'. The option is deprecated and will be removed in the future. The use of unsupported elements is always reported at run time.
+Warning: Using a deprecated option --install-exit-handlers from 'META-INF/native-image/org.acme/springboot3/native-image.properties' in 'file:///home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/classes/'. --install-exit-handlers is enabled by default for executables and it can likely be removed. To use this option for the shared libraries, please use -H:+InstallExitHandlers.
+Warning: The option '-H:ServiceLoaderFeatureExcludeServices=org.hibernate.bytecode.spi.BytecodeProvider' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+Warning: Please re-evaluate whether any experimental option is required, and either remove or unlock it. The build output lists all active experimental options, including where they come from and possible alternatives. If you think an experimental option should be considered as stable, please file an issue.
+Warning: Option 'DynamicProxyConfigurationResources' is deprecated and might be removed in a future release: This can be caused by a proxy-config.json file in your META-INF directory. Consider including proxy configuration in the reflection section of reachability-metadata.md instead.. Please refer to the GraalVM release notes.
+Warning: Option 'DynamicProxyConfigurationResources' is deprecated and might be removed in a future release: This can be caused by a proxy-config.json file in your META-INF directory. Consider including proxy configuration in the reflection section of reachability-metadata.md instead.. Please refer to the GraalVM release notes.
+Warning: Option 'DynamicProxyConfigurationResources' is deprecated and might be removed in a future release: This can be caused by a proxy-config.json file in your META-INF directory. Consider including proxy configuration in the reflection section of reachability-metadata.md instead.. Please refer to the GraalVM release notes.
+Warning: Option 'DynamicProxyConfigurationResources' is deprecated and might be removed in a future release: This can be caused by a proxy-config.json file in your META-INF directory. Consider including proxy configuration in the reflection section of reachability-metadata.md instead.. Please refer to the GraalVM release notes.
+========================================================================================================================
+GraalVM Native Image: Generating 'springboot3' (executable)...
+========================================================================================================================
+For detailed information and explanations on the build output, visit:
+https://github.com/oracle/graal/blob/master/docs/reference-manual/native-image/BuildOutput.md
+------------------------------------------------------------------------------------------------------------------------
+[1/8] Initializing...                                                                                    (6.6s @ 0.75GB)
+ Java version: 25.0.1+8, vendor version: GraalVM CE 25.0.1+8.1
+ Graal compiler: optimization level: 2, target machine: x86-64-v3
+ C compiler: gcc (redhat, x86_64, 11.5.0)
+ Garbage collector: Serial GC (max heap size: 80% of RAM)
+ 3 user-specific feature(s):
+ - com.oracle.svm.thirdparty.gson.GsonFeature
+ - org.eclipse.angus.activation.nativeimage.AngusActivationFeature
+ - org.springframework.aot.nativex.feature.PreComputeFieldFeature
+------------------------------------------------------------------------------------------------------------------------
+ 1 experimental option(s) unlocked:
+ - '-H:ServiceLoaderFeatureExcludeServices' (origin(s): 'META-INF/native-image/org.springframework/spring-orm/native-image.properties' in 'file:///home/jenkins/.m2/repository/org/springframework/spring-orm/6.2.15/spring-orm-6.2.15.jar')
+------------------------------------------------------------------------------------------------------------------------
+Build resources:
+ - 28.45GB of memory (7.0% of system memory, using available memory)
+ - 32 thread(s) (50.0% of 64 available processor(s), determined at start)
+[2/8] Performing analysis...  [******]                                                                  (17.4s @ 4.20GB)
+   35,871 types,  50,925 fields, and 170,927 methods found reachable
+   11,889 types,   1,910 fields, and  13,161 methods registered for reflection
+       64 types,      63 fields, and      57 methods registered for JNI access
+        0 downcalls and 0 upcalls registered for foreign access
+        4 native libraries: dl, pthread, rt, z
+[3/8] Building universe...                                                                               (7.1s @ 4.21GB)
+[4/8] Parsing methods...      [**]                                                                       (2.7s @ 3.57GB)
+[5/8] Inlining methods...     [***]                                                                      (1.5s @ 2.73GB)
+[6/8] Compiling methods...    [****]                                                                    (14.8s @ 3.63GB)
+[7/8] Laying out methods...   [****]                                                                    (19.7s @ 4.57GB)
+[8/8] Creating image...       [***]                                                                     (11.5s @ 3.23GB)
+  82.01MB (51.59%) for code area:   114,947 compilation units
+  66.78MB (42.01%) for image heap:  625,723 objects and 517 resources
+  10.17MB ( 6.40%) for other data
+ 158.96MB in total image size, 149.15MB in total file size
+------------------------------------------------------------------------------------------------------------------------
+Top 10 origins of code area:                                Top 10 object types in image heap:
+  16.03MB java.base                                           22.30MB byte[] for code metadata
+  15.72MB hibernate-core-6.6.41.Final.jar                      9.69MB byte[] for java.lang.String
+   4.58MB tomcat-embed-core-10.1.50.jar                        7.17MB com.oracle.svm.core.hub.DynamicHubCompanion
+   4.10MB java.xml                                             5.87MB java.lang.String
+   4.06MB java.desktop                                         5.68MB java.lang.Class
+   3.17MB jdk.proxy4                                           1.29MB c.o.svm.core.hub.DynamicHub$ReflectionMetadata
+   2.57MB spring-data-jpa-3.5.8.jar                            1.28MB byte[] for reflection metadata
+   2.44MB svm.jar (Native Image)                               1.17MB byte[] for general heap data
+   1.98MB postgresql-42.7.9.jar                                1.16MB java.lang.reflect.Method
+   1.88MB spring-boot-3.5.10.jar                               1.10MB java.lang.String[]
+  23.69MB for 157 more packages                               10.05MB for 6275 more object types
+------------------------------------------------------------------------------------------------------------------------
+Recommendations:
+ FUTR: Use '--future-defaults=all' to prepare for future releases.
+ AWT:  Use the tracing agent to collect metadata for AWT.
+ HEAP: Set max heap for improved and more predictable memory usage.
+ CPU:  Enable more CPU features with '-march=native' for improved performance.
+------------------------------------------------------------------------------------------------------------------------
+                       4.7s (5.5% of total time) in 211 GCs | Peak RSS: 7.30GB | CPU load: 16.57
+------------------------------------------------------------------------------------------------------------------------
+Build artifacts:
+ /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/libawt.so (jdk_library)
+ /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/libawt_headless.so (jdk_library)
+ /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/libawt_xawt.so (jdk_library)
+ /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/libfontmanager.so (jdk_library)
+ /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/libjava.so (jdk_library_shim)
+ /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/libjavajpeg.so (jdk_library)
+ /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/libjvm.so (jdk_library_shim)
+ /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/liblcms.so (jdk_library)
+ /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/libmanagement_ext.so (jdk_library)
+ /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/springboot3 (executable)
+========================================================================================================================
+Finished generating 'springboot3' in 1m 24s.
+[INFO] 
+[INFO] --- properties:1.3.0:set-system-properties (default) @ springboot3 ---
+[INFO] Set 1 system property
+[INFO] 
+[INFO] --- native:0.10.6:add-reachability-metadata (add-reachability-metadata) @ springboot3 ---
+[INFO] [graalvm reachability metadata repository for ch.qos.logback:logback-classic:1.5.25]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for ch.qos.logback:logback-classic:1.5.25]: Configuration directory is ch.qos.logback/logback-classic/1.4.9
+[INFO] [graalvm reachability metadata repository for com.zaxxer:HikariCP:6.3.3]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for com.zaxxer:HikariCP:6.3.3]: Configuration directory is com.zaxxer/HikariCP/5.0.1
+[INFO] [graalvm reachability metadata repository for org.hibernate.orm:hibernate-core:6.6.41.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.hibernate.orm:hibernate-core:6.6.41.Final]: Configuration directory is org.hibernate.orm/hibernate-core/6.6.0.Final
+[INFO] [graalvm reachability metadata repository for org.glassfish.jaxb:jaxb-runtime:4.0.6]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.glassfish.jaxb:jaxb-runtime:4.0.6]: Configuration directory is org.glassfish.jaxb/jaxb-runtime/3.0.2
+[INFO] [graalvm reachability metadata repository for com.fasterxml.jackson.core:jackson-databind:2.19.4]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for com.fasterxml.jackson.core:jackson-databind:2.19.4]: Configuration directory is com.fasterxml.jackson.core/jackson-databind/2.15.2
+[INFO] [graalvm reachability metadata repository for org.apache.tomcat.embed:tomcat-embed-core:10.1.50]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.apache.tomcat.embed:tomcat-embed-core:10.1.50]: Configuration directory is org.apache.tomcat.embed/tomcat-embed-core/10.0.20
+[INFO] [graalvm reachability metadata repository for org.hibernate.validator:hibernate-validator:8.0.3.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.hibernate.validator:hibernate-validator:8.0.3.Final]: Configuration directory is org.hibernate.validator/hibernate-validator/7.0.4.Final
+[INFO] [graalvm reachability metadata repository for org.hibernate.validator:hibernate-validator:8.0.3.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.hibernate.validator:hibernate-validator:8.0.3.Final]: Latest version not found!
+[INFO] [graalvm reachability metadata repository for org.hibernate.validator:hibernate-validator:8.0.3.Final]: missing.
+[INFO] [graalvm reachability metadata repository for org.hdrhistogram:HdrHistogram:2.2.2]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.hdrhistogram:HdrHistogram:2.2.2]: Configuration directory is org.hdrhistogram/HdrHistogram/2.1.12
+[INFO] [graalvm reachability metadata repository for org.postgresql:postgresql:42.7.9]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.postgresql:postgresql:42.7.9]: Configuration directory is org.postgresql/postgresql/42.7.3
+[INFO] [graalvm reachability metadata repository for javax.cache:cache-api:1.1.1]: Configuration directory is javax.cache/cache-api/1.1.1
+[INFO] [graalvm reachability metadata repository for org.jboss.logging:jboss-logging:3.6.1.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for org.jboss.logging:jboss-logging:3.6.1.Final]: Configuration directory is org.jboss.logging/jboss-logging/3.5.0.Final
+[INFO] [graalvm reachability metadata repository for com.github.ben-manes.caffeine:caffeine:3.2.3]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for com.github.ben-manes.caffeine:caffeine:3.2.3]: Configuration directory is com.github.ben-manes.caffeine/caffeine/3.1.2
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ springboot3 ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ springboot3 ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- hibernate-enhance:6.6.41.Final:enhance (enhance) @ springboot3 ---
+[WARNING] Skipping Hibernate bytecode enhancement plugin execution since no feature is enabled
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ springboot3 ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ springboot3 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 5 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ springboot3 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- spring-boot:3.5.10:process-aot (process-aot) @ springboot3 ---
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.10)
+
+2026-02-05T09:40:50.423-05:00  INFO 1966578 --- [           main] org.acme.SpringBoot3Application          : Starting SpringBoot3Application using Java 25.0.1 with PID 1966578 (/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/classes started by jenkins in /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3)
+2026-02-05T09:40:50.427-05:00  INFO 1966578 --- [           main] org.acme.SpringBoot3Application          : No active profile set, falling back to 1 default profile: "default"
+2026-02-05T09:40:51.262-05:00  INFO 1966578 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-05T09:40:51.314-05:00  INFO 1966578 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interface.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ springboot3 ---
+[INFO] Building jar: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/springboot3.jar
+[INFO] 
+[INFO] --- spring-boot:3.5.10:repackage (repackage) @ springboot3 ---
+[INFO] Replacing main artifact /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/springboot3.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/springboot3.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:41 min
+[INFO] Finished at: 2026-02-05T09:40:54-05:00
+[INFO] ------------------------------------------------------------------------
