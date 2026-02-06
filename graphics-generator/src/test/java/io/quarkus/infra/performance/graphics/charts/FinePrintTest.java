@@ -138,6 +138,6 @@ class FinePrintTest extends ElasticElementTest {
       var finePrint = new FinePrint(new BenchmarkData(timing, null, config));
       var s = drawSvg(finePrint);
 
-      assertTrue(s.contains("Benchmark date: " + now.atZone(ZoneOffset.UTC).format(FinePrint.DATE_TIME_FORMATTER)));
+      assertTrue(s.contains("Execution date: " + now.atZone(ZoneOffset.UTC).format(FinePrint.DATE_TIME_FORMATTER)));
     }
 }

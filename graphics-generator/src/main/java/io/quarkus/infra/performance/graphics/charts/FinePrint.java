@@ -110,7 +110,7 @@ public class FinePrint implements ElasticElement {
         Optional.ofNullable(this.timing)
           .map(Timing::stop)
           .map(stopTime -> stopTime.atZone(ZoneOffset.UTC).format(DATE_TIME_FORMATTER))
-          .ifPresent(stopTime -> rightColumn.add("Benchmark date: %s".formatted(stopTime)));
+          .ifPresent(stopTime -> rightColumn.add("Execution date: %s".formatted(stopTime)));
 
         // Make sure font sizes are the same
         // TODO this can go away when we have label groups
