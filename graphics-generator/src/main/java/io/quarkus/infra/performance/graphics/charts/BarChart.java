@@ -7,17 +7,17 @@ import java.util.stream.Collectors;
 
 import io.quarkus.infra.performance.graphics.PlotDefinition;
 import io.quarkus.infra.performance.graphics.Theme;
-import io.quarkus.infra.performance.graphics.model.Config;
+import io.quarkus.infra.performance.graphics.model.BenchmarkData;
 
 public class BarChart extends Chart {
 
     private final FinePrint fineprint;
     private final List<Bar> bars = new ArrayList<>();
 
-    public BarChart(PlotDefinition plotDefinition, List<Datapoint> data, Config metadata) {
-        super(plotDefinition, data, metadata);
+    public BarChart(PlotDefinition plotDefinition, List<Datapoint> data, BenchmarkData bmData) {
+        super(plotDefinition, data, bmData);
 
-        this.fineprint = new FinePrint(metadata);
+        this.fineprint = new FinePrint(bmData);
         children.add(fineprint);
 
         for (Datapoint d : data) {

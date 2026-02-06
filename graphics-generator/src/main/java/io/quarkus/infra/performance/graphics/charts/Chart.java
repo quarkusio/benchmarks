@@ -9,6 +9,7 @@ import java.util.Set;
 
 import io.quarkus.infra.performance.graphics.PlotDefinition;
 import io.quarkus.infra.performance.graphics.Theme;
+import io.quarkus.infra.performance.graphics.model.BenchmarkData;
 import io.quarkus.infra.performance.graphics.model.Config;
 
 public abstract class Chart implements ElasticElement {
@@ -24,9 +25,9 @@ public abstract class Chart implements ElasticElement {
     final int xmargins = 20;
     final int ymargins = 20;
 
-    protected Chart(PlotDefinition plotDefinition, List<Datapoint> datasets, Config metadata) {
+    protected Chart(PlotDefinition plotDefinition, List<Datapoint> datasets, BenchmarkData bmData) {
         this.data = datasets;
-        this.metadata = metadata;
+        this.metadata = bmData.config();
         children = new HashSet<>();
 
         this.title = new Title(plotDefinition.title(), plotDefinition.subtitle());
