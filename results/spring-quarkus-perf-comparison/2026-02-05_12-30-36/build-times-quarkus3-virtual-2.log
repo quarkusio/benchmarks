@@ -1,0 +1,52 @@
+[INFO] Scanning for projects...
+[WARNING] Quarkus Maven extension: an explicit 'argLine' is defined in maven-surefire-plugin config, but does not contain '@{argLine}': we will not be able to inject JVM parameters automatically. Please add '@{argLine}' to the argLine configuration you have defined.
+[INFO] 
+[INFO] ---------------------< org.acme:quarkus3-virtual >----------------------
+[INFO] Building quarkus3-virtual 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact io.quarkus:quarkus-junit5:jar:3.31.2 has been relocated to io.quarkus:quarkus-junit:jar:3.31.2: Update the artifactId in your project build file. Refer to https://github.com/quarkusio/quarkus/wiki/Migration-Guide-3.31 for more information.
+[WARNING] The artifact io.quarkus:quarkus-junit5-mockito:jar:3.31.2 has been relocated to io.quarkus:quarkus-junit-mockito:jar:3.31.2: Update the artifactId in your project build file. Refer to https://github.com/quarkusio/quarkus/wiki/Migration-Guide-3.31 for more information.
+[WARNING] The artifact io.quarkus.junit5:junit5-virtual-threads:jar:3.31.2 has been relocated to io.quarkus.junit:junit-virtual-threads:jar:3.31.2: Update the artifactId in your project build file. Refer to https://github.com/quarkusio/quarkus/wiki/Migration-Guide-3.31 for more information.
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ quarkus3-virtual ---
+[INFO] Deleting /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3-virtual/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ quarkus3-virtual ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- quarkus:3.31.2:generate-code (default) @ quarkus3-virtual ---
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ quarkus3-virtual ---
+[INFO] Recompiling the module because of changed source code.
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 7 source files with javac [debug release 21] to target/classes
+[INFO] 
+[INFO] --- quarkus:3.31.2:generate-code-tests (default) @ quarkus3-virtual ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ quarkus3-virtual ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3-virtual/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ quarkus3-virtual ---
+[INFO] Recompiling the module because of changed dependency.
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 4 source files with javac [debug release 21] to target/test-classes
+[WARNING] /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3-virtual/src/test/java/org/acme/e2e/FruitControllerEndToEndTest.java:[27,2] io.quarkus.test.junit5.virtual.VirtualThreadUnit in io.quarkus.test.junit5.virtual has been deprecated and marked for removal
+[WARNING] /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3-virtual/src/test/java/org/acme/e2e/FruitControllerEndToEndTest.java:[28,2] io.quarkus.test.junit5.virtual.ShouldNotPin in io.quarkus.test.junit5.virtual has been deprecated and marked for removal
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ quarkus3-virtual ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ quarkus3-virtual ---
+[INFO] Building jar: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3-virtual/target/quarkus3.jar
+[INFO] 
+[INFO] --- quarkus:3.31.2:build (default) @ quarkus3-virtual ---
+[INFO] [io.quarkus.deployment.QuarkusAugmentor] Quarkus augmentation completed in 2642ms
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.699 s
+[INFO] Finished at: 2026-02-05T03:47:22-05:00
+[INFO] ------------------------------------------------------------------------

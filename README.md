@@ -20,14 +20,28 @@ This will generate a set of plots in an `images` directory.
 
 Benchmark source code: https://github.com/quarkusio/spring-quarkus-perf-comparison
 
-![](images/spring-quarkus-perf-comparison/results-latest-throughput-light.svg#gh-light-mode-only)
-![](images/spring-quarkus-perf-comparison/results-latest-throughput-dark.svg#gh-dark-mode-only)
+#### Tuned
+![](images/spring-quarkus-perf-comparison/tuned/results-latest-tuned-throughput-light.svg#gh-light-mode-only)
+![](images/spring-quarkus-perf-comparison/tuned/results-latest-tuned-throughput-dark.svg#gh-dark-mode-only)
 
-![](images/spring-quarkus-perf-comparison/results-latest-boot-and-first-response-time-light.svg#gh-light-mode-only)
-![](images/spring-quarkus-perf-comparison/results-latest-boot-and-first-response-time-dark.svg#gh-dark-mode-only)
+![](images/spring-quarkus-perf-comparison/tuned/results-latest-tuned-boot-and-first-response-time-light.svg#gh-light-mode-only)
+![](images/spring-quarkus-perf-comparison/tuned/results-latest-tuned-boot-and-first-response-time-dark.svg#gh-dark-mode-only)
 
-![](images/spring-quarkus-perf-comparison/results-latest-memory-rss-light.svg#gh-light-mode-only)
-![](images/spring-quarkus-perf-comparison/results-latest-memory-rss-dark.svg#gh-dark-mode-only)
+![](images/spring-quarkus-perf-comparison/tuned/results-latest-tuned-memory-rss-light.svg#gh-light-mode-only)
+![](images/spring-quarkus-perf-comparison/tuned/results-latest-tuned-memory-rss-dark.svg#gh-dark-mode-only)
 
-![](images/spring-quarkus-perf-comparison/results-latest-build-duration-light.svg#gh-light-mode-only)
-![](images/spring-quarkus-perf-comparison/results-latest-build-duration-dark.svg#gh-dark-mode-only)
+![](images/spring-quarkus-perf-comparison/tuned/results-latest-tuned-build-duration-light.svg#gh-light-mode-only)
+![](images/spring-quarkus-perf-comparison/tuned/results-latest-tuned-build-duration-dark.svg#gh-dark-mode-only)
+
+#### Out of the box
+![](images/spring-quarkus-perf-comparison/ootb/results-latest-ootb-throughput-light.svg#gh-light-mode-only)
+![](images/spring-quarkus-perf-comparison/ootb/results-latest-ootb-throughput-dark.svg#gh-dark-mode-only)
+
+![](images/spring-quarkus-perf-comparison/ootb/results-latest-ootb-boot-and-first-response-time-light.svg#gh-light-mode-only)
+![](images/spring-quarkus-perf-comparison/ootb/results-latest-ootb-boot-and-first-response-time-dark.svg#gh-dark-mode-only)
+
+![](images/spring-quarkus-perf-comparison/ootb/results-latest-ootb-memory-rss-light.svg#gh-light-mode-only)
+![](images/spring-quarkus-perf-comparison/ootb/results-latest-ootb-memory-rss-dark.svg#gh-dark-mode-only)
+
+![](images/spring-quarkus-perf-comparison/ootb/results-latest-ootb-build-duration-light.svg#gh-light-mode-only)
+![](images/spring-quarkus-perf-comparison/ootb/results-latest-ootb-build-duration-dark.svg#gh-dark-mode-only)

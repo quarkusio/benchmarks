@@ -1,0 +1,81 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.acme:springboot4 >------------------------
+[INFO] Building springboot4 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ springboot4 ---
+[INFO] Deleting /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ springboot4 ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ springboot4 ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 11 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- hibernate:7.2.1.Final:enhance (enhance) @ springboot4 ---
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/HibernateNativeHints.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/L2CacheConfiguration.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/L2CacheRuntimeHints.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/SpringBoot4Application.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Address.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Fruit.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/StoreFruitPrice.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/StoreFruitPriceId.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Store.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/repository/FruitRepository.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/rest/FruitController.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/HibernateNativeHints.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/L2CacheConfiguration.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/L2CacheRuntimeHints.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/SpringBoot4Application.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Address.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Fruit.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/StoreFruitPrice.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/StoreFruitPriceId.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Store.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/repository/FruitRepository.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/rest/FruitController.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/HibernateNativeHints.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/L2CacheConfiguration.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/L2CacheRuntimeHints.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/SpringBoot4Application.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Address.class
+[INFO] Succesfully cleared the contents of file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Fruit.class
+[INFO] Succesfully enhanced class file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Fruit.class
+[INFO] Succesfully cleared the contents of file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/StoreFruitPrice.class
+[INFO] Succesfully enhanced class file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/StoreFruitPrice.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/StoreFruitPriceId.class
+[INFO] Succesfully cleared the contents of file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Store.class
+[INFO] Succesfully enhanced class file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Store.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/repository/FruitRepository.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/rest/FruitController.class
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ springboot4 ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ springboot4 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 5 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/src/test/java/org/acme/ContainersConfig.java: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/src/test/java/org/acme/ContainersConfig.java uses or overrides a deprecated API.
+[INFO] /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/src/test/java/org/acme/ContainersConfig.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ springboot4 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ springboot4 ---
+[INFO] Building jar: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/springboot4.jar
+[INFO] 
+[INFO] --- spring-boot:4.0.2:repackage (repackage) @ springboot4 ---
+[INFO] Replacing main artifact /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/springboot4.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/springboot4.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.429 s
+[INFO] Finished at: 2026-02-05T06:18:57-05:00
+[INFO] ------------------------------------------------------------------------
