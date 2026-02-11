@@ -2,17 +2,23 @@ package io.quarkus.infra.performance.graphics.charts;
 
 import static io.quarkus.infra.performance.graphics.charts.Sizer.calculateWidth;
 
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 import io.quarkus.infra.performance.graphics.Theme;
 import io.quarkus.infra.performance.graphics.VAlignment;
+import io.quarkus.infra.performance.graphics.model.BenchmarkData;
 import io.quarkus.infra.performance.graphics.model.Config;
 import io.quarkus.infra.performance.graphics.model.Repo;
+import io.quarkus.infra.performance.graphics.model.Timing;
 
 public class FinePrint implements ElasticElement {
+    static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
     private static final String SOURCE_CODE_LABEL = "Source:";
 
     private static final int MAXIMUM_FONT_SIZE = 30;
@@ -25,6 +31,7 @@ public class FinePrint implements ElasticElement {
     private static final int TOP_PADDING = 30;
 
     private final Config metadata;
+    private final Timing timing;
     private final Label leftLabel;
     private final Label middleLabel;
     private final Label rightLabel;
@@ -33,8 +40,9 @@ public class FinePrint implements ElasticElement {
     private final List<String> middleColumn = new ArrayList<>();
     private final List<String> rightColumn = new ArrayList<>();
 
-    public FinePrint(Config metadata) {
-        this.metadata = metadata;
+    public FinePrint(BenchmarkData bmData) {
+        this.metadata = bmData.config();
+        this.timing = bmData.timing();
 
         if (metadata.quarkus() != null) {
             leftColumn.add("Quarkus: "
@@ -97,6 +105,12 @@ public class FinePrint implements ElasticElement {
               rightColumn.add("Commit: " + metadata.repo().shortCommit());
             }
         }
+
+        // Add date/time
+        Optional.ofNullable(this.timing)
+          .map(Timing::stop)
+          .map(stopTime -> stopTime.atZone(ZoneOffset.UTC).format(DATE_TIME_FORMATTER))
+          .ifPresent(stopTime -> rightColumn.add("Execution date: %s".formatted(stopTime)));
 
         // Make sure font sizes are the same
         // TODO this can go away when we have label groups

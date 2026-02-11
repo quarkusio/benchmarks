@@ -74,7 +74,7 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: images
-          path: ./images/*svg
+          path: ./images/tuned/*svg
           retention-days: 3
       - name: Save PR number
         if: github.repository == 'quarkusio/benchmarks' && ! endsWith(github.ref, '/main') && github.event_name == 'pull_request'

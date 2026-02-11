@@ -110,7 +110,7 @@ public class GraphicsCommand implements Runnable {
     }
   }
 
-  private void generate(Path file, Path qualifiedOutputDir, TriFunction<PlotDefinition, List<Datapoint>, Config, Chart> chartConstructor, BenchmarkData data, PlotDefinition plotDefinition) {
+  private void generate(Path file, Path qualifiedOutputDir, TriFunction<PlotDefinition, List<Datapoint>, BenchmarkData, Chart> chartConstructor, BenchmarkData data, PlotDefinition plotDefinition) {
     try {
         var lightFile = qualifiedOutputDir.resolve(deriveOutputFilename(file, plotDefinition, data.config().repo(), Theme.LIGHT)).toFile();
         generator.generate(chartConstructor, data, plotDefinition, lightFile, Theme.LIGHT);

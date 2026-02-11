@@ -4,11 +4,16 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import java.time.Instant;
+import java.time.ZoneOffset;
+
 import org.junit.jupiter.api.Test;
 
+import io.quarkus.infra.performance.graphics.model.BenchmarkData;
 import io.quarkus.infra.performance.graphics.model.Config;
 import io.quarkus.infra.performance.graphics.model.FrameworkBuild;
 import io.quarkus.infra.performance.graphics.model.Repo;
+import io.quarkus.infra.performance.graphics.model.Timing;
 
 class FinePrintTest extends ElasticElementTest {
 
@@ -18,7 +23,7 @@ class FinePrintTest extends ElasticElementTest {
         when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "1234"));
         when(config.quarkus()).thenReturn(new FrameworkBuild("", "3.28.3"));
 
-        FinePrint p = new FinePrint(config);
+        FinePrint p = new FinePrint(new BenchmarkData(null, null, config));
         String s = drawSvg(p);
         assertTrue(s.contains("3.28.3"), s);
     }
@@ -29,7 +34,7 @@ class FinePrintTest extends ElasticElementTest {
         when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "1234"));
         when(config.quarkus()).thenReturn(new FrameworkBuild("", "3.28.3"));
 
-        FinePrint p = new FinePrint(config);
+        FinePrint p = new FinePrint(new BenchmarkData(null, null, config));
         String s = drawSvg(p);
         assertTrue(s.contains("Quarkus: 3.28.3"), s);
     }
@@ -40,7 +45,7 @@ class FinePrintTest extends ElasticElementTest {
         when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "1234"));
         when(config.springboot()).thenReturn(new FrameworkBuild("", "3.10.3"));
 
-        FinePrint p = new FinePrint(config);
+        FinePrint p = new FinePrint(new BenchmarkData(null, null, config));
         String s = drawSvg(p);
         assertTrue(s.contains("Spring: 3.10.3"), s);
     }
@@ -50,7 +55,7 @@ class FinePrintTest extends ElasticElementTest {
         Config config = mock(Config.class);
         when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "1234"));
         when(config.springboot3()).thenReturn(new FrameworkBuild("", "3.10.3"));
-        FinePrint p = new FinePrint(config);
+        FinePrint p = new FinePrint(new BenchmarkData(null, null, config));
         String s = drawSvg(p);
         assertTrue(s.contains("Spring: 3.10.3"), s);
 
@@ -61,7 +66,7 @@ class FinePrintTest extends ElasticElementTest {
         Config config = mock(Config.class);
         when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "1234"));
         when(config.springboot4()).thenReturn(new FrameworkBuild("", "4.10.3"));
-        FinePrint p = new FinePrint(config);
+        FinePrint p = new FinePrint(new BenchmarkData(null, null, config));
         String s = drawSvg(p);
         assertTrue(s.contains("Spring: 4.10.3"), s);
     }
@@ -72,7 +77,7 @@ class FinePrintTest extends ElasticElementTest {
         when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "1234"));
         when(config.springboot3()).thenReturn(new FrameworkBuild("", "3.10.3"));
         when(config.springboot4()).thenReturn(new FrameworkBuild("", "4.10.3"));
-        FinePrint p = new FinePrint(config);
+        FinePrint p = new FinePrint(new BenchmarkData(null, null, config));
         String s = drawSvg(p);
         assertTrue(s.contains("Spring 3: 3.10.3"), s);
         assertTrue(s.contains("Spring 4: 4.10.3"), s);
@@ -84,7 +89,7 @@ class FinePrintTest extends ElasticElementTest {
       var config = mock(Config.class);
       when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "1234"));
 
-      var finePrint = new FinePrint(config);
+      var finePrint = new FinePrint(new BenchmarkData(null, null, config));
       var s = drawSvg(finePrint);
 
       assertTrue(s.contains("Scenario: ootb"));
@@ -95,7 +100,7 @@ class FinePrintTest extends ElasticElementTest {
       var config = mock(Config.class);
       when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "1234"));
 
-      var finePrint = new FinePrint(config);
+      var finePrint = new FinePrint(new BenchmarkData(null, null, config));
       var s = drawSvg(finePrint);
 
       assertTrue(s.contains("Commit: 1234"));
@@ -106,7 +111,7 @@ class FinePrintTest extends ElasticElementTest {
       var config = mock(Config.class);
       when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "12345698712665655"));
 
-      var finePrint = new FinePrint(config);
+      var finePrint = new FinePrint(new BenchmarkData(null, null, config));
       var s = drawSvg(finePrint);
 
       assertTrue(s.contains("Commit: 1234569871"));
@@ -117,9 +122,22 @@ class FinePrintTest extends ElasticElementTest {
       var config = mock(Config.class);
       when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "12345698712665655", "1234"));
 
-      var finePrint = new FinePrint(config);
+      var finePrint = new FinePrint(new BenchmarkData(null, null, config));
       var s = drawSvg(finePrint);
 
       assertTrue(s.contains("Commit: 1234"));
+    }
+
+    @Test
+    void benchmarkDateIncluded() {
+      var timing = mock(Timing.class);
+      var config = mock(Config.class);
+      var now = Instant.now();
+      when(timing.stop()).thenReturn(now);
+
+      var finePrint = new FinePrint(new BenchmarkData(timing, null, config));
+      var s = drawSvg(finePrint);
+
+      assertTrue(s.contains("Execution date: " + now.atZone(ZoneOffset.UTC).format(FinePrint.DATE_TIME_FORMATTER)));
     }
 }
