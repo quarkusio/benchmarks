@@ -35,7 +35,7 @@ jobs:
         id: reset_needed
         run: |
           # Decide if any images has changed on this branch
-          if [ -n "$(git status --porcelain images/tuned/*svg)" ]; then
+          if [ -n "$(git status --porcelain images/*svg)" ]; then
             echo "Changes detected from reset."
             echo "reset_needed=true" >> $GITHUB_OUTPUT
           else
@@ -48,7 +48,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git add images/tuned/*svg
+          git add images/*svg
           git commit -m "Reset while processing #${{ steps.pr.outputs.id }}" || echo "No changes to commit"
           git push origin -u pr-images-reset --force
 
@@ -57,7 +57,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git rm -f images/tuned/*svg || echo "No files to remove"
+          git rm -f images/*svg || echo "No files to remove"
 
       - name: Download PR Artifact
         uses: actions/download-artifact@v7
@@ -71,10 +71,10 @@ jobs:
         id: changed
         run: |
           # Refresh index so git diff-index doesn't return true just because of timestamp changes
-          git add images/tuned/*svg
+          git add images/*svg
           git update-index --refresh
           # Decide if any images has changed relative to origin/main (not just the head of this branch)
-          if ! git diff-index --quiet origin/main -- images/tuned/*svg; then
+          if ! git diff-index --quiet origin/main -- images/*svg; then
             echo "Changes detected."
             echo "files_changed=true" >> $GITHUB_OUTPUT
           else
@@ -85,7 +85,7 @@ jobs:
         id: branch_changed
         run: |
           # Decide if any images has changed on this branch
-          if [ -n "$(git status --porcelain images/tuned/*svg)" ]; then
+          if [ -n "$(git status --porcelain images/*svg)" ]; then
             echo "Changes detected."
             echo "branch_changed=true" >> $GITHUB_OUTPUT
           else
@@ -113,7 +113,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Stage all SVG files
-          git add images/tuned/*svg
+          git add images/*svg
           
           DIFF=$(git diff --cached --name-status)
           
@@ -124,21 +124,21 @@ jobs:
           
           # Added SVGs
           ADDED=$(echo "$DIFF" \
-            | grep -E '^A\s+images/tuned/.*\.svg' \
+            | grep -E '^A\s+images/.*\.svg' \
             | awk '{print $2}')
           
           # Removed SVGs
           REMOVED=$(echo "$DIFF" \
-            | grep -E '^D\s+images/tuned/.*\.svg' \
+            | grep -E '^D\s+images/.*\.svg' \
             | awk '{print $2}')
 
           # Renamed SVGs: old -> removed, new -> added
           RENAMED_OLD=$(echo "$DIFF" \
-            | grep -E '^R[0-9]*\s+images/tuned/.*\.svg\s+images/tuned/.*\.svg' \
+            | grep -E '^R[0-9]*\s+images/.*\.svg\s+images/.*\.svg' \
             | awk '{print $2}')
           
           RENAMED_NEW=$(echo "$DIFF" \
-            | grep -E '^R[0-9]*\s+images/tuned/.*\.svg\s+images/tuned/.*\.svg' \
+            | grep -E '^R[0-9]*\s+images/.*\.svg\s+images/.*\.svg' \
             | awk '{print $3}')
 
           # Merge lists and convert to comma-separated
