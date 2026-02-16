@@ -1,0 +1,51 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.2)
+
+2026-02-16T11:15:07.498-05:00  INFO 3042701 --- [           main] org.acme.SpringBoot4Application          : Starting SpringBoot4Application v1.0 using Java 25.0.2 with PID 3042701 (/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/springboot4.jar started by jenkins in /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4)
+2026-02-16T11:15:07.511-05:00  INFO 3042701 --- [           main] org.acme.SpringBoot4Application          : No active profile set, falling back to 1 default profile: "default"
+2026-02-16T11:15:08.578-05:00  INFO 3042701 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-16T11:15:08.638-05:00  INFO 3042701 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interface.
+2026-02-16T11:15:09.271-05:00  INFO 3042701 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-02-16T11:15:09.289-05:00  INFO 3042701 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-16T11:15:09.289-05:00  INFO 3042701 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-16T11:15:09.321-05:00  INFO 3042701 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1722 ms
+2026-02-16T11:15:09.846-05:00  INFO 3042701 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-16T11:15:10.118-05:00  INFO 3042701 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1282f784
+2026-02-16T11:15:10.120-05:00  INFO 3042701 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-16T11:15:10.161-05:00  INFO 3042701 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-16T11:15:10.251-05:00  INFO 3042701 --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-16T11:15:10.284-05:00  INFO 3042701 --- [           main] org.hibernate.orm.cache                  : HHH90001028: Second-level cache region factory [org.hibernate.cache.jcache.internal.JCacheRegionFactory]
+2026-02-16T11:15:10.866-05:00  INFO 3042701 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-16T11:15:10.999-05:00  INFO 3042701 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/fruits]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.7
+	Default catalog/schema: fruits/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-16T11:15:12.205-05:00  INFO 3042701 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16T11:15:12.214-05:00  INFO 3042701 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-16T11:15:12.302-05:00  INFO 3042701 --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-16T11:15:12.952-05:00  INFO 3042701 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-02-16T11:15:13.021-05:00  INFO 3042701 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-02-16T11:15:13.030-05:00  INFO 3042701 --- [           main] org.acme.SpringBoot4Application          : Started SpringBoot4Application in 6.113 seconds (process running for 6.849)
+2026-02-16T11:15:16.861-05:00  INFO 3042701 --- [omcat-handler-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-16T11:15:16.862-05:00  INFO 3042701 --- [omcat-handler-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-16T11:15:16.864-05:00  INFO 3042701 --- [omcat-handler-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-02-16T11:18:37.398-05:00  INFO 3042701 --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-16T11:18:37.400-05:00  INFO 3042701 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-02-16T11:18:37.404-05:00  INFO 3042701 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-16T11:18:37.408-05:00  INFO 3042701 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-16T11:18:37.412-05:00  INFO 3042701 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

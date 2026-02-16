@@ -1,0 +1,46 @@
+[INFO] Scanning for projects...
+[WARNING] Quarkus Maven extension: an explicit 'argLine' is defined in maven-surefire-plugin config, but does not contain '@{argLine}': we will not be able to inject JVM parameters automatically. Please add '@{argLine}' to the argLine configuration you have defined.
+[INFO] 
+[INFO] -------------------------< org.acme:quarkus3 >--------------------------
+[INFO] Building quarkus3 1.0
+[INFO]   from pom.xml
+[INFO] ------------------------------[ quarkus ]-------------------------------
+[WARNING] The artifact io.quarkus:quarkus-junit5:jar:3.31.3 has been relocated to io.quarkus:quarkus-junit:jar:3.31.3: Update the artifactId in your project build file. Refer to https://github.com/quarkusio/quarkus/wiki/Migration-Guide-3.31 for more information.
+[WARNING] The artifact io.quarkus:quarkus-junit5-mockito:jar:3.31.3 has been relocated to io.quarkus:quarkus-junit-mockito:jar:3.31.3: Update the artifactId in your project build file. Refer to https://github.com/quarkusio/quarkus/wiki/Migration-Guide-3.31 for more information.
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ quarkus3 ---
+[INFO] Deleting /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ quarkus3 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- quarkus:3.31.3:generate-code (default-generate-code) @ quarkus3 ---
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ quarkus3 ---
+[INFO] Recompiling the module because of changed source code.
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 16 source files with javac [debug release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ quarkus3 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/src/test/resources
+[INFO] 
+[INFO] --- quarkus:3.31.3:generate-code-tests (default-generate-code-tests) @ quarkus3 ---
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ quarkus3 ---
+[INFO] Recompiling the module because of changed dependency.
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 4 source files with javac [debug release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ quarkus3 ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- quarkus:3.31.3:build (default-build) @ quarkus3 ---
+[INFO] [io.quarkus.deployment.QuarkusAugmentor] Quarkus augmentation completed in 2720ms
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.600 s
+[INFO] Finished at: 2026-02-16T08:08:55-05:00
+[INFO] ------------------------------------------------------------------------
