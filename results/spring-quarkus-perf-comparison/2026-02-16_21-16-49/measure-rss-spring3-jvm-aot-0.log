@@ -1,0 +1,46 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.10)
+
+2026-02-16T14:00:37.492-05:00  INFO 3257932 --- [           main] org.acme.SpringBoot3Application          : Starting AOT-processed SpringBoot3Application v1.0 using Java 25.0.2 with PID 3257932 (/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3/target/springboot3.jar started by jenkins in /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot3)
+2026-02-16T14:00:37.496-05:00  INFO 3257932 --- [           main] org.acme.SpringBoot3Application          : No active profile set, falling back to 1 default profile: "default"
+2026-02-16T14:00:38.103-05:00  INFO 3257932 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-16T14:00:38.119-05:00  INFO 3257932 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-16T14:00:38.120-05:00  INFO 3257932 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-16T14:00:38.150-05:00  INFO 3257932 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-16T14:00:38.151-05:00  INFO 3257932 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 652 ms
+2026-02-16T14:00:38.621-05:00  INFO 3257932 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-16T14:00:38.926-05:00  INFO 3257932 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@359066bc
+2026-02-16T14:00:38.928-05:00  INFO 3257932 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-16T14:00:38.989-05:00  INFO 3257932 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16T14:00:39.062-05:00  INFO 3257932 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.41.Final
+2026-02-16T14:00:39.104-05:00  INFO 3257932 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000025: Second-level cache region factory [org.hibernate.cache.jcache.internal.JCacheRegionFactory]
+2026-02-16T14:00:39.477-05:00  INFO 3257932 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-16T14:00:39.582-05:00  INFO 3257932 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.7
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-16T14:00:40.619-05:00  INFO 3257932 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16T14:00:40.622-05:00  INFO 3257932 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-16T14:00:41.011-05:00  WARN 3257932 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-16T14:00:41.422-05:00  INFO 3257932 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-02-16T14:00:41.494-05:00  INFO 3257932 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-02-16T14:00:41.498-05:00  INFO 3257932 --- [           main] org.acme.SpringBoot3Application          : Started SpringBoot3Application in 5.14 seconds (process running for 5.812)
+2026-02-16T14:01:07.562-05:00  INFO 3257932 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-16T14:01:07.562-05:00  INFO 3257932 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-16T14:01:07.564-05:00  INFO 3257932 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-02-16T14:01:08.887-05:00  INFO 3257932 --- [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-16T14:01:08.890-05:00  INFO 3257932 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-02-16T14:01:08.896-05:00  INFO 3257932 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-16T14:01:08.906-05:00  INFO 3257932 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-16T14:01:08.908-05:00  INFO 3257932 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

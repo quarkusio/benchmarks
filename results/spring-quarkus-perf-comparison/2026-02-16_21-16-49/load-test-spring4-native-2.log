@@ -1,0 +1,50 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.2)
+
+2026-02-16T16:09:59.559-05:00  INFO 3350752 --- [           main] org.acme.SpringBoot4Application          : Starting AOT-processed SpringBoot4Application using Java 25.0.2 with PID 3350752 (/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/springboot4 started by jenkins in /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4)
+2026-02-16T16:09:59.559-05:00  INFO 3350752 --- [           main] org.acme.SpringBoot4Application          : No active profile set, falling back to 1 default profile: "default"
+2026-02-16T16:09:59.650-05:00  INFO 3350752 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-02-16T16:09:59.656-05:00  INFO 3350752 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-16T16:09:59.656-05:00  INFO 3350752 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-16T16:09:59.673-05:00  INFO 3350752 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 113 ms
+2026-02-16T16:09:59.735-05:00  INFO 3350752 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-16T16:09:59.790-05:00  INFO 3350752 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@60ea8926
+2026-02-16T16:09:59.790-05:00  INFO 3350752 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-16T16:09:59.795-05:00  INFO 3350752 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-16T16:09:59.809-05:00  INFO 3350752 --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-16T16:09:59.822-05:00  INFO 3350752 --- [           main] org.hibernate.orm.cache                  : HHH90001028: Second-level cache region factory [org.hibernate.cache.jcache.internal.JCacheRegionFactory]
+2026-02-16T16:09:59.877-05:00  INFO 3350752 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/fruits]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.7
+	Default catalog/schema: fruits/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-16T16:09:59.966-05:00  INFO 3350752 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16T16:09:59.967-05:00  INFO 3350752 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-16T16:09:59.981-05:00  INFO 3350752 --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-16T16:10:00.003-05:00  WARN 3350752 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-16T16:10:00.065-05:00  WARN 3350752 --- [           main] i.m.c.i.binder.jvm.JvmGcMetrics          : GC notifications will not be available because no GarbageCollectorMXBean of the JVM provides any. GCs=[young generation scavenger, complete scavenger]
+2026-02-16T16:10:00.069-05:00  INFO 3350752 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-02-16T16:10:00.077-05:00  INFO 3350752 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-02-16T16:10:00.079-05:00  INFO 3350752 --- [           main] org.acme.SpringBoot4Application          : Started SpringBoot4Application in 0.619 seconds (process running for 0.891)
+2026-02-16T16:10:09.371-05:00  INFO 3350752 --- [io-8080-exec-18] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-16T16:10:09.371-05:00  INFO 3350752 --- [io-8080-exec-18] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-16T16:10:09.372-05:00  INFO 3350752 --- [io-8080-exec-18] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-02-16T16:13:30.925-05:00  INFO 3350752 --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-16T16:13:30.926-05:00  INFO 3350752 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-02-16T16:13:30.929-05:00  INFO 3350752 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-16T16:13:30.930-05:00  INFO 3350752 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-16T16:13:30.930-05:00  INFO 3350752 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -1,0 +1,52 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.2)
+
+2026-02-16T15:09:22.202-05:00  INFO 3310774 --- [           main] org.acme.SpringBoot4Application          : Starting SpringBoot4Application v1.0 using Java 25.0.2 with PID 3310774 (/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/springboot4.jar started by jenkins in /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4)
+2026-02-16T15:09:22.209-05:00  INFO 3310774 --- [           main] org.acme.SpringBoot4Application          : No active profile set, falling back to 1 default profile: "default"
+2026-02-16T15:09:23.260-05:00  INFO 3310774 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-16T15:09:23.318-05:00  INFO 3310774 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2026-02-16T15:09:23.958-05:00  INFO 3310774 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-02-16T15:09:23.975-05:00  INFO 3310774 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-16T15:09:23.976-05:00  INFO 3310774 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-16T15:09:24.010-05:00  INFO 3310774 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1729 ms
+2026-02-16T15:09:24.539-05:00  INFO 3310774 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-16T15:09:24.790-05:00  INFO 3310774 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@50de907a
+2026-02-16T15:09:24.791-05:00  INFO 3310774 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-16T15:09:24.835-05:00  INFO 3310774 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-16T15:09:24.938-05:00  INFO 3310774 --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-16T15:09:24.975-05:00  INFO 3310774 --- [           main] org.hibernate.orm.cache                  : HHH90001028: Second-level cache region factory [org.hibernate.cache.jcache.internal.JCacheRegionFactory]
+2026-02-16T15:09:25.560-05:00  INFO 3310774 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-16T15:09:25.692-05:00  INFO 3310774 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/fruits]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.7
+	Default catalog/schema: fruits/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-16T15:09:26.890-05:00  INFO 3310774 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16T15:09:26.898-05:00  INFO 3310774 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-16T15:09:26.985-05:00  INFO 3310774 --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-16T15:09:27.229-05:00  WARN 3310774 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-16T15:09:27.632-05:00  INFO 3310774 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-02-16T15:09:27.705-05:00  INFO 3310774 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-02-16T15:09:27.714-05:00  INFO 3310774 --- [           main] org.acme.SpringBoot4Application          : Started SpringBoot4Application in 6.134 seconds (process running for 6.9)
+2026-02-16T15:09:52.608-05:00  INFO 3310774 --- [omcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-16T15:09:52.610-05:00  INFO 3310774 --- [omcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-16T15:09:52.612-05:00  INFO 3310774 --- [omcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-02-16T15:09:53.964-05:00  INFO 3310774 --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-16T15:09:53.967-05:00  INFO 3310774 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-02-16T15:09:53.972-05:00  INFO 3310774 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-16T15:09:53.975-05:00  INFO 3310774 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-16T15:09:53.978-05:00  INFO 3310774 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
