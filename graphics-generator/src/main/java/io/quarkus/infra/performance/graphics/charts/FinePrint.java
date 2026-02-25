@@ -28,7 +28,7 @@ import static io.quarkus.infra.performance.graphics.model.Category.QUARKUS;
 import static io.quarkus.infra.performance.graphics.model.Category.SPRING;
 
 public class FinePrint implements ElasticElement {
-    static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     private static final String SOURCE_CODE_LABEL = "Source:";
 
     private static final int MAXIMUM_FONT_SIZE = 30;
