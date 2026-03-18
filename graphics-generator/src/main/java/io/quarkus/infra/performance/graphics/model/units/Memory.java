@@ -18,7 +18,7 @@ public class Memory extends DimensionalNumber {
     @JsonCreator
     public Memory(double mem) {
         super(mem);
-        this.units = "MB";
+        this.units = "MiB";
     }
 
     @Override
@@ -33,6 +33,6 @@ public class Memory extends DimensionalNumber {
 
     private static String extractUnits(String s) {
         Matcher m = UNIT_PATTERN.matcher(s.trim());
-        return m.matches() ? m.group(2) : "MB";
+        return m.matches() ? m.group(2) : "MiB";
     }
 }
