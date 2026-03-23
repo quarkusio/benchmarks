@@ -1,18 +1,16 @@
 package io.quarkus.infra.performance.graphics;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
 import java.nio.file.Path;
 import java.time.Instant;
-
 import jakarta.inject.Inject;
-
-import org.junit.jupiter.api.Test;
 
 import io.quarkus.infra.performance.graphics.model.BenchmarkData;
 import io.quarkus.infra.performance.graphics.model.Framework;
 import io.quarkus.test.junit.QuarkusTest;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @QuarkusTest
 class DataIngesterTest {
@@ -40,7 +38,7 @@ class DataIngesterTest {
         // Resources
         assertNotNull(data.config().resources());
         assertNotNull(data.config().resources().cpu());
-        assertEquals("4", data.config().resources().appCpus());
+        assertEquals(4, data.config().resources().appCpus());
         assertEquals("0-3", data.config().resources().cpu().app());
         assertEquals("10", data.config().resources().cpu().firstRequest());
         assertEquals("7-9", data.config().resources().cpu().loadGenerator());
