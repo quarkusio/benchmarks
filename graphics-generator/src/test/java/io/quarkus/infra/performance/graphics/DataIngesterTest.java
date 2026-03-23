@@ -40,7 +40,7 @@ class DataIngesterTest {
         // Resources
         assertNotNull(data.config().resources());
         assertNotNull(data.config().resources().cpu());
-        assertEquals(4, data.config().resources().appCpus());
+        assertEquals("4", data.config().resources().appCpus());
         assertEquals("0-3", data.config().resources().cpu().app());
         assertEquals("10", data.config().resources().cpu().firstRequest());
         assertEquals("7-9", data.config().resources().cpu().loadGenerator());
