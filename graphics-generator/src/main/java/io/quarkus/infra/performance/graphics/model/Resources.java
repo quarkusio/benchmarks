@@ -3,7 +3,7 @@ package io.quarkus.infra.performance.graphics.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public record Resources(
-    @JsonProperty("app_cpus") int appCpus,
+    @JsonProperty("app_cpus") String appCpus,
     Cpu cpu
 ) {
 
