@@ -1,45 +1,45 @@
 {
   "timing": {
-    "start": "2026-02-16T17:13:18Z",
-    "stop": "2026-02-16T21:17:17Z"
+    "start": "2026-03-25T12:13:37Z",
+    "stop": "2026-03-25T16:17:08Z"
   },
   "results": {
     "quarkus3-jvm": {
       "build": {
         "timings": [
-          10.2,
-          10.21,
-          10.23
+          10.57,
+          10.42,
+          10.57
         ],
-        "avBuildTime": 10.213333333333333
+        "avBuildTime": 10.520000000000001
       },
       "startup": {
         "timings": [
-          2950,
-          2988,
-          2931
+          3508.836419,
+          3535.867268,
+          3543.298289
         ],
-        "avStartTime": 2956.3333333333335
+        "avStartTime": 3529.333992
       },
       "rss": {
         "startup": [
-          231.88671875,
-          234.0234375,
-          234.67578125
+          230.83203125,
+          237.4765625,
+          231.671875
         ],
         "firstRequest": [
-          267.90625,
-          268.4609375,
-          269.2890625
+          265.46875,
+          269.87890625,
+          266.80859375
         ],
-        "avStartupRss": 233.52864583333334,
-        "avFirstRequestRss": 268.5520833333333
+        "avStartupRss": 233.32682291666666,
+        "avFirstRequestRss": 267.3854166666667
       },
       "load": {
         "throughput": [
-          19429.75,
-          18803.79,
-          19448.58
+          22271.54,
+          22182.91,
+          21843.74
         ],
         "connectionErrors": [
           0,
@@ -52,18 +52,18 @@
           0
         ],
         "rss": [
-          692.33984375,
-          707.453125,
-          695.41015625
+          688.5703125,
+          720.2109375,
+          686.0390625
         ],
         "throughputDensity": [
-          28.063891130056025,
-          26.579556065993774,
-          27.967063502317092
+          32.34461259176056,
+          30.800573616670462,
+          31.840373521004864
         ],
-        "avThroughput": 19227.373333333333,
-        "avMaxRss": 698.4010416666666,
-        "maxThroughputDensity": 28.063891130056025,
+        "avThroughput": 22099.396666666667,
+        "avMaxRss": 698.2734375,
+        "maxThroughputDensity": 32.34461259176056,
         "avConnectionErrors": 0,
         "avRequestTimeouts": 0
       }
@@ -71,39 +71,39 @@
     "quarkus3-virtual": {
       "build": {
         "timings": [
-          10.28,
-          10.29,
-          10.42
+          10.3,
+          10.38,
+          10.36
         ],
-        "avBuildTime": 10.33
+        "avBuildTime": 10.346666666666666
       },
       "startup": {
         "timings": [
-          2957,
-          2960,
-          3001
+          3526.915967,
+          3527.998635,
+          3527.00776
         ],
-        "avStartTime": 2972.6666666666665
+        "avStartTime": 3527.307454
       },
       "rss": {
         "startup": [
-          229.9140625,
-          229.6953125,
-          230.7265625
+          231.890625,
+          222.34765625,
+          222.71875
         ],
         "firstRequest": [
-          273.59375,
-          272.1875,
-          279.84375
+          272.875,
+          270.3671875,
+          265.125
         ],
-        "avStartupRss": 230.11197916666666,
-        "avFirstRequestRss": 275.2083333333333
+        "avStartupRss": 225.65234375,
+        "avFirstRequestRss": 269.4557291666667
       },
       "load": {
         "throughput": [
-          25512.27,
-          25275.05,
-          26118.8
+          31931.51,
+          31797.55,
+          31579.39
         ],
         "connectionErrors": [
           0,
@@ -116,18 +116,18 @@
           0
         ],
         "rss": [
-          685.09765625,
-          680.8046875,
-          677.703125
+          673.80859375,
+          660.02734375,
+          671.71875
         ],
         "throughputDensity": [
-          37.23888086210337,
-          37.12525848318281,
-          38.540179374265094
+          47.38958555320444,
+          48.176110128013164,
+          47.012816003721795
         ],
-        "avThroughput": 25635.373333333333,
-        "avMaxRss": 681.2018229166666,
-        "maxThroughputDensity": 38.540179374265094,
+        "avThroughput": 31769.483333333334,
+        "avMaxRss": 668.5182291666666,
+        "maxThroughputDensity": 48.176110128013164,
         "avConnectionErrors": 0,
         "avRequestTimeouts": 0
       }
@@ -135,54 +135,54 @@
     "quarkus3-native": {
       "build": {
         "timings": [
-          77.77,
-          76.93,
-          75.08
+          75.64,
+          76.84,
+          77.16
         ],
         "native": {
           "rss": [
+            7.75,
             5.61,
-            5.49,
-            5.56
+            6.46
           ],
-          "binarySize": 95.02
+          "binarySize": 95.08
         },
-        "avBuildTime": 76.59333333333332,
-        "avNativeRSS": 5.553333333333334,
-        "classCount": "22,347",
-        "fieldCount": "29,218",
-        "methodCount": "106,127",
-        "reflectionClassCount": "7,391",
+        "avBuildTime": 76.54666666666667,
+        "avNativeRSS": 6.6066666666666665,
+        "classCount": "22,362",
+        "fieldCount": "29,229",
+        "methodCount": "106,188",
+        "reflectionClassCount": "7,395",
         "reflectionFieldCount": 245,
-        "reflectionMethodCount": "7,419"
+        "reflectionMethodCount": "7,425"
       },
       "startup": {
         "timings": [
-          64,
-          73,
-          71
+          478.343546,
+          467.250487,
+          469.347227
         ],
-        "avStartTime": 69.33333333333333
+        "avStartTime": 471.64708666666667
       },
       "rss": {
         "startup": [
-          69.0703125,
-          69.078125,
-          69.0546875
+          68.4765625,
+          68.46484375,
+          68.47265625
         ],
         "firstRequest": [
-          76.8359375,
-          76.84765625,
-          76.86328125
+          75.9453125,
+          75.94921875,
+          75.9453125
         ],
-        "avStartupRss": 69.06770833333333,
-        "avFirstRequestRss": 76.84895833333333
+        "avStartupRss": 68.47135416666667,
+        "avFirstRequestRss": 75.94661458333333
       },
       "load": {
         "throughput": [
-          10050.43,
-          10329.15,
-          10054.42
+          10483.81,
+          10488.39,
+          10502.85
         ],
         "connectionErrors": [
           0,
@@ -195,18 +195,18 @@
           0
         ],
         "rss": [
-          137.12890625,
-          133.5546875,
-          139.3125
+          132.4609375,
+          137.90625,
+          136.99609375
         ],
         "throughputDensity": [
-          73.29184104828373,
-          77.34022813688213,
-          72.17170031404217
+          79.14642760247715,
+          76.05449354180828,
+          76.66532462718486
         ],
-        "avThroughput": 10144.666666666666,
-        "avMaxRss": 136.66536458333334,
-        "maxThroughputDensity": 77.34022813688213,
+        "avThroughput": 10491.683333333332,
+        "avMaxRss": 135.78776041666666,
+        "maxThroughputDensity": 79.14642760247715,
         "avConnectionErrors": 0,
         "avRequestTimeouts": 0
       }
@@ -214,44 +214,44 @@
     "spring3-jvm": {
       "build": {
         "timings": [
-          5.22,
-          5.21,
-          5.23
+          5.17,
+          5.42,
+          5.31
         ],
-        "avBuildTime": 5.22
+        "avBuildTime": 5.3
       },
       "startup": {
         "timings": [
-          6063,
-          6088,
-          6056
+          6549.101314,
+          6503.854582,
+          6552.603848
         ],
-        "avStartTime": 6069
+        "avStartTime": 6535.1865813333325
       },
       "rss": {
         "startup": [
-          502.81640625,
-          505.60546875,
-          507.32421875
+          502.83984375,
+          506.0234375,
+          513.11328125
         ],
         "firstRequest": [
-          512.40234375,
-          524.47265625,
-          516.78515625
+          510.17578125,
+          523.421875,
+          528.34765625
         ],
-        "avStartupRss": 505.2486979166667,
-        "avFirstRequestRss": 517.88671875
+        "avStartupRss": 507.3255208333333,
+        "avFirstRequestRss": 520.6484375
       },
       "load": {
         "throughput": [
-          6915.77,
-          7057.37,
-          6971.21
+          7034.26,
+          6791.3,
+          6971.38
         ],
         "connectionErrors": [
-          2032,
-          2081,
-          2048
+          2070,
+          1999,
+          2052
         ],
         "requestTimeouts": [
           0,
@@ -259,63 +259,63 @@
           0
         ],
         "rss": [
-          714.73046875,
-          729.14453125,
-          715.1015625
+          715.16796875,
+          725.203125,
+          713.72265625
         ],
         "throughputDensity": [
-          9.676053145033913,
-          9.678972683099309,
-          9.748559317404652
+          9.835815231343162,
+          9.364686617973414,
+          9.767631640879411
         ],
-        "avThroughput": 6981.45,
-        "avMaxRss": 719.6588541666666,
-        "maxThroughputDensity": 9.748559317404652,
-        "avConnectionErrors": 2053.6666666666665,
+        "avThroughput": 6932.313333333334,
+        "avMaxRss": 718.03125,
+        "maxThroughputDensity": 9.835815231343162,
+        "avConnectionErrors": 2040.3333333333333,
         "avRequestTimeouts": 0
       }
     },
     "spring3-virtual": {
       "build": {
         "timings": [
-          5.19,
-          5.38,
-          5.19
+          5.37,
+          5.28,
+          5.24
         ],
-        "avBuildTime": 5.253333333333334
+        "avBuildTime": 5.296666666666667
       },
       "startup": {
         "timings": [
-          6086,
-          6107,
-          6130
+          6463.337503,
+          6544.414283,
+          6608.849263
         ],
-        "avStartTime": 6107.666666666667
+        "avStartTime": 6538.867016333334
       },
       "rss": {
         "startup": [
-          508.82421875,
-          519.8359375,
-          501.63671875
+          503.203125,
+          501.796875,
+          504.82421875
         ],
         "firstRequest": [
-          542.8671875,
-          553.0390625,
-          513.59765625
+          522.6796875,
+          530.62890625,
+          538.44140625
         ],
-        "avStartupRss": 510.0989583333333,
-        "avFirstRequestRss": 536.5013020833334
+        "avStartupRss": 503.2747395833333,
+        "avFirstRequestRss": 530.5833333333334
       },
       "load": {
         "throughput": [
-          9965.74,
-          9956.32,
-          9799.97
+          12433.92,
+          12467.41,
+          12008
         ],
         "connectionErrors": [
-          2921,
-          2913,
-          2842
+          3642,
+          3650,
+          3526
         ],
         "requestTimeouts": [
           0,
@@ -323,63 +323,63 @@
           0
         ],
         "rss": [
-          690.4921875,
-          662.21875,
-          694.109375
+          710.11328125,
+          693.98046875,
+          701.71484375
         ],
         "throughputDensity": [
-          14.432806308905558,
-          15.034790241140106,
-          14.118769106093689
+          17.509769678033326,
+          17.965073314608322,
+          17.11236424161791
         ],
-        "avThroughput": 9907.343333333332,
-        "avMaxRss": 682.2734375,
-        "maxThroughputDensity": 15.034790241140106,
-        "avConnectionErrors": 2892,
+        "avThroughput": 12303.11,
+        "avMaxRss": 701.9361979166666,
+        "maxThroughputDensity": 17.965073314608322,
+        "avConnectionErrors": 3606,
         "avRequestTimeouts": 0
       }
     },
     "spring3-jvm-aot": {
       "build": {
         "timings": [
-          10.59,
-          10.5,
-          10.53
+          10.32,
+          10.66,
+          10.58
         ],
-        "avBuildTime": 10.54
+        "avBuildTime": 10.520000000000001
       },
       "startup": {
         "timings": [
-          5582,
-          5629,
-          5542
+          5989.117063,
+          5985.530322,
+          5955.82426
         ],
-        "avStartTime": 5584.333333333333
+        "avStartTime": 5976.823881666667
       },
       "rss": {
         "startup": [
-          491.80078125,
-          488.69140625,
-          504.46484375
+          515.62109375,
+          512.90234375,
+          496.51171875
         ],
         "firstRequest": [
-          509.1796875,
-          501.84375,
-          513.73828125
+          523.0078125,
+          528.2890625,
+          504.2109375
         ],
-        "avStartupRss": 494.9856770833333,
-        "avFirstRequestRss": 508.25390625
+        "avStartupRss": 508.3450520833333,
+        "avFirstRequestRss": 518.5026041666666
       },
       "load": {
         "throughput": [
-          6732,
-          6914.96,
-          7073.27
+          7080.5,
+          6901.57,
+          7023.63
         ],
         "connectionErrors": [
-          1981,
-          2015,
-          2075
+          2082,
+          2036,
+          2058
         ],
         "requestTimeouts": [
           0,
@@ -387,78 +387,78 @@
           0
         ],
         "rss": [
-          704.57421875,
-          703.4609375,
-          714.9765625
+          702.31640625,
+          706.92578125,
+          675.92578125
         ],
         "throughputDensity": [
-          9.554706687882199,
-          9.829913263662917,
-          9.893009604772883
+          10.081638328522246,
+          9.762792902808705,
+          10.391126059744447
         ],
-        "avThroughput": 6906.743333333333,
-        "avMaxRss": 707.6705729166666,
-        "maxThroughputDensity": 9.893009604772883,
-        "avConnectionErrors": 2023.6666666666667,
+        "avThroughput": 7001.900000000001,
+        "avMaxRss": 695.0559895833334,
+        "maxThroughputDensity": 10.391126059744447,
+        "avConnectionErrors": 2058.6666666666665,
         "avRequestTimeouts": 0
       }
     },
     "spring3-native": {
       "build": {
         "timings": [
-          103.32,
-          103.35,
-          103.43
+          103.2,
+          104.31,
+          103.75
         ],
         "native": {
           "rss": [
-            7.1,
-            8.15,
-            7.54
+            8.04,
+            7.44,
+            8.13
           ],
-          "binarySize": 158.96
+          "binarySize": 159.03
         },
-        "avBuildTime": 103.36666666666667,
-        "avNativeRSS": 7.596666666666667,
-        "classCount": "35,867",
-        "fieldCount": "50,924",
-        "methodCount": "170,922",
-        "reflectionClassCount": "11,891",
+        "avBuildTime": 103.75333333333333,
+        "avNativeRSS": 7.87,
+        "classCount": "35,872",
+        "fieldCount": "50,953",
+        "methodCount": "170,966",
+        "reflectionClassCount": "11,894",
         "reflectionFieldCount": "1,897",
-        "reflectionMethodCount": "13,166"
+        "reflectionMethodCount": "13,176"
       },
       "startup": {
         "timings": [
-          74,
-          79,
-          77
+          876.122055,
+          883.66464,
+          877.924791
         ],
-        "avStartTime": 76.66666666666667
+        "avStartTime": 879.237162
       },
       "rss": {
         "startup": [
-          185.73046875,
-          185.7421875,
-          185.7265625
+          180.58984375,
+          180.59765625,
+          180.6015625
         ],
         "firstRequest": [
-          190.20703125,
-          190.21875,
-          190.32421875
+          185.04296875,
+          185.05078125,
+          185.0546875
         ],
-        "avStartupRss": 185.73307291666666,
-        "avFirstRequestRss": 190.25
+        "avStartupRss": 180.59635416666666,
+        "avFirstRequestRss": 185.04947916666666
       },
       "load": {
         "throughput": [
-          4472.46,
-          4475.09,
-          4468.06
+          4215.29,
+          4484.99,
+          4557.77
         ],
         "connectionErrors": [
-          1326,
-          1334,
-          1323
+          1255,
+          1327,
+          1349
         ],
         "requestTimeouts": [
           0,
@@ -466,63 +466,63 @@
           0
         ],
         "rss": [
-          216.53125,
-          213.73828125,
-          226.10546875
+          200.30859375,
+          208.69921875,
+          200.95703125
         ],
         "throughputDensity": [
-          20.655032472218213,
-          20.93724144233054,
-          19.76095502997426
+          21.04397979679791,
+          21.490209819005372,
+          22.68032111964234
         ],
-        "avThroughput": 4471.87,
-        "avMaxRss": 218.79166666666666,
-        "maxThroughputDensity": 20.93724144233054,
-        "avConnectionErrors": 1327.6666666666667,
+        "avThroughput": 4419.349999999999,
+        "avMaxRss": 203.32161458333334,
+        "maxThroughputDensity": 22.68032111964234,
+        "avConnectionErrors": 1310.3333333333333,
         "avRequestTimeouts": 0
       }
     },
     "spring4-jvm": {
       "build": {
         "timings": [
-          6,
-          6.03,
-          6.21
+          5.92,
+          5.86,
+          5.97
         ],
-        "avBuildTime": 6.080000000000001
+        "avBuildTime": 5.916666666666667
       },
       "startup": {
         "timings": [
-          6689,
-          6577,
-          6647
+          7009.765715,
+          7051.986154,
+          7035.195274
         ],
-        "avStartTime": 6637.666666666667
+        "avStartTime": 7032.315714333333
       },
       "rss": {
         "startup": [
-          567.81640625,
-          572.703125,
-          567.74609375
+          565.73828125,
+          570.4609375,
+          573.91796875
         ],
         "firstRequest": [
-          580.87890625,
-          587.125,
-          576.984375
+          578.51171875,
+          582.9296875,
+          596.0234375
         ],
-        "avStartupRss": 569.421875,
-        "avFirstRequestRss": 581.6627604166666
+        "avStartupRss": 570.0390625,
+        "avFirstRequestRss": 585.8216145833334
       },
       "load": {
         "throughput": [
-          7511.31,
-          7408.33,
-          7241.87
+          8643.67,
+          8409.78,
+          8378.39
         ],
         "connectionErrors": [
-          2205,
-          2165,
-          2133
+          2524,
+          2470,
+          2464
         ],
         "requestTimeouts": [
           0,
@@ -530,63 +530,63 @@
           0
         ],
         "rss": [
-          699.28125,
-          705.6328125,
-          720.32421875
+          698.65234375,
+          713.18359375,
+          710.4140625
         ],
         "throughputDensity": [
-          10.741472047191314,
-          10.498845672656413,
-          10.053625591774537
+          12.371918705096308,
+          11.791886512392168,
+          11.793671384425895
         ],
-        "avThroughput": 7387.169999999999,
-        "avMaxRss": 708.4127604166666,
-        "maxThroughputDensity": 10.741472047191314,
-        "avConnectionErrors": 2167.6666666666665,
+        "avThroughput": 8477.28,
+        "avMaxRss": 707.4166666666666,
+        "maxThroughputDensity": 12.371918705096308,
+        "avConnectionErrors": 2486,
         "avRequestTimeouts": 0
       }
     },
     "spring4-virtual": {
       "build": {
         "timings": [
-          5.96,
-          5.87,
+          5.98,
+          5.95,
           5.97
         ],
-        "avBuildTime": 5.933333333333334
+        "avBuildTime": 5.966666666666666
       },
       "startup": {
         "timings": [
-          6642,
-          6634,
-          6604
+          7137.143563,
+          7004.509181,
+          7081.030307
         ],
-        "avStartTime": 6626.666666666667
+        "avStartTime": 7074.227683666667
       },
       "rss": {
         "startup": [
-          567.51171875,
-          558.5703125,
-          572.640625
+          566.109375,
+          559.01171875,
+          569.53125
         ],
         "firstRequest": [
-          577.32421875,
-          573.12109375,
-          592.83984375
+          580.52734375,
+          593.1953125,
+          585.31640625
         ],
-        "avStartupRss": 566.2408854166666,
-        "avFirstRequestRss": 581.0950520833334
+        "avStartupRss": 564.8841145833334,
+        "avFirstRequestRss": 586.3463541666666
       },
       "load": {
         "throughput": [
-          9990.9,
-          9854.34,
-          10193.84
+          13570.65,
+          12677.68,
+          12321.75
         ],
         "connectionErrors": [
-          2921,
-          2900,
-          2984
+          3941,
+          3688,
+          3571
         ],
         "requestTimeouts": [
           0,
@@ -594,63 +594,63 @@
           0
         ],
         "rss": [
-          707.953125,
-          700.4296875,
-          696.84375
+          675.91796875,
+          690.1484375,
+          678.9140625
         ],
         "throughputDensity": [
-          14.112375024829504,
-          14.068992471139367,
-          14.62858782905063
+          20.07736238333285,
+          18.36949750393371,
+          18.149204266924432
         ],
-        "avThroughput": 10013.026666666667,
-        "avMaxRss": 701.7421875,
-        "maxThroughputDensity": 14.62858782905063,
-        "avConnectionErrors": 2935,
+        "avThroughput": 12856.693333333335,
+        "avMaxRss": 681.66015625,
+        "maxThroughputDensity": 20.07736238333285,
+        "avConnectionErrors": 3733.3333333333335,
         "avRequestTimeouts": 0
       }
     },
     "spring4-jvm-aot": {
       "build": {
         "timings": [
-          12.77,
-          12.92,
-          12.98
+          12.88,
+          12.88,
+          12.99
         ],
-        "avBuildTime": 12.89
+        "avBuildTime": 12.916666666666666
       },
       "startup": {
         "timings": [
-          6034,
-          6031,
-          5989
+          6590.968027,
+          6681.255834,
+          6453.102684
         ],
-        "avStartTime": 6018
+        "avStartTime": 6575.108848333333
       },
       "rss": {
         "startup": [
-          547.01953125,
-          557.05078125,
-          553.53125
+          575.82421875,
+          545.171875,
+          552.18359375
         ],
         "firstRequest": [
-          558.01953125,
-          570.25390625,
-          567.01171875
+          589.80859375,
+          579.57421875,
+          568.9453125
         ],
-        "avStartupRss": 552.5338541666666,
-        "avFirstRequestRss": 565.0950520833334
+        "avStartupRss": 557.7265625,
+        "avFirstRequestRss": 579.4427083333334
       },
       "load": {
         "throughput": [
-          7411.47,
-          7411.21,
-          7674.45
+          8577.65,
+          8519.01,
+          8286.55
         ],
         "connectionErrors": [
-          2163,
-          2185,
-          2256
+          2512,
+          2489,
+          2435
         ],
         "requestTimeouts": [
           0,
@@ -658,78 +658,78 @@
           0
         ],
         "rss": [
-          693.59375,
-          721.53515625,
-          694.171875
+          713.765625,
+          714.22265625,
+          687.296875
         ],
         "throughputDensity": [
-          10.685606668168507,
-          10.271446839150466,
-          11.055547302316159
+          12.017460213217749,
+          11.927666989351405,
+          12.056725850819559
         ],
-        "avThroughput": 7499.043333333334,
-        "avMaxRss": 703.1002604166666,
-        "maxThroughputDensity": 11.055547302316159,
-        "avConnectionErrors": 2201.3333333333335,
+        "avThroughput": 8461.07,
+        "avMaxRss": 705.0950520833334,
+        "maxThroughputDensity": 12.056725850819559,
+        "avConnectionErrors": 2478.6666666666665,
         "avRequestTimeouts": 0
       }
     },
     "spring4-native": {
       "build": {
         "timings": [
-          113.73,
-          114.36,
-          113.05
+          113.94,
+          114.65,
+          113.07
         ],
         "native": {
           "rss": [
-            8.67,
-            8.35,
-            8.7
+            8.73,
+            7.44,
+            8.71
           ],
-          "binarySize": 169.58
+          "binarySize": 170.56
         },
-        "avBuildTime": 113.71333333333332,
-        "avNativeRSS": 8.573333333333332,
-        "classCount": "37,911",
-        "fieldCount": "52,889",
-        "methodCount": "181,734",
-        "reflectionClassCount": "13,050",
-        "reflectionFieldCount": "4,491",
-        "reflectionMethodCount": "19,968"
+        "avBuildTime": 113.88666666666666,
+        "avNativeRSS": 8.293333333333335,
+        "classCount": "38,009",
+        "fieldCount": "53,051",
+        "methodCount": "182,585",
+        "reflectionClassCount": "13,076",
+        "reflectionFieldCount": "4,493",
+        "reflectionMethodCount": "20,004"
       },
       "startup": {
         "timings": [
-          133,
-          135,
-          132
+          925.274571,
+          932.05577,
+          933.751572
         ],
-        "avStartTime": 133.33333333333334
+        "avStartTime": 930.3606376666667
       },
       "rss": {
         "startup": [
-          195.82421875,
-          195.82421875,
-          195.82421875
+          189.76953125,
+          189.78125,
+          189.76953125
         ],
         "firstRequest": [
-          201.88671875,
-          201.8828125,
-          201.88671875
+          195.3984375,
+          195.41015625,
+          195.3984375
         ],
-        "avStartupRss": 195.82421875,
-        "avFirstRequestRss": 201.88541666666666
+        "avStartupRss": 189.7734375,
+        "avFirstRequestRss": 195.40234375
       },
       "load": {
         "throughput": [
-          4106.92,
-          4106.29,
-          4092.3
+          4504.05,
+          4437.82,
+          4450.88
         ],
         "connectionErrors": [
-          1205,
-          1202,
-          1209
+          1330,
+          1319,
+          1321
         ],
         "requestTimeouts": [
           0,
@@ -737,19 +737,19 @@
           0
         ],
         "rss": [
-          260.33984375,
-          266.29296875,
-          272.34375
+          242.98828125,
+          253.14453125,
+          242.62109375
         ],
         "throughputDensity": [
-          15.775226491815086,
-          15.420196857901454,
-          15.026230636833047
+          18.536079093320474,
+          17.530775711750636,
+          18.34498365828919
         ],
-        "avThroughput": 4101.836666666666,
-        "avMaxRss": 266.3255208333333,
-        "maxThroughputDensity": 15.775226491815086,
-        "avConnectionErrors": 1205.3333333333333,
+        "avThroughput": 4464.25,
+        "avMaxRss": 246.25130208333334,
+        "maxThroughputDensity": 18.536079093320474,
+        "avConnectionErrors": 1323.3333333333333,
         "avRequestTimeouts": 0
       }
     }
@@ -767,31 +767,36 @@
     "quarkus": {
       "build_config_args": "",
       "native_build_options": "",
-      "version": "3.31.3"
+      "version": "3.32.4"
     },
     "repo": {
+      "short_commit": "d1d8103",
       "scenario": "ootb",
-      "commit": "1aa2446df5bb6fedd67c0b3112e723edab779dcf",
+      "commit": "d1d81034958c952d8ee5ba029bdf94f507ac35a4",
       "branch": "ootb",
+      "scenarioName": "Out of the box",
       "url": "https://github.com/quarkusio/spring-quarkus-perf-comparison.git"
     },
     "springboot3": {
       "native_build_options": "",
-      "version": "3.5.10"
+      "version": "3.5.12"
     },
     "springboot4": {
       "native_build_options": "",
-      "version": "4.0.2"
+      "version": "4.0.4"
     },
     "resources": {
       "cpu": {
-        "app": "0-3",
-        "1st_request": 10,
-        "monitor": 11,
-        "load_generator": "7-9",
-        "db": "4-6"
+        "app": "2,4,6,8",
+        "1st_request": 22,
+        "monitor": 28,
+        "load_generator": "22,24,26",
+        "db": "10,12,14"
       },
       "app_cpus": 4
+    },
+    "run": {
+      "description": "Running ootb tests after merging new affinity and fixing bugs"
     },
     "profiler": {
       "name": "none",
