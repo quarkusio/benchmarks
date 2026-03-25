@@ -9,8 +9,8 @@ on:
       - 'main'
 
 concurrency:
-  group: "workflow = ${{ github.workflow }}, ref = ${{ github.event.ref }}, pr = ${{ github.event.pull_request.id }}"
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+  group: git-operations
+  cancel-in-progress: false
 
 jobs:
   preview:
