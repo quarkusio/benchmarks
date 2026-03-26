@@ -42,8 +42,9 @@ public class EmbeddableFont {
 
         this.fontName = fontName;
 
-        Set<DownloadedFont> dfonts = fontUrls.entrySet().stream().map(entry -> loadAndRegisterFont(entry.getValue(), entry.getKey()))
-                .collect(Collectors.toSet());
+        List<DownloadedFont> dfonts = fontUrls.entrySet().stream().map(entry -> loadAndRegisterFont(entry.getValue(), entry.getKey()))
+                .sorted((a, b) -> a.font.getFontName().compareTo(b.font.getFontName()))
+                .collect(Collectors.toList());
 
         css = dfonts.stream().map(d -> generateFontFaceCSS(d)).collect(Collectors.joining(" "));
         fonts = dfonts.stream().collect(Collectors.toMap(d -> d.style, d -> d.font()));
