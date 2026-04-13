@@ -39,7 +39,7 @@ jobs:
           sed -i 's/You have found nowhere/There is no measurement/g' images/404.html
       - name: Upload static files as artifact
         id: deployment
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         # At some point, the directory size will exceed the 1GB official limit and 10GB unofficial limit, and we will have to be more selective about what's included
         # (the graphics generator workflow might be where we want to do the discrimination)
         with:
