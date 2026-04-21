@@ -1,0 +1,11 @@
+[0.019s][warning][os] NUMA support disabled: The process memory and cpu node configuration does not match
+[0.263s][warning][aot,codecache,stubs] Saved blob's name 'LLLLLLILLLIL' is different from the expected name 'LLLLLLLLILIL'
+[0.263s][warning][aot                ] Failed to link AdapterHandlerEntry (fp=LLLLLLLLILIL) to its code in the AOT code cache
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2026-04-17 12:46:51,572 INFO  [io.quarkus] (main) quarkus3-virtual 1.0 on JVM (powered by Quarkus 3.34.3) started in 0.826s. Listening on: http://0.0.0.0:8080
+2026-04-17 12:46:51,575 INFO  [io.quarkus] (main) Profile prod activated. 
+2026-04-17 12:46:51,575 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, config-yaml, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-postgresql, micrometer, narayana-jta, opentelemetry, rest, rest-jackson, smallrye-context-propagation, smallrye-health, vertx]
+2026-04-17 12:46:56,882 INFO  [io.quarkus] (Shutdown thread) quarkus3-virtual stopped in 5.154s

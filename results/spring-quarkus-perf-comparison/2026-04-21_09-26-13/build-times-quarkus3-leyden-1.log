@@ -1,0 +1,143 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< org.acme:quarkus3 >--------------------------
+[INFO] Building quarkus3 1.0
+[INFO]   from pom.xml
+[INFO] ------------------------------[ quarkus ]-------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ quarkus3 ---
+[INFO] Deleting /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ quarkus3 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- quarkus:3.34.3:generate-code (default-generate-code) @ quarkus3 ---
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ quarkus3 ---
+[INFO] Recompiling the module because of changed source code.
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 16 source files with javac [debug release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ quarkus3 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/src/test/resources
+[INFO] 
+[INFO] --- quarkus:3.34.3:generate-code-tests (default-generate-code-tests) @ quarkus3 ---
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ quarkus3 ---
+[INFO] Recompiling the module because of changed dependency.
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 4 source files with javac [debug release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.5:test (default-test) @ quarkus3 ---
+[INFO] 
+[INFO] --- quarkus:3.34.3:build (default-build) @ quarkus3 ---
+[INFO] [io.quarkus.deployment.pkg.steps.JvmStartupOptimizerArchiveBuildStep] Launching AppCDS creation process.
+[INFO] [io.quarkus.deployment.pkg.steps.JvmStartupOptimizerArchiveBuildStep] AppCDS archive successfully created at: '/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus-app/app-cds.jsa'.
+[INFO] [io.quarkus.deployment.pkg.steps.JvmStartupOptimizerArchiveBuildStep] To ensure they are loaded properly, run the application jar from its directory and also add the '-XX:SharedArchiveFile=app-cds.jsa' JVM flag.
+Moreover, make sure to use the exact same Java version (25.0.2) to run the application as was used to build it.
+[INFO] [io.quarkus.deployment.QuarkusAugmentor] Quarkus augmentation completed in 14507ms
+[INFO] 
+[INFO] --- failsafe:3.5.5:integration-test (default) @ quarkus3 ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.acme.e2e.FruitControllerIT
+2026-04-17 10:30:37,634 INFO  [org.testcontainers.DockerClientFactory] (build-9) Testcontainers version: 2.0.3
+2026-04-17 10:30:37,812 INFO  [org.testcontainers.dockerclient.DockerClientProviderStrategy] (build-9) Loaded org.testcontainers.dockerclient.RootlessDockerClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2026-04-17 10:30:38,762 INFO  [org.testcontainers.dockerclient.DockerClientProviderStrategy] (build-9) Found Docker environment with Environment variables, system properties and defaults. Resolved dockerHost=unix:///run/user/1000/podman/podman.sock
+2026-04-17 10:30:38,764 INFO  [org.testcontainers.DockerClientFactory] (build-9) Docker host IP address is localhost
+2026-04-17 10:30:38,852 INFO  [org.testcontainers.DockerClientFactory] (build-9) Connected to docker: 
+  Server Version: 5.6.0
+  API Version: 1.41
+  Operating System: rhel
+  Total Memory: 385050 MB
+2026-04-17 10:30:38,864 INFO  [org.testcontainers.images.PullPolicy] (build-9) Image pull policy will be performed by: DefaultPullPolicy()
+2026-04-17 10:30:38,865 INFO  [org.testcontainers.utility.ImageNameSubstitutor] (build-9) Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2026-04-17 10:30:38,870 INFO  [org.testcontainers.DockerClientFactory] (build-9) Checking the system...
+2026-04-17 10:30:38,871 INFO  [org.testcontainers.DockerClientFactory] (build-9) ✔︎ Docker server version should be at least 1.6.0
+2026-04-17 10:30:38,879 INFO  [io.quarkus.observability.deployment.ObservabilityDevServiceProcessor] (build-9) Dev Service Lgtm properties override: {quarkus.otel.metric.export.interval=10s, quarkus.otel.bsp.schedule.delay=3s, quarkus.otel.blrp.schedule.delay=1s}
+2026-04-17 10:30:38,906 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (build-9) Starting LGTM ...
+2026-04-17 10:30:38,983 INFO  [tc.docker.io/grafana/otel-lgtm:0.12.0] (build-9) Creating container for image: docker.io/grafana/otel-lgtm:0.12.0
+2026-04-17 10:30:38,989 INFO  [org.testcontainers.utility.RegistryAuthLocator] (build-9) Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: docker.io/grafana/otel-lgtm:0.12.0, configFile: /home/jenkins/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /home/jenkins/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+2026-04-17 10:30:39,031 INFO  [tc.testcontainers/ryuk:0.13.0] (build-9) Creating container for image: testcontainers/ryuk:0.13.0
+2026-04-17 10:30:39,031 INFO  [org.testcontainers.utility.RegistryAuthLocator] (build-9) Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.13.0, configFile: /home/jenkins/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /home/jenkins/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+2026-04-17 10:30:39,117 INFO  [tc.testcontainers/ryuk:0.13.0] (build-9) Container testcontainers/ryuk:0.13.0 is starting: 39bd6a2903898436b40d6cca7fe1fbeb2d3e307497114fa91c04250926e44c5d
+2026-04-17 10:30:39,584 INFO  [tc.testcontainers/ryuk:0.13.0] (build-9) Container testcontainers/ryuk:0.13.0 started in PT0.553228578S
+2026-04-17 10:30:39,883 INFO  [tc.docker.io/grafana/otel-lgtm:0.12.0] (build-9) Container docker.io/grafana/otel-lgtm:0.12.0 is starting: 323aa5c7b18f43f7a2afe2bf3fba26ef6a02c24d93cb9b3a18f454f8da933aea
+2026-04-17 10:30:40,132 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Running Grafana v12.3.0 logging=false
+2026-04-17 10:30:40,132 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Running OpenTelemetry Collector v0.139.0 logging=false
+2026-04-17 10:30:40,132 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Running Prometheus v3.7.3 logging=false
+2026-04-17 10:30:40,132 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Running Tempo v2.9.0 logging=false
+2026-04-17 10:30:40,198 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Running Pyroscope v1.16.0 logging=false
+2026-04-17 10:30:40,199 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Running Loki v3.6.2 logging=false
+2026-04-17 10:30:40,201 INFO  [org.testcontainers.containers.wait.strategy.HttpWaitStrategy] (ducttape-0) /blissful_lalande: Waiting for 180 seconds for URL: http://localhost:45035/ (where port 45035 maps to container port 3000)
+2026-04-17 10:30:40,550 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Prometheus is up and running. Startup time: 0 seconds
+2026-04-17 10:30:41,550 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Otelcol is up and running. Startup time: 1 seconds
+2026-04-17 10:30:41,550 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Tempo is up and running. Startup time: 1 seconds
+2026-04-17 10:30:42,800 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Pyroscope is up and running. Startup time: 2 seconds
+2026-04-17 10:30:42,800 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Loki is up and running. Startup time: 2 seconds
+2026-04-17 10:30:44,362 INFO  [tc.docker.io/grafana/otel-lgtm:0.12.0] (build-9) Container docker.io/grafana/otel-lgtm:0.12.0 started in PT5.379104747S
+2026-04-17 10:30:44,363 INFO  [io.quarkus.observability.deployment.ObservabilityDevServiceProcessor] (build-9) Dev Service Lgtm started, config: {grafana.endpoint=http://localhost:45035, quarkus.otel.exporter.otlp.endpoint=http://localhost:37993, quarkus.otel.exporter.otlp.protocol=http/protobuf, otel-collector.url=localhost:37993}
+2026-04-17 10:30:44,366 INFO  [io.quarkus.hibernate.orm.deployment.dev.HibernateOrmDevServicesProcessor] (build-7) Setting quarkus.hibernate-orm.schema-management.strategy=drop-and-create to initialize Dev Services managed database
+2026-04-17 10:30:44,373 INFO  [tc.ghcr.io/quarkusio/postgres-17-perf:main] (ForkJoinPool.commonPool-worker-1) Creating container for image: ghcr.io/quarkusio/postgres-17-perf:main
+2026-04-17 10:30:44,374 INFO  [org.testcontainers.utility.RegistryAuthLocator] (ForkJoinPool.commonPool-worker-1) Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: ghcr.io/quarkusio/postgres-17-perf:main, configFile: /home/jenkins/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /home/jenkins/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+2026-04-17 10:30:44,374 WARN  [tc.ghcr.io/quarkusio/postgres-17-perf:main] (ForkJoinPool.commonPool-worker-1) Reuse was requested but the environment does not support the reuse of containers
+To enable reuse of containers, you must set 'testcontainers.reuse.enable=true' in a file located at /home/jenkins/.testcontainers.properties
+2026-04-17 10:30:44,401 INFO  [tc.ghcr.io/quarkusio/postgres-17-perf:main] (ForkJoinPool.commonPool-worker-1) Container ghcr.io/quarkusio/postgres-17-perf:main is starting: 5a99e6fb0b3118377e9c08c33c3047a890c260c324f6825c843989ad2ffaa848
+2026-04-17 10:30:44,637 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Grafana is up and running. Startup time: 4 seconds
+2026-04-17 10:30:44,637 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Total startup time: 4 seconds
+2026-04-17 10:30:44,637 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: 
+2026-04-17 10:30:44,637 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Startup Time Summary:
+2026-04-17 10:30:44,637 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: ---------------------
+2026-04-17 10:30:44,638 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Grafana: 4 seconds
+2026-04-17 10:30:44,638 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Loki: 2 seconds
+2026-04-17 10:30:44,638 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Prometheus: 0 seconds
+2026-04-17 10:30:44,638 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Tempo: 1 seconds
+2026-04-17 10:30:44,638 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Pyroscope: 2 seconds
+2026-04-17 10:30:44,638 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: OpenTelemetry collector: 1 seconds
+2026-04-17 10:30:44,638 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Total: 4 seconds
+2026-04-17 10:30:44,638 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: The OpenTelemetry collector and the Grafana LGTM stack are up and running. (created /tmp/ready)
+2026-04-17 10:30:44,639 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT: Open ports:
+2026-04-17 10:30:44,639 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT:  - 4317: OpenTelemetry GRPC endpoint
+2026-04-17 10:30:44,639 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT:  - 4318: OpenTelemetry HTTP endpoint
+2026-04-17 10:30:44,639 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT:  - 3000: Grafana (http://localhost:3000). User: admin, password: admin
+2026-04-17 10:30:44,639 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT:  - 4040: Pyroscope endpoint
+2026-04-17 10:30:44,639 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (docker-java-stream--1329608957) [LGTM] STDOUT:  - 9090: Prometheus endpoint
+2026-04-17 10:30:46,384 INFO  [tc.ghcr.io/quarkusio/postgres-17-perf:main] (ForkJoinPool.commonPool-worker-1) Container ghcr.io/quarkusio/postgres-17-perf:main started in PT2.010931635S
+2026-04-17 10:30:46,385 INFO  [tc.ghcr.io/quarkusio/postgres-17-perf:main] (ForkJoinPool.commonPool-worker-1) Container is started (JDBC URL: jdbc:postgresql://localhost:32797/quarkus?loggerLevel=OFF)
+2026-04-17 10:30:46,387 INFO  [io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor] (ForkJoinPool.commonPool-worker-1) Dev Services for default datasource (postgresql) started - container ID is 5a99e6fb0b31
+Executing "/home/jenkins/.sdkman/candidates/java/25.0.2-tem/bin/java -XX:AOTMode=record -XX:AOTConfiguration=/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus-app/app.aotconf -Dquarkus.http.port=8081 -Dquarkus.http.ssl-port=8444 -Dtest.url=http://localhost:${quarkus.http.test-port:8081} -Dquarkus.log.file.path=/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus.log -Dquarkus.log.file.enabled=true -Dquarkus.log.category."io.quarkus".level=INFO -Dquarkus.profile=prod -Dquarkus.datasource.password=quarkus -Dgrafana.endpoint=http://localhost:45035 -Dquarkus.hibernate-orm.schema-management.strategy=drop-and-create -Dquarkus.otel.exporter.otlp.endpoint=http://localhost:37993 -Dotel-collector.url=localhost:37993 -Dquarkus.datasource.jdbc.url=jdbc:postgresql://localhost:32797/quarkus?loggerLevel=OFF -Dquarkus.datasource.username=quarkus -Dquarkus.package.jar.aot.enabled=true -Dquarkus.otel.exporter.otlp.protocol=http/protobuf -jar /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus-app/quarkus-run.jar"
+[4.720s][warning][aot] class org/postgresql/util/LazyCleanerImpl$CleanableWrapper cannot be archived because it was not defined from /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus-app/lib/main/org.postgresql.postgresql-42.7.10.jar as claimed
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2026-04-17 10:30:53,476 INFO  [io.quarkus] (main) quarkus3 1.0 on JVM (powered by Quarkus 3.34.3) started in 5.777s. Listening on: http://0.0.0.0:8081
+2026-04-17 10:30:53,518 INFO  [io.quarkus] (main) Profile prod activated. 
+2026-04-17 10:30:53,519 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, config-yaml, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-postgresql, micrometer, narayana-jta, opentelemetry, rest, rest-jackson, smallrye-context-propagation, smallrye-health, vertx]
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.83 s -- in org.acme.e2e.FruitControllerIT
+2026-04-17 10:31:10,785 INFO  [io.quarkus.test.common.DefaultJarLauncher] (main) AOT file '/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus-app/app.aot' created
+2026-04-17 10:31:10,797 INFO  [com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec] (main) ex-0000000036 recoverable I/O exception (java.io.IOException) caught when sending request to unix://localhost:2375;request will be automatically re-executed in 0 MILLISECONDS (exec count 2)
+2026-04-17 10:31:11,255 INFO  [io.quarkus.observability.testcontainers.LgtmContainer] (main) Stopping LGTM...
+2026-04-17 10:31:11,715 INFO  [io.quarkus.devservices.common.ContainerShutdownCloseable] (main) Dev Services for lgtm shut down.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- quarkus:3.34.3:native-image-agent (default-native-image-agent) @ quarkus3 ---
+[INFO] 
+[INFO] --- quarkus:3.34.3:build-aot-enhanced-container-image (default-build-aot-enhanced-container-image) @ quarkus3 ---
+[INFO] 
+[INFO] --- failsafe:3.5.5:verify (default) @ quarkus3 ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:02 min
+[INFO] Finished at: 2026-04-17T10:31:11-04:00
+[INFO] ------------------------------------------------------------------------
