@@ -33,6 +33,11 @@ public enum Group {
             Category.QUARKUS
     )),
 
+    QUARKUS_LEYDEN_AND_NATIVE(EnumSet.noneOf(KnownFramework.class), EnumSet.of(
+            NATIVE,
+            LEYDEN
+    ), EnumSet.of(OLD, Category.VIRTUAL_THREADS, SPRING)),
+
     VIRTUAL_THREADS(EnumSet.noneOf(KnownFramework.class), EnumSet.of(
             Category.VIRTUAL_THREADS,
             JVM
