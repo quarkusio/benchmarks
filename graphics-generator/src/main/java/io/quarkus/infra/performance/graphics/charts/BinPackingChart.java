@@ -1,5 +1,6 @@
 package io.quarkus.infra.performance.graphics.charts;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
@@ -143,7 +144,7 @@ public class BinPackingChart extends Chart {
         int totalGutter = Math.max(0, numNodes - 1) * gutterSize;
         int nodeWidth = numNodes > 0 ? (plotArea.getWidth() - totalGutter) / numNodes : plotArea.getWidth();
 
-        int labelHeight = nodes.isEmpty() ? 0 : nodes.get(0).getLabelEstimate();
+        int labelHeight = nodes.isEmpty() ? 0 : nodes.getFirst().getLabelEstimate();
         int boxHeight = plotArea.getHeight() - labelHeight;
         int platformHeight = boxHeight / PLATFORM_HEIGHT_FRACTION;
         boxHeight -= platformHeight + PLATFORM_GAP;
@@ -158,37 +159,46 @@ public class BinPackingChart extends Chart {
 
         int x = 0;
         for (PackedNode node : nodes) {
-            Subcanvas boxArea = new Subcanvas(plotArea, nodeWidth, boxHeight, x, 0);
+            Subcanvas labelArea = new Subcanvas(plotArea, nodeWidth, labelHeight, x, 0);
+            node.drawLabels(labelArea, theme);
+            x += nodeWidth + gutterSize;
+        }
+
+        int boxY = labelHeight;
+        x = 0;
+        for (PackedNode node : nodes) {
+            Subcanvas boxArea = new Subcanvas(plotArea, nodeWidth, boxHeight, x, boxY);
             node.drawBox(boxArea, theme);
             x += nodeWidth + gutterSize;
         }
 
         if (!nodes.isEmpty()) {
-            int platformY = boxHeight + PLATFORM_GAP;
+            int platformY = boxY + boxHeight + PLATFORM_GAP;
             int totalNodesWidth = numNodes * nodeWidth + (numNodes - 1) * gutterSize;
             int platformX = PackedNode.CONTAINER_INSET;
             int platformWidth = totalNodesWidth - 2 * PackedNode.CONTAINER_INSET;
 
-            Subcanvas platformCanvas = new Subcanvas(plotArea, platformWidth, platformHeight, platformX, platformY);
+            int platformShadowOffset = 3;
+            Subcanvas platformCanvas = new Subcanvas(plotArea,
+                    platformWidth + platformShadowOffset, platformHeight + platformShadowOffset,
+                    platformX, platformY);
+
+            int platformArc = 6;
+            Color shadowColor = PackedNode.blendColors(theme.text(), theme.background(), 0.75);
+            platformCanvas.setPaint(shadowColor);
+            platformCanvas.fillRoundRect(platformShadowOffset, platformShadowOffset,
+                    platformWidth, platformHeight, platformArc, platformArc);
 
             platformCanvas.setPaint(theme.divider());
-            platformCanvas.fillRect(0, 0, platformWidth, platformHeight);
+            platformCanvas.fillRoundRect(0, 0, platformWidth, platformHeight, platformArc, platformArc);
 
             platformCanvas.setPaint(theme.background());
-            Label platformLabel = new Label("Container Platform", infrastructureLabelGroup)
+            Label platformLabel = new Label("container platform", infrastructureLabelGroup)
                     .setHorizontalAlignment(io.quarkus.infra.performance.graphics.charts.fonts.Alignment.CENTER)
                     .setVerticalAlignment(io.quarkus.infra.performance.graphics.charts.fonts.VAlignment.MIDDLE)
                     .setStyle(BOLD)
                     .setTargetHeight(commonFontHeight);
             platformLabel.draw(platformCanvas, platformWidth / 2, platformHeight / 2);
-        }
-
-        int labelY = boxHeight + PLATFORM_GAP + platformHeight;
-        x = 0;
-        for (PackedNode node : nodes) {
-            Subcanvas labelArea = new Subcanvas(plotArea, nodeWidth, labelHeight, x, labelY);
-            node.drawLabels(labelArea, theme);
-            x += nodeWidth + gutterSize;
         }
 
         drawFinePrint(canvasWithMargins, theme, finePrintHeight,

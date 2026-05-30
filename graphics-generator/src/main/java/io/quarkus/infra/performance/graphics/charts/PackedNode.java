@@ -14,12 +14,15 @@ public class PackedNode implements ElasticElement {
 
     static final int BLOCK_PADDING = 2;
     static final int CONTAINER_INSET = 3;
-    static final int FRAMEWORK_LABEL_PADDING = 8;
+    private static final int FRAMEWORK_LABEL_TOP_PADDING = 2;
+    private static final int FRAMEWORK_LABEL_BOTTOM_PADDING = 10;
     private static final int MINIMUM_FONT_SIZE = 8;
     private static final int MAXIMUM_FONT_SIZE = 24;
     private static final int MINIMUM_CONTAINER_HEIGHT = 120;
     private static final int MAXIMUM_CONTAINER_HEIGHT = 500;
     private static final int NODE_FRACTION = 8;
+    private static final int SHADOW_OFFSET = 3;
+    private static final int BLOCK_ARC = 4;
 
     private final Datapoint d;
     private final int schedulableMemoryMiB;
@@ -114,7 +117,8 @@ public class PackedNode implements ElasticElement {
     }
 
     int getLabelEstimate() {
-        return frameworkLabel.getTargetHeight() + countLabel.getTargetHeight() + FRAMEWORK_LABEL_PADDING;
+        return frameworkLabel.getTargetHeight() + countLabel.getTargetHeight()
+                + FRAMEWORK_LABEL_TOP_PADDING + FRAMEWORK_LABEL_BOTTOM_PADDING;
     }
 
     int getNodeAreaHeight(int totalBoxHeight) {
@@ -122,7 +126,7 @@ public class PackedNode implements ElasticElement {
     }
 
     /**
-     * Draw just the box (backing rectangle, instance blocks, "Node" section).
+     * Draw just the box (backing rectangle, instance blocks, "Machine" section).
      * The dataArea height should be the box height only, not including labels.
      */
     public void drawBox(Subcanvas dataArea, Theme theme) {
@@ -132,13 +136,18 @@ public class PackedNode implements ElasticElement {
 
         int containerWidth = dataArea.getWidth() - 2 * CONTAINER_INSET;
         int cx = CONTAINER_INSET;
+        int arc = 10;
+
+        Color shadowColor = blendColors(theme.text(), theme.background(), 0.75);
+        dataArea.setPaint(shadowColor);
+        dataArea.fillRoundRect(cx + SHADOW_OFFSET, SHADOW_OFFSET, containerWidth, totalBoxHeight, arc, arc);
 
         Color containerBg = blendColors(theme.background(), theme.divider(), 0.2);
         dataArea.setPaint(containerBg);
-        dataArea.fillRect(cx, 0, containerWidth, totalBoxHeight);
+        dataArea.fillRoundRect(cx, 0, containerWidth, totalBoxHeight, arc, arc);
 
         dataArea.setPaint(theme.divider());
-        dataArea.drawRect(cx, 0, containerWidth, totalBoxHeight);
+        dataArea.drawRoundRect(cx, 0, containerWidth, totalBoxHeight, arc, arc);
 
         int outline = 1;
         Subcanvas instanceCanvas = new Subcanvas(dataArea, containerWidth - 2 * outline, instanceAreaHeight - outline, cx + outline, outline);
@@ -168,7 +177,7 @@ public class PackedNode implements ElasticElement {
                 if (by < 0) {
                     break;
                 }
-                canvas.fillRect(bx, by, blockWidth, blockHeight);
+                canvas.fillRoundRect(bx, by, blockWidth, blockHeight, BLOCK_ARC, BLOCK_ARC);
                 drawn++;
             }
         }
@@ -176,7 +185,7 @@ public class PackedNode implements ElasticElement {
 
     private void drawNodeLabel(Subcanvas canvas, Theme theme) {
         canvas.setPaint(theme.text());
-        Label nodeLabel = new Label("Node", infrastructureLabelGroup)
+        Label nodeLabel = new Label("machine", infrastructureLabelGroup)
                 .setHorizontalAlignment(Alignment.CENTER)
                 .setVerticalAlignment(VAlignment.MIDDLE)
                 .setStyle(PLAIN)
@@ -189,9 +198,9 @@ public class PackedNode implements ElasticElement {
      */
     public void drawLabels(Subcanvas dataArea, Theme theme) {
         dataArea.setPaint(theme.text());
-        frameworkLabel.draw(dataArea, dataArea.getWidth() / 2, FRAMEWORK_LABEL_PADDING);
+        frameworkLabel.draw(dataArea, dataArea.getWidth() / 2, FRAMEWORK_LABEL_TOP_PADDING);
         countLabel.draw(dataArea, dataArea.getWidth() / 2,
-                FRAMEWORK_LABEL_PADDING + frameworkLabel.getActualHeight());
+                FRAMEWORK_LABEL_TOP_PADDING + frameworkLabel.getActualHeight());
     }
 
     @Override
@@ -199,14 +208,14 @@ public class PackedNode implements ElasticElement {
         int labelHeight = getLabelEstimate();
         int boxHeight = dataArea.getHeight() - labelHeight;
 
-        Subcanvas boxArea = new Subcanvas(dataArea, dataArea.getWidth(), boxHeight, 0, 0);
-        drawBox(boxArea, theme);
-
-        Subcanvas labelArea = new Subcanvas(dataArea, dataArea.getWidth(), labelHeight, 0, boxHeight);
+        Subcanvas labelArea = new Subcanvas(dataArea, dataArea.getWidth(), labelHeight, 0, 0);
         drawLabels(labelArea, theme);
+
+        Subcanvas boxArea = new Subcanvas(dataArea, dataArea.getWidth(), boxHeight, 0, labelHeight);
+        drawBox(boxArea, theme);
     }
 
-    private static Color blendColors(Color c1, Color c2, double ratio) {
+    static Color blendColors(Color c1, Color c2, double ratio) {
         int r = Math.clamp(Math.round(c1.getRed() * (1 - ratio) + c2.getRed() * ratio), 0, 255);
         int g = Math.clamp(Math.round(c1.getGreen() * (1 - ratio) + c2.getGreen() * ratio), 0, 255);
         int b = Math.clamp(Math.round(c1.getBlue() * (1 - ratio) + c2.getBlue() * ratio), 0, 255);
