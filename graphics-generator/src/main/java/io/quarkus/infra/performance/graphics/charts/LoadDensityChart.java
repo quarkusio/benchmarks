@@ -35,6 +35,8 @@ public class LoadDensityChart extends Chart {
     private static final int LEGEND_ENTRY_GAP = 20;
     private static final int Y_AXIS_LABEL_WIDTH = 40;
     private static final int X_AXIS_LABEL_HEIGHT = 44;
+    private static final int KEY_PADDING_LEFT = 8;
+    private static final int KEY_PADDING_RIGHT = 14;
 
     private final Optional<FinePrint> fineprint;
     private final List<FrameworkStepData> frameworkSteps = new ArrayList<>();
@@ -186,6 +188,12 @@ public class LoadDensityChart extends Chart {
         g.drawLine(chartLeft, chartTop, chartLeft, chartBottom, 2);
         g.drawLine(chartLeft, chartBottom, chartRight, chartBottom, 2);
 
+        Label originLabel = new Label("0")
+                .setTargetHeight(Math.min(AXIS_LABEL_FONT_SIZE, chartHeight / 2))
+                .setHorizontalAlignment(Alignment.RIGHT)
+                .setVerticalAlignment(VAlignment.MIDDLE);
+        originLabel.draw(g, chartLeft - TICK_LENGTH - 4, chartBottom);
+
         int yStep = (int) Math.max(1, niceStep(maxInstances, 8));
         for (int i = yStep; i <= maxInstances; i += yStep) {
             int y = chartBottom - (int) ((double) i / maxInstances * chartHeight);
@@ -241,8 +249,9 @@ public class LoadDensityChart extends Chart {
             fillStepArea(g, fillColor, step, chartLeft, chartBottom, chartWidth, chartHeight);
         }
 
+        Color lineColor = theme.background().getRed() < 128 ? Color.WHITE : theme.text();
         for (FrameworkStepData step : frameworkSteps) {
-            drawStepLine(g, theme.text(), step, chartLeft, chartBottom, chartWidth, chartHeight);
+            drawStepLine(g, lineColor, step, chartLeft, chartBottom, chartWidth, chartHeight);
         }
 
         labelAreas(g, theme, sortedByThroughput, chartLeft, chartBottom, chartWidth, chartHeight);
@@ -358,7 +367,7 @@ public class LoadDensityChart extends Chart {
         for (BandInfo band : bands) {
             if (band.fits) {
                 int labelY = (band.yTop + band.yBottom) / 2;
-                g.setPaint(theme.text());
+                g.setPaint(Color.BLACK);
                 Label areaLabel = new Label(band.name)
                         .setTargetHeight(textHeight)
                         .setHorizontalAlignment(Alignment.RIGHT)
@@ -382,14 +391,13 @@ public class LoadDensityChart extends Chart {
         int keyFontSize = Math.min(AXIS_LABEL_FONT_SIZE, 11);
         int entryHeight = Sizer.calculateHeight(keyFontSize);
         int swatchSize = entryHeight - 2;
-        int keyPadding = 8;
         int maxW = 0;
         for (FrameworkStepData step : entries) {
             String name = step.framework.getExpandedName().replace("\n", " ");
             int w = swatchSize + 6 + Sizer.calculateWidth(name, keyFontSize, FontStyle.PLAIN);
             maxW = Math.max(maxW, w);
         }
-        return maxW + 2 * keyPadding;
+        return maxW + KEY_PADDING_LEFT + KEY_PADDING_RIGHT;
     }
 
     private void drawKey(Subcanvas g, Theme theme, List<FrameworkStepData> entries,
@@ -397,32 +405,33 @@ public class LoadDensityChart extends Chart {
         int keyFontSize = Math.min(AXIS_LABEL_FONT_SIZE, 11);
         int entryHeight = Sizer.calculateHeight(keyFontSize);
         int swatchSize = entryHeight - 2;
-        int keyPadding = 8;
+        int keyVerticalPadding = 8;
         int entryGap = 4;
 
-        int keyHeight = entries.size() * (entryHeight + entryGap) + 2 * keyPadding;
+        int keyHeight = entries.size() * (entryHeight + entryGap) + 2 * keyVerticalPadding;
         int keyWidth = 0;
         for (FrameworkStepData step : entries) {
             String name = step.framework.getExpandedName().replace("\n", " ");
             int w = swatchSize + 6 + Sizer.calculateWidth(name, keyFontSize, FontStyle.PLAIN);
             keyWidth = Math.max(keyWidth, w);
         }
-        keyWidth += 2 * keyPadding;
+        keyWidth += KEY_PADDING_LEFT + KEY_PADDING_RIGHT;
 
         int keyX = chartLeft + 10;
         int keyY = 10;
 
+        int arc = 8;
         g.setPaint(new Color(theme.background().getRed(), theme.background().getGreen(),
                 theme.background().getBlue(), 220));
-        g.fillRect(keyX, keyY, keyWidth, keyHeight);
+        g.fillRoundRect(keyX, keyY, keyWidth, keyHeight, arc, arc);
         g.setPaint(theme.divider());
-        g.drawRect(keyX, keyY, keyWidth, keyHeight);
+        g.drawRoundRect(keyX, keyY, keyWidth, keyHeight, arc, arc);
 
-        int y = keyY + keyPadding + entryHeight / 2;
+        int y = keyY + keyVerticalPadding + entryHeight / 2;
         for (FrameworkStepData step : entries) {
             Color fillColor = theme.fillElements().getOrDefault(step.framework, theme.divider());
             g.setPaint(fillColor);
-            g.fillRect(keyX + keyPadding, y - swatchSize / 2, swatchSize, swatchSize);
+            g.fillRect(keyX + KEY_PADDING_LEFT, y - swatchSize / 2, swatchSize, swatchSize);
 
             g.setPaint(theme.text());
             String name = step.framework.getExpandedName().replace("\n", " ");
@@ -430,7 +439,7 @@ public class LoadDensityChart extends Chart {
                     .setTargetHeight(entryHeight)
                     .setHorizontalAlignment(Alignment.LEFT)
                     .setVerticalAlignment(VAlignment.MIDDLE);
-            label.draw(g, keyX + keyPadding + swatchSize + 6, y);
+            label.draw(g, keyX + KEY_PADDING_LEFT + swatchSize + 6, y);
 
             y += entryHeight + entryGap;
         }
