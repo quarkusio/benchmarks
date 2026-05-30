@@ -15,9 +15,12 @@ import io.quarkus.infra.performance.graphics.model.Group;
 import io.quarkus.infra.performance.graphics.model.KnownFramework;
 import io.quarkus.infra.performance.graphics.model.Load;
 import io.quarkus.infra.performance.graphics.model.Repo;
+import io.quarkus.infra.performance.graphics.model.Resources;
 import io.quarkus.infra.performance.graphics.model.Result;
 import io.quarkus.infra.performance.graphics.model.Results;
+import io.quarkus.infra.performance.graphics.model.Rss;
 import io.quarkus.infra.performance.graphics.model.units.DimensionalNumber;
+import io.quarkus.infra.performance.graphics.model.units.Memory;
 import io.quarkus.infra.performance.graphics.model.units.TransactionsPerSecond;
 import org.apache.batik.svggen.SVGGraphics2D;
 import org.junit.jupiter.api.Test;
@@ -217,6 +220,9 @@ public abstract class ChartTest extends ElasticElementTest {
         Load load = mock(Load.class);
         when(result.load()).thenReturn(load);
         when(load.avThroughput()).thenReturn(new TransactionsPerSecond(throughput));
+        Rss rss = mock(Rss.class);
+        when(result.rss()).thenReturn(rss);
+        when(rss.avFirstRequestRss()).thenReturn(new Memory(Math.max(throughput, 1)));
     }
 
     protected static void addConfig(BenchmarkData data) {
@@ -224,6 +230,7 @@ public abstract class ChartTest extends ElasticElementTest {
         when(data.config()).thenReturn(config);
         when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "1234"));
         when(config.quarkus()).thenReturn(new FrameworkBuild("", "3.28.3"));
+        when(config.resources()).thenReturn(new Resources(4, null));
     }
 
     protected static void draw(Chart chart) {

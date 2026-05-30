@@ -96,8 +96,14 @@ public class Label {
             int segmentX = alignedX;
 
             for (int j = 0; j < segments.length; j++) {
-                // Chaos; which index we use depends on the delimiter
-                int index = (LINE_BREAK.equals(styles.delimiter())) ? i:j;
+                int index;
+                if (LINE_BREAK.equals(styles.delimiter())) {
+                    index = i;
+                } else if (segments.length == 1) {
+                    index = styles.styles().length - 1;
+                } else {
+                    index = j;
+                }
                 font = labelGroup.getFont(index);
                 g.getGraphics().setFont(font);
                 metrics = g.getGraphics().getFontMetrics(font);
