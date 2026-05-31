@@ -48,9 +48,17 @@ public class FinePrint implements ElasticElement {
     private final List<String> middleColumn = new ArrayList<>();
     private final List<String> rightColumn = new ArrayList<>();
 
-    public FinePrint(BenchmarkData bmData) {
+    public FinePrint(BenchmarkData bmData, String... extraMiddleEntries) {
         this.metadata = bmData.config();
         this.timing = bmData.timing();
+
+        for (String entry : extraMiddleEntries) {
+            if (entry.contains(": ")) {
+                middleColumn.add(entry);
+            } else {
+                middleColumn.add("   " + entry);
+            }
+        }
 
         if (bmData.group().containsAny(QUARKUS)) {
             if (metadata.quarkus() != null) {
