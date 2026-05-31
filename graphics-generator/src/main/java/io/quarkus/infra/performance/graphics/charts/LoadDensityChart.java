@@ -1,7 +1,9 @@
 package io.quarkus.infra.performance.graphics.charts;
 
+import java.awt.AlphaComposite;
 import java.awt.BasicStroke;
 import java.awt.Color;
+import java.awt.Composite;
 import java.awt.Polygon;
 import java.awt.Stroke;
 import java.util.ArrayList;
@@ -37,6 +39,8 @@ public class LoadDensityChart extends Chart {
     private static final int X_AXIS_LABEL_HEIGHT = 44;
     private static final int KEY_PADDING_LEFT = 8;
     private static final int KEY_PADDING_RIGHT = 14;
+    private static final int FILL_OPACITY_PERCENT = 55;
+    private static final int FILL_ALPHA = (int) (FILL_OPACITY_PERCENT / 100.0 * 255);
 
     private final Optional<FinePrint> fineprint;
     private final List<FrameworkStepData> frameworkSteps = new ArrayList<>();
@@ -177,7 +181,7 @@ public class LoadDensityChart extends Chart {
         }
 
         drawAxes(plotArea, theme, chartLeft, chartTop, chartBottom, chartRight, chartWidth, chartHeight);
-        drawStepLines(plotArea, theme, chartLeft, chartTop, chartBottom, chartWidth, chartHeight);
+        drawStepLines(plotArea, theme, chartLeft, chartTop, chartBottom, chartRight, chartWidth, chartHeight);
         drawLegend(plotArea, theme, chartLeft, chartBottom + X_AXIS_LABEL_HEIGHT, chartWidth);
     }
 
@@ -240,7 +244,7 @@ public class LoadDensityChart extends Chart {
     }
 
     private void drawStepLines(Subcanvas g, Theme theme, int chartLeft, int chartTop,
-                                int chartBottom, int chartWidth, int chartHeight) {
+                                int chartBottom, int chartRight, int chartWidth, int chartHeight) {
         List<FrameworkStepData> sortedByThroughput = new ArrayList<>(frameworkSteps);
         sortedByThroughput.sort(Comparator.comparingDouble(s -> s.throughput));
 
@@ -249,12 +253,30 @@ public class LoadDensityChart extends Chart {
             fillStepArea(g, fillColor, step, chartLeft, chartBottom, chartWidth, chartHeight);
         }
 
+        drawOverlayGridLines(g, theme, chartLeft, chartBottom, chartRight, chartHeight);
+
         Color lineColor = theme.background().getRed() < 128 ? Color.WHITE : theme.text();
         for (FrameworkStepData step : frameworkSteps) {
             drawStepLine(g, lineColor, step, chartLeft, chartBottom, chartWidth, chartHeight);
         }
 
         labelAreas(g, theme, sortedByThroughput, chartLeft, chartBottom, chartWidth, chartHeight);
+    }
+
+    private void drawOverlayGridLines(Subcanvas g, Theme theme, int chartLeft, int chartBottom,
+                                       int chartRight, int chartHeight) {
+        Composite oldComposite = g.getGraphics().getComposite();
+        g.getGraphics().setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, FILL_ALPHA / 255f));
+        Color gridColor = theme.background().getRed() < 128 ? Color.WHITE : theme.divider();
+        g.setPaint(gridColor);
+
+        int yStep = (int) Math.max(1, niceStep(maxInstances, 8));
+        for (int i = yStep; i <= maxInstances; i += yStep) {
+            int y = chartBottom - (int) ((double) i / maxInstances * chartHeight);
+            g.drawLine(chartLeft + 1, y, chartRight, y);
+        }
+
+        g.getGraphics().setComposite(oldComposite);
     }
 
     private void fillStepArea(Subcanvas g, Color fillColor, FrameworkStepData step,
