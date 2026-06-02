@@ -1,0 +1,45 @@
+14:13:21,740 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Starting in directory /home/jenkins/spring-quarkus-perf-comparison/logs/hyperfoil/quarkus3-leyden-2...
+14:13:21,909 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerServer] Hyperfoil controller listening on http://127.0.0.1:33777
+14:13:22,564 INFO  (vert.x-worker-thread-3) [i.h.c.u.PersistenceUtil] Stored benchmark 'load-test-fixed-threads-read-all' in /home/jenkins/spring-quarkus-perf-comparison/logs/hyperfoil/quarkus3-leyden-2/benchmark/load-test-fixed-threads-read-all.yaml
+14:13:22,710 INFO  (vert.x-eventloop-thread-0) [i.h.c.u.PersistenceUtil] Stored benchmark 'load-test-fixed-threads-read-all' in /home/jenkins/spring-quarkus-perf-comparison/logs/hyperfoil/quarkus3-leyden-2/run/0000/load-test-fixed-threads-read-all.yaml
+14:13:23,721 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Starting benchmark load-test-fixed-threads-read-all - run 0000
+14:13:23,721 INFO  (vert.x-eventloop-thread-2) [i.h.c.AgentVerticle] aa7424d7-2f0f-41b1-a3ff-4149d43ff634 Got reply from controller.
+14:13:23,723 INFO  (vert.x-eventloop-thread-2) [i.h.c.AgentVerticle] Initializing agent
+14:13:23,749 INFO  (vert.x-eventloop-thread-2) [i.h.h.c.HttpClientPoolImpl] Allocating 100 connections (max 100, buffer 0) in 2 executors to http://localhost:8080
+14:13:23,872 INFO  (vert.x-eventloop-thread-2) [i.h.c.i.SimulationRunner] GC execution took 94 ms
+14:13:23,872 INFO  (vert.x-eventloop-thread-2) [i.h.c.i.SimulationRunner] Overall GC run took 94 ms
+14:13:23,879 INFO  (vert.x-eventloop-thread-2) [i.h.c.i.SimulationRunner] Simulation initialization took 123 ms
+14:13:23,938 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 warmup changing status NOT_STARTED to STARTING
+14:13:23,951 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 warmup changing status STARTING to RUNNING
+14:15:23,937 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 warmup changing status RUNNING to FINISHING
+14:15:23,941 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 warmup changing status FINISHING to FINISHED
+14:15:23,941 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 cooldown changing status NOT_STARTED to STARTING
+14:15:23,942 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 cooldown changing status STARTING to RUNNING
+14:15:23,948 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000: completing stats for phase warmup
+14:15:23,962 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 warmup changing status FINISHED to TERMINATED
+14:15:53,942 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 cooldown changing status RUNNING to FINISHING
+14:15:53,942 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 cooldown changing status FINISHING to FINISHED
+14:15:53,942 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 cooldown changing status FINISHED to TERMINATING
+14:15:53,942 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000: completing stats for phase cooldown
+14:15:53,942 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 cooldown changing status TERMINATING to TERMINATED
+14:15:53,943 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 logStart changing status NOT_STARTED to STARTING
+14:15:53,943 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 logStart changing status STARTING to RUNNING
+14:15:53,944 INFO  (epollEventLoopGroup-2-1) [i.h.c.s.LogAction] loadTest started at 2026-06-02T14:15:53.943Z
+14:15:53,944 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 logStart changing status RUNNING to FINISHING
+14:15:53,945 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 logStart changing status FINISHING to FINISHED
+14:15:53,945 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000: completing stats for phase logStart
+14:15:53,945 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 logStart changing status FINISHED to TERMINATED
+14:15:53,945 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 loadTest changing status NOT_STARTED to STARTING
+14:15:53,947 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 loadTest changing status STARTING to RUNNING
+14:16:23,946 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 loadTest changing status RUNNING to FINISHING
+14:16:23,947 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 loadTest changing status FINISHING to FINISHED
+14:16:23,952 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000: completing stats for phase loadTest
+14:16:23,958 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 loadTest changing status FINISHED to TERMINATED
+14:16:23,958 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] 0000 All phases are terminated.
+14:16:23,959 INFO  (vert.x-eventloop-thread-2) [i.h.c.AgentVerticle] Received agent reset
+14:16:23,959 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000: completing stats for phase logStart
+14:16:23,960 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000: completing stats for phase cooldown
+14:16:23,960 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000: completing stats for phase loadTest
+14:16:23,960 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000: completing stats for phase warmup
+14:16:23,961 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000 completed
+14:16:24,068 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Successfully persisted run 0000

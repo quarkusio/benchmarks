@@ -1,0 +1,4 @@
+○ firewalld.service - firewalld - dynamic firewall daemon
+     Loaded: loaded (/usr/lib/systemd/system/firewalld.service; disabled; preset: enabled)
+     Active: inactive (dead)
+       Docs: man:firewalld(1)

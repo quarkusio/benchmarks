@@ -1,0 +1,10 @@
+{
+  "id" : "0000",
+  "benchmark" : "load-test-fixed-threads-read-all",
+  "params" : { },
+  "startTime" : 1780431994222,
+  "terminateTime" : 1780432174249,
+  "cancelled" : false,
+  "description" : "spring3-virtual-leyden-1",
+  "errors" : [ ]
+}

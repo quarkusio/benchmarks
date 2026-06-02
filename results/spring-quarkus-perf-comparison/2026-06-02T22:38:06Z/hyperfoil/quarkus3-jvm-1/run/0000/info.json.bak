@@ -1,0 +1,10 @@
+{
+  "id" : "0000",
+  "benchmark" : "load-test-fixed-threads-read-all",
+  "params" : { },
+  "startTime" : 1780422588404,
+  "terminateTime" : 1780422768428,
+  "cancelled" : false,
+  "description" : "quarkus3-jvm-1",
+  "errors" : [ ]
+}

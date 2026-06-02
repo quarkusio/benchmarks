@@ -1,0 +1,39 @@
+[0.002s][warning][os] NUMA support disabled: The process memory and cpu node configuration does not match
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2 (file:/home/jenkins/.m2/repository/io/netty/netty-common/4.1.125.Final/netty-common-4.1.125.Final.jar)
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+Loaded benchmark template load-test-fixed-threads-read-all with these parameters (with defaults): 
+[1mNAME                    DEFAULT    CURRENT (CONTEXT)[0m
+PATH                    /fruits    (not set)        
+PORT                    8080       (not set)        
+THREADS                 2          (not set)        
+LOAD_REQUEST_TIMEOUT    30s        (not set)        
+PROTOCOL                http       (not set)        
+HOST                    localhost  (not set)        
+WARMUP_DURATION         2m         (not set)        
+WARMUP_REQUEST_TIMEOUT  2m         (not set)        
+CONNECTIONS             100        (not set)        
+HIDE_WARMUP_PHASE       false      (not set)        
+LOAD_MAX_DURATION       1m         (not set)        
+LOAD_DURATION           30s        (not set)        
+WARMUP_PAUSE_DURATION   30s        (not set)        
+WARMUP_MAX_DURATION     4m         (not set)        
+Uploading...
+... done.
+Started run 0000
+Monitoring run 0000, benchmark load-test-fixed-threads-read-all
+spring4-jvm-2
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::loadLibrary has been called by io.netty.util.internal.NativeLibraryUtil in an unnamed module (file:/home/jenkins/.m2/repository/io/netty/netty-common/4.1.125.Final/netty-common-4.1.125.Final.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Started:    2026/06/02 17:09:49.934
+Terminated: 2026/06/02 17:12:49.965
+Run statistics persisted in the local filesystem
+[2KTotal stats from run 0000
+[1mPHASE     METRIC        THROUGHPUT     REQUESTS  MEAN      STD_DEV   MAX        p50       p90       p99        p99.9      p99.99     TIMEOUTS  ERRORS  BLOCKED  2xx     3xx  4xx  5xx  CACHE[0m
+warmup    getAllFruits  2517.20 req/s    302202  39.71 ms  44.38 ms  981.47 ms  28.31 ms  87.03 ms  207.62 ms  341.84 ms  939.52 ms         0       0     0 ns  302202    0    0    0      0[0m
+loadTest  getAllFruits  7835.48 req/s    235221  12.75 ms  12.05 ms  392.17 ms  10.62 ms  19.14 ms   62.39 ms  153.09 ms  265.29 ms         0       0     0 ns  235221    0    0    0      0[0m
+Report written to /home/jenkins/spring-quarkus-perf-comparison/logs/hyperfoil/spring4-jvm-2/0000.html

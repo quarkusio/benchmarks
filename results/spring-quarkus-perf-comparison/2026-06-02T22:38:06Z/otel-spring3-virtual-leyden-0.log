@@ -1,0 +1,44 @@
+[
+  {
+    "service": "otelcol-contrib",
+    "datasources": [
+      {
+        "name": "Loki",
+        "status": "no_data_found"
+      },
+      {
+        "name": "Prometheus",
+        "status": "data_found"
+      },
+      {
+        "name": "Pyroscope",
+        "status": "not_implemented"
+      },
+      {
+        "name": "Tempo",
+        "status": "no_data_found"
+      }
+    ]
+  },
+  {
+    "service": "springboot3",
+    "datasources": [
+      {
+        "name": "Loki",
+        "status": "data_found"
+      },
+      {
+        "name": "Prometheus",
+        "status": "data_found"
+      },
+      {
+        "name": "Pyroscope",
+        "status": "not_implemented"
+      },
+      {
+        "name": "Tempo",
+        "status": "data_found"
+      }
+    ]
+  }
+]

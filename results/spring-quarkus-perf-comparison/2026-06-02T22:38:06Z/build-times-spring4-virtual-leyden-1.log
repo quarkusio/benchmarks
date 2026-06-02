@@ -1,0 +1,257 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.acme:springboot4 >------------------------
+[INFO] Building springboot4 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ springboot4 ---
+[INFO] Deleting /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ springboot4 ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ springboot4 ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 25 source files with javac [debug parameters release 21] to target/classes
+[INFO] /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/src/main/java/org/acme/config/DataSourceConfig.java: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/src/main/java/org/acme/config/DataSourceConfig.java uses or overrides a deprecated API.
+[INFO] /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/src/main/java/org/acme/config/DataSourceConfig.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- hibernate:7.2.12.Final:enhance (enhance) @ springboot4 ---
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/SpringBoot4Application.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/DataSourceConfig.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/GraalVMConfig.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/HibernateNativeHints.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/InstallOpentelemetryAppender.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/L2CacheConfiguration.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/L2CacheRuntimeHints.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/OpentelemetryConfiguration.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/TraceIdFilter.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Address.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Fruit.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/StoreFruitPrice.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/StoreFruitPriceId.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Store.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/dto/AddressDTO.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/dto/FruitDTO.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/dto/StoreFruitPriceDTO.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/dto/StoreDTO.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/mapping/AddressMapper.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/mapping/FruitMapper.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/mapping/StoreFruitPriceMapper.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/mapping/StoreMapper.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/repository/FruitRepository.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/rest/FruitController.class
+[INFO] Added file to source set: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/service/FruitService.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/SpringBoot4Application.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/DataSourceConfig.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/GraalVMConfig.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/HibernateNativeHints.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/InstallOpentelemetryAppender.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/L2CacheConfiguration.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/L2CacheRuntimeHints.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/OpentelemetryConfiguration.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/TraceIdFilter.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Address.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Fruit.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/StoreFruitPrice.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/StoreFruitPriceId.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Store.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/dto/AddressDTO.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/dto/FruitDTO.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/dto/StoreFruitPriceDTO.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/dto/StoreDTO.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/mapping/AddressMapper.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/mapping/FruitMapper.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/mapping/StoreFruitPriceMapper.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/mapping/StoreMapper.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/repository/FruitRepository.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/rest/FruitController.class
+[INFO] Succesfully discovered types for classes in file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/service/FruitService.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/SpringBoot4Application.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/DataSourceConfig.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/GraalVMConfig.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/HibernateNativeHints.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/InstallOpentelemetryAppender.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/L2CacheConfiguration.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/L2CacheRuntimeHints.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/OpentelemetryConfiguration.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/config/TraceIdFilter.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Address.class
+[INFO] Succesfully cleared the contents of file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Fruit.class
+[INFO] Succesfully enhanced class file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Fruit.class
+[INFO] Succesfully cleared the contents of file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/StoreFruitPrice.class
+[INFO] Succesfully enhanced class file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/StoreFruitPrice.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/StoreFruitPriceId.class
+[INFO] Succesfully cleared the contents of file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Store.class
+[INFO] Succesfully enhanced class file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/domain/Store.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/dto/AddressDTO.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/dto/FruitDTO.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/dto/StoreFruitPriceDTO.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/dto/StoreDTO.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/mapping/AddressMapper.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/mapping/FruitMapper.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/mapping/StoreFruitPriceMapper.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/mapping/StoreMapper.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/repository/FruitRepository.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/rest/FruitController.class
+[INFO] Skipping file: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/classes/org/acme/service/FruitService.class
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ springboot4 ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ springboot4 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 5 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/src/test/java/org/acme/ContainersConfig.java: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/src/test/java/org/acme/ContainersConfig.java uses or overrides a deprecated API.
+[INFO] /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/src/test/java/org/acme/ContainersConfig.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:3.5.5:test (default-test) @ springboot4 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ springboot4 ---
+[INFO] Building jar: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/springboot4.jar
+[INFO] 
+[INFO] --- spring-boot:4.0.6:repackage (repackage) @ springboot4 ---
+[INFO] Replacing main artifact /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/springboot4.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/springboot4.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.331 s
+[INFO] Finished at: 2026-06-02T13:17:25-04:00
+[INFO] ------------------------------------------------------------------------
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-06-02T13:17:28.015-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] org.acme.SpringBoot4Application          : Starting SpringBoot4Application v1.0 using Java 25.0.3 with PID 1785400 (/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/springboot4.jar started by jenkins in /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4)
+2026-06-02T13:17:28.021-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] org.acme.SpringBoot4Application          : No active profile set, falling back to 1 default profile: "default"
+2026-06-02T13:17:29.139-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-02T13:17:29.213-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interface.
+2026-06-02T13:17:30.270-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-02T13:17:30.287-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-02T13:17:30.288-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-02T13:17:30.317-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2224 ms
+2026-06-02T13:17:30.895-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] i.m.c.instrument.push.PushMeterRegistry  : Publishing metrics for OtlpMeterRegistry every 1m to http://localhost:4318/v1/metrics with resource attributes {service.name=springboot4}
+2026-06-02T13:17:31.668-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-02T13:17:31.815-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5414fea
+2026-06-02T13:17:31.817-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-02T13:17:31.871-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-02T13:17:31.960-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-02T13:17:31.997-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] org.hibernate.orm.cache                  : HHH90001028: Second-level cache region factory [org.hibernate.cache.jcache.internal.JCacheRegionFactory]
+2026-06-02T13:17:32.688-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-02T13:17:32.827-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/fruits]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.9
+	Default catalog/schema: fruits/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-02T13:17:34.203-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-02T13:17:34.214-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-02T13:17:34.375-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-02T13:17:35.962-04:00  INFO 1785400 --- [springboot4] [           main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+[9.719s][warning][aot] Preload Warning: Verification failed for org.springframework.transaction.reactive.TransactionalOperator
+[9.735s][warning][aot] Preload Warning: Verification failed for org.springframework.core.ReactiveAdapterRegistry$ReactorAdapter
+[9.873s][warning][aot] Preload Warning: Verification failed for org.hibernate.type.format.jackson.JacksonXmlFormatMapper
+[9.873s][warning][aot] Preload Warning: Verification failed for org.hibernate.type.format.jackson.JacksonJsonFormatMapper
+[9.873s][warning][aot] Preload Warning: Verification failed for org.hibernate.type.format.jakartajson.JsonBJsonFormatMapper
+[9.906s][warning][aot] Preload Warning: Verification failed for org.springframework.transaction.interceptor.TransactionAspectSupport$ReactiveTransactionSupport
+[9.937s][warning][aot] Preload Warning: Verification failed for io.micrometer.core.instrument.binder.logging.Log4j2Metrics
+[9.988s][warning][aot] Preload Warning: Verification failed for org.springframework.boot.logging.log4j2.Log4J2LoggingSystem
+[10.040s][warning][aot] Preload Warning: Verification failed for org.springframework.web.servlet.view.freemarker.FreeMarkerView
+[10.145s][warning][aot] Skipping jdk/internal/event/Event: JFR event class
+[10.146s][warning][aot] Skipping jdk/jfr/Event: JFR event class
+[10.146s][warning][aot] Skipping jdk/internal/event/FileReadEvent: JFR event class
+[10.146s][warning][aot] Skipping jdk/internal/event/FileWriteEvent: JFR event class
+[10.146s][warning][aot] Skipping org/springframework/core/ReactiveAdapterRegistry$ReactorAdapter: Failed verification
+[10.147s][warning][aot] Skipping io/micrometer/core/instrument/binder/logging/Log4j2Metrics: Failed verification
+[10.147s][warning][aot] Skipping jdk/internal/event/VirtualThreadEndEvent: JFR event class
+[10.147s][warning][aot] Skipping jdk/internal/event/VirtualThreadStartEvent: JFR event class
+[10.148s][warning][aot] Skipping jdk/internal/event/VirtualThreadSubmitFailedEvent: Has been redefined
+[10.148s][warning][aot] Skipping jdk/proxy1/$Proxy187: Unsupported location
+[10.148s][warning][aot] Skipping jdk/proxy1/$Proxy186: Unsupported location
+[10.148s][warning][aot] Skipping jdk/proxy1/$Proxy185: Unsupported location
+[10.148s][warning][aot] Skipping jdk/proxy1/$Proxy182: Unsupported location
+[10.148s][warning][aot] Skipping com/sun/proxy/jdk/proxy1/$Proxy183: Unsupported location
+[10.148s][warning][aot] Skipping jdk/proxy1/$Proxy184: Unsupported location
+[10.149s][warning][aot] Skipping org/springframework/transaction/interceptor/TransactionAspectSupport$ReactiveTransactionSupport: Failed verification
+[10.149s][warning][aot] Skipping jdk/proxy1/$Proxy194: Unsupported location
+[10.149s][warning][aot] Skipping jdk/proxy1/$Proxy188: Unsupported location
+[10.149s][warning][aot] Skipping jdk/proxy1/$Proxy189: Unsupported location
+[10.149s][warning][aot] Skipping com/sun/proxy/jdk/proxy1/$Proxy190: Unsupported location
+[10.149s][warning][aot] Skipping com/sun/proxy/jdk/proxy1/$Proxy191: Unsupported location
+[10.149s][warning][aot] Skipping jdk/proxy1/$Proxy193: Unsupported location
+[10.149s][warning][aot] Skipping jdk/proxy1/$Proxy192: Unsupported location
+[10.149s][warning][aot] Skipping org/hibernate/type/format/jackson/JacksonXmlFormatMapper: Failed verification
+[10.149s][warning][aot] Skipping org/hibernate/type/format/jakartajson/JsonBJsonFormatMapper: Failed verification
+[10.149s][warning][aot] Skipping org/hibernate/type/format/jackson/JacksonJsonFormatMapper: Failed verification
+[10.149s][warning][aot] Skipping jdk/proxy3/$Proxy92: Unsupported location
+[10.149s][warning][aot] Skipping jdk/proxy1/$Proxy2: Unsupported location
+[10.150s][warning][aot] Skipping jdk/internal/event/DeserializationEvent: JFR event class
+[10.150s][warning][aot] Skipping jdk/proxy1/$Proxy0: Unsupported location
+[10.150s][warning][aot] Skipping jdk/jfr/events/ContainerCPUUsageEvent: JFR event class
+[10.150s][warning][aot] Skipping jdk/jfr/events/ContainerCPUThrottlingEvent: JFR event class
+[10.150s][warning][aot] Skipping jdk/jfr/events/ContainerMemoryUsageEvent: JFR event class
+[10.150s][warning][aot] Skipping jdk/jfr/events/ContainerIOUsageEvent: JFR event class
+[10.150s][warning][aot] Skipping jdk/internal/event/ThreadSleepEvent: JFR event class
+[10.150s][warning][aot] Skipping jdk/internal/event/ExceptionThrownEvent: JFR event class
+[10.150s][warning][aot] Skipping jdk/internal/event/ProcessStartEvent: JFR event class
+[10.150s][warning][aot] Skipping jdk/internal/event/TLSHandshakeEvent: JFR event class
+[10.150s][warning][aot] Skipping jdk/internal/event/ErrorThrownEvent: JFR event class
+[10.150s][warning][aot] Skipping jdk/jfr/events/MethodTraceEvent: JFR event class
+[10.150s][warning][aot] Skipping jdk/internal/event/X509CertificateEvent: JFR event class
+[10.150s][warning][aot] Skipping jdk/internal/event/X509ValidationEvent: JFR event class
+[10.150s][warning][aot] Skipping org/springframework/transaction/reactive/TransactionalOperator: Failed verification
+[10.151s][warning][aot] Skipping jdk/jfr/events/AbstractJDKEvent: JFR event class
+[10.151s][warning][aot] Skipping jdk/jfr/events/AbstractPeriodicEvent: JFR event class
+[10.151s][warning][aot] Skipping jdk/jfr/events/AbstractBufferStatisticsEvent: JFR event class
+[10.151s][warning][aot] Skipping org/springframework/web/servlet/view/freemarker/FreeMarkerView: Failed verification
+[10.151s][warning][aot] Skipping com/sun/proxy/jdk/proxy1/$Proxy137: Unsupported location
+[10.151s][warning][aot] Skipping jdk/proxy1/$Proxy4: Unsupported location
+[10.151s][warning][aot] Skipping jdk/proxy1/$Proxy3: Unsupported location
+[10.151s][warning][aot] Skipping jdk/proxy1/$Proxy21: Unsupported location
+[10.152s][warning][aot] Skipping jdk/jfr/events/ContainerConfigurationEvent: JFR event class
+[10.152s][warning][aot] Skipping jdk/jfr/events/MethodTimingEvent: JFR event class
+[10.152s][warning][aot] Skipping jdk/jfr/events/InitialSecurityPropertyEvent: JFR event class
+[10.152s][warning][aot] Skipping jdk/internal/event/ExceptionStatisticsEvent: JFR event class
+[10.152s][warning][aot] Skipping jdk/jfr/events/DirectBufferStatisticsEvent: JFR event class
+[10.153s][warning][aot] Skipping jdk/internal/event/FileForceEvent: JFR event class
+[10.153s][warning][aot] Skipping jdk/proxy1/$Proxy163: Unsupported location
+[10.154s][warning][aot] Skipping jdk/proxy1/$Proxy177: Unsupported location
+[10.154s][warning][aot] Skipping jdk/proxy1/$Proxy176: Unsupported location
+[10.154s][warning][aot] Skipping jdk/proxy1/$Proxy178: Unsupported location
+[10.155s][warning][aot] Skipping com/sun/proxy/jdk/proxy1/$Proxy33: Unsupported location
+[10.155s][warning][aot] Skipping jdk/proxy1/$Proxy175: Unsupported location
+[10.155s][warning][aot] Skipping org/springframework/boot/logging/log4j2/Log4J2LoggingSystem: Failed verification
+[10.158s][warning][aot] Skipping jdk/internal/event/SerializationMisdeclarationEvent: JFR event class
+[10.159s][warning][aot] Skipping jdk/internal/event/SecurityPropertyModificationEvent: JFR event class
+[10.159s][warning][aot] Skipping jdk/proxy1/$Proxy18: Unsupported location
+[10.159s][warning][aot] Skipping jdk/internal/event/SocketWriteEvent: JFR event class
+[10.159s][warning][aot] Skipping jdk/internal/event/SocketReadEvent: JFR event class
+[10.159s][warning][aot] Skipping jdk/proxy1/$Proxy180: Unsupported location
+[10.159s][warning][aot] Skipping jdk/proxy1/$Proxy179: Unsupported location
+[10.159s][warning][aot] Skipping jdk/proxy1/$Proxy181: Unsupported location
+[10.160s][warning][aot] Skipping jdk/jfr/events/ActiveRecordingEvent: JFR event class
+[10.160s][warning][aot] Skipping jdk/jfr/events/ActiveSettingEvent: JFR event class
+[10.160s][warning][aot] Skipping jdk/proxy1/$Proxy10: Unsupported location
+[10.160s][warning][aot] Skipping jdk/internal/event/SecurityProviderServiceEvent: JFR event class
+Temporary AOTConfiguration recorded: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/app.aot.config
+Launching child process /home/jenkins/.sdkman/candidates/java/25.0.3-tem/bin/java to assemble AOT cache /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/app.aot using configuration /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/app.aot.config
+Reading AOTConfiguration /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/app.aot.config and writing AOTCache /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/app.aot
+AOTCache creation is complete: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/app.aot 128753664 bytes
+Removed temporary AOT configuration file /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/app.aot.config

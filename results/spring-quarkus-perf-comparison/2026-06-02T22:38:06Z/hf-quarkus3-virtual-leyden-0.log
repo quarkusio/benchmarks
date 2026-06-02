@@ -1,0 +1,39 @@
+[0.001s][warning][os] NUMA support disabled: The process memory and cpu node configuration does not match
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2 (file:/home/jenkins/.m2/repository/io/netty/netty-common/4.1.125.Final/netty-common-4.1.125.Final.jar)
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+Loaded benchmark template load-test-fixed-threads-read-all with these parameters (with defaults): 
+[1mNAME                    DEFAULT    CURRENT (CONTEXT)[0m
+PATH                    /fruits    (not set)        
+PORT                    8080       (not set)        
+THREADS                 2          (not set)        
+LOAD_REQUEST_TIMEOUT    30s        (not set)        
+PROTOCOL                http       (not set)        
+HOST                    localhost  (not set)        
+WARMUP_DURATION         2m         (not set)        
+WARMUP_REQUEST_TIMEOUT  2m         (not set)        
+CONNECTIONS             100        (not set)        
+HIDE_WARMUP_PHASE       false      (not set)        
+LOAD_MAX_DURATION       1m         (not set)        
+LOAD_DURATION           30s        (not set)        
+WARMUP_PAUSE_DURATION   30s        (not set)        
+WARMUP_MAX_DURATION     4m         (not set)        
+Uploading...
+... done.
+Started run 0000
+Monitoring run 0000, benchmark load-test-fixed-threads-read-all
+quarkus3-virtual-leyden-0
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::loadLibrary has been called by io.netty.util.internal.NativeLibraryUtil in an unnamed module (file:/home/jenkins/.m2/repository/io/netty/netty-common/4.1.125.Final/netty-common-4.1.125.Final.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Started:    2026/06/02 14:44:22.977
+Terminated: 2026/06/02 14:47:22.999
+Run statistics persisted in the local filesystem
+[2KTotal stats from run 0000
+[1mPHASE     METRIC        THROUGHPUT    REQUESTS  MEAN     STD_DEV  MAX        p50      p90      p99       p99.9     p99.99     TIMEOUTS  ERRORS  BLOCKED  2xx      3xx  4xx  5xx  CACHE[0m
+warmup    getAllFruits  13.52k req/s   1622670  7.39 ms  6.22 ms  645.92 ms  7.41 ms  9.90 ms  22.54 ms  63.44 ms  220.20 ms         0       0     0 ns  1622670    0    0    0      0[0m
+loadTest  getAllFruits  14.70k req/s    441156  6.80 ms  2.36 ms   29.88 ms  7.37 ms  9.18 ms  12.39 ms  15.47 ms   20.45 ms         0       0     0 ns   441156    0    0    0      0[0m
+Report written to /home/jenkins/spring-quarkus-perf-comparison/logs/hyperfoil/quarkus3-virtual-leyden-0/0000.html

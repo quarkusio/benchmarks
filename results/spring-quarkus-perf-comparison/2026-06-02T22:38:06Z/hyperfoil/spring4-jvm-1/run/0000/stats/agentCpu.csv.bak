@@ -1,0 +1,4 @@
+phase,in-vm
+logStart,0.0% (0.0/64 cores), 1 core max NaN%
+loadTest,8.5% (5.5/64 cores), 1 core max 99.9%
+warmup,7.3% (4.7/64 cores), 1 core max 99.9%
