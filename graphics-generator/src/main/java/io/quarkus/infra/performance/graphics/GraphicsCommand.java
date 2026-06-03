@@ -68,6 +68,15 @@ public class GraphicsCommand implements Runnable {
     private void processDirectory(Path directory) throws IOException {
         Files.walkFileTree(directory, new SimpleFileVisitor<>() {
                     @Override
+                    public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) {
+                        return Optional.ofNullable(dir.getFileName())
+                          .map(Path::toString)
+                          .filter("hyperfoil"::equalsIgnoreCase)
+                          .map(name -> FileVisitResult.SKIP_SUBTREE)
+                          .orElse(FileVisitResult.CONTINUE);
+                    }
+
+                    @Override
                     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
                         if (file.getFileName().toString().endsWith(".json")) {
                             processFile(file);
