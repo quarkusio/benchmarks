@@ -172,6 +172,13 @@ public class GraphicsCommandTest {
     }
 
     @Test
+    @Launch({"src/test/resources", "target/test-output/directory-hyperfoil"})
+    public void testLaunchWithDirectoryIgnoresHyperfoil(LaunchResult result) {
+        String output = result.getOutput();
+        assertFalse(output.contains("should-be-ignored.json"), "Hyperfoil JSON files should be ignored: " + output);
+    }
+
+    @Test
     @Launch({"src/test/resources", "target/test-output/directory"})
     public void testLaunchWithDirectory(LaunchResult result) {
         String output = result.getOutput();
