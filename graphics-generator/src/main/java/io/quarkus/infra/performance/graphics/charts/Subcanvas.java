@@ -65,6 +65,18 @@ public class Subcanvas {
         g.fillRect(x + xOffset, y + yOffset, width, height);
     }
 
+    public void drawRect(int x, int y, int width, int height) {
+        g.drawRect(x + xOffset, y + yOffset, width, height);
+    }
+
+    public void fillRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight) {
+        g.fillRoundRect(x + xOffset, y + yOffset, width, height, arcWidth, arcHeight);
+    }
+
+    public void drawRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight) {
+        g.drawRoundRect(x + xOffset, y + yOffset, width, height, arcWidth, arcHeight);
+    }
+
     public void drawLine(int x1, int y1, int x2, int y2) {
         drawLine(x1, y1, x2, y2, 1);
     }
