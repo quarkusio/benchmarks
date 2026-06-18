@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.repository == 'quarkusio/benchmarks'
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Find latest folder and promote previous
         id: rollback

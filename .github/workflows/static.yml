@@ -30,7 +30,7 @@ jobs:
     if: github.repository == 'quarkusio/benchmarks'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Setup Pages
         uses: actions/configure-pages@v6
       - name: Clone a 404 page # because this is a separate site, it shows the default GitHub 404
