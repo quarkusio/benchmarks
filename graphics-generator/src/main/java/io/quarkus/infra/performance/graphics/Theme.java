@@ -33,11 +33,15 @@ import static io.quarkus.infra.performance.graphics.model.KnownFramework.SPRING_
 import static java.awt.Color.decode;
 
 public record Theme(String name, Color background, Color text, Color divider, Color finePrint,
-                    Map<Framework, Color> chartElements) {
+                    Map<Framework, Color> chartElements, Map<Framework, Color> fillElements) {
     public static final EmbeddableFont FONT = EmbeddableFont.OPENSANS;
     public static final Color QUARKUS_BLUE = decode("#4695eb");
+    public static final Color QUARKUS_MID_BLUE = decode("#8fc6ef");
+    public static final Color QUARKUS_LIGHT_BLUE = decode("#b8dcf2");
     public static final Color SPRING_GREEN = decode("#6ab443");
+    public static final Color SPRING_MID_GREEN = decode("#96d174");
     public static final Color SPRING_LIGHT_GREEN = decode("#c3e1b4");
+    public static final Color SPRING_PALE_GREEN = decode("#d4ebc6");
 
     public static final Color LIGHT_DIVIDER = decode("#AAAAAA");
     public static final Color DARK_DIVIDER = decode("#555555");
@@ -78,11 +82,44 @@ public record Theme(String name, Color background, Color text, Color divider, Co
             Map.entry(SPRING_VIRTUAL, SPRING_LIGHT_GREEN),
             Map.entry(SPRING_VIRTUAL_LEYDEN, SPRING_LIGHT_GREEN));
 
+    private static final Map<Framework, Color> DEFAULT_FILL_ELEMENTS = Map.ofEntries(
+            // Quarkus - JVM variants get mid blue, Native gets light blue
+            Map.entry(QUARKUS3_JVM, QUARKUS_MID_BLUE),
+            Map.entry(QUARKUS3_VIRTUAL, QUARKUS_BLUE),
+            Map.entry(QUARKUS3_NATIVE, QUARKUS_LIGHT_BLUE),
+            Map.entry(QUARKUS3_SPRING_COMPAT, QUARKUS_MID_BLUE),
+            Map.entry(QUARKUS3_LEYDEN, QUARKUS_MID_BLUE),
+            Map.entry(QUARKUS3_VIRTUAL_LEYDEN, QUARKUS_BLUE),
+
+            // Spring 3 - JVM variants get mid green, Native gets light green
+            Map.entry(SPRING3_JVM, SPRING_MID_GREEN),
+            Map.entry(SPRING3_NATIVE, SPRING_LIGHT_GREEN),
+            Map.entry(SPRING3_JVM_AOT, SPRING_MID_GREEN),
+            Map.entry(SPRING3_VIRTUAL, SPRING_GREEN),
+            Map.entry(SPRING3_LEYDEN, SPRING_MID_GREEN),
+            Map.entry(SPRING3_VIRTUAL_LEYDEN, SPRING_GREEN),
+
+            // Spring 4 - JVM variants get mid green, Native gets light green
+            Map.entry(SPRING4_JVM, SPRING_MID_GREEN),
+            Map.entry(SPRING4_NATIVE, SPRING_LIGHT_GREEN),
+            Map.entry(SPRING4_JVM_AOT, SPRING_MID_GREEN),
+            Map.entry(SPRING4_VIRTUAL, SPRING_GREEN),
+            Map.entry(SPRING4_LEYDEN, SPRING_MID_GREEN),
+            Map.entry(SPRING4_VIRTUAL_LEYDEN, SPRING_GREEN),
+
+            // Spring (unversioned)
+            Map.entry(SPRING_JVM, SPRING_MID_GREEN),
+            Map.entry(SPRING_NATIVE, SPRING_LIGHT_GREEN),
+            Map.entry(SPRING_LEYDEN, SPRING_MID_GREEN),
+            Map.entry(SPRING_JVM_AOT, SPRING_MID_GREEN),
+            Map.entry(SPRING_VIRTUAL, SPRING_GREEN),
+            Map.entry(SPRING_VIRTUAL_LEYDEN, SPRING_GREEN));
+
     public static final Theme LIGHT = new Theme("light", Color.WHITE, decode("#121212"), LIGHT_DIVIDER, BARELY_GREY);
     public static final Theme DARK = new Theme("dark", decode("#121212"), decode("#B5B5B5"), DARK_DIVIDER, OFF_BLACK);
 
     public Theme(String name, Color background, Color text, Color divider, Color finePrint) {
-        this(name, background, text, divider, finePrint, DEFAULT_CHART_ELEMENTS);
+        this(name, background, text, divider, finePrint, DEFAULT_CHART_ELEMENTS, DEFAULT_FILL_ELEMENTS);
     }
 
 }
