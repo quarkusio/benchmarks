@@ -148,6 +148,7 @@ jobs:
           SUBSET_CUBE_FILES=$(echo "$FILES" | tr ',' '\n' | grep "memory" | grep "main" | grep -v "composite" | head -n2)
           SUBSET_COMPOSITE_FILES=$(echo "$FILES" | tr ',' '\n' | grep "composite" | grep -v "memory" | grep "main" | head -n2)
           BIN_PACKING_FILES=$(echo "$FILES" | tr ',' '\n' | grep "density-by-rss" | grep "main" | head -n2)
+          LOAD_DENSITY_FILES=$(echo "$FILES" | tr ',' '\n' | grep "load-density" | grep "main" | head -n2)
           MD=""
           for f in $SUBSET_COMPOSITE_FILES; do
             MD="$MD  \n-![$f](../blob/$HASH/$f?raw=true)\n"
@@ -168,6 +169,9 @@ jobs:
             MD="$MD  \n-![$f](../blob/$HASH/$f?raw=true)\n"
           done
           for f in $BIN_PACKING_FILES; do
+            MD="$MD  \n-![$f](../blob/$HASH/$f?raw=true)\n"
+          done
+          for f in $LOAD_DENSITY_FILES; do
             MD="$MD  \n-![$f](../blob/$HASH/$f?raw=true)\n"
           done
           {
