@@ -1,0 +1,53 @@
+14:02:59,294 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Starting in directory /home/jenkins/spring-quarkus-perf-comparison/logs/hyperfoil/spring4-native-0...
+14:02:59,488 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerServer] Hyperfoil controller listening on http://127.0.0.1:38109
+14:03:00,226 INFO  (vert.x-worker-thread-3) [i.h.c.u.PersistenceUtil] Stored benchmark 'load-test-fixed-threads-read-all' in /home/jenkins/spring-quarkus-perf-comparison/logs/hyperfoil/spring4-native-0/benchmark/load-test-fixed-threads-read-all.yaml
+14:03:00,364 INFO  (vert.x-eventloop-thread-0) [i.h.c.u.PersistenceUtil] Stored benchmark 'load-test-fixed-threads-read-all' in /home/jenkins/spring-quarkus-perf-comparison/logs/hyperfoil/spring4-native-0/run/0000/load-test-fixed-threads-read-all.yaml
+14:03:00,368 INFO  (vert.x-eventloop-thread-2) [i.h.c.AgentVerticle] Agent in-vm for run 0000 uses control address __hyperfoil.agent.0000.in-vm.in-vm.2 (Vert.x deployment ID 2, node ID in-vm)
+14:03:01,372 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Received AgentHello from in-vm (nodeId=in-vm, deploymentId=__hyperfoil.agent.0000.in-vm.in-vm.2, runId=0000)
+14:03:01,373 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Agent in-vm status before: STARTING, runId=0000
+14:03:01,373 INFO  (vert.x-eventloop-thread-2) [i.h.c.AgentVerticle] __hyperfoil.agent.0000.in-vm.in-vm.2 Got reply from controller.
+14:03:01,374 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] All agents registered, calling handleAgentsStarted
+14:03:01,374 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Starting benchmark load-test-fixed-threads-read-all - run 0000 (description: spring4-native-0)
+14:03:01,374 INFO  (vert.x-eventloop-thread-2) [i.h.c.AgentVerticle] handleAgentControlMessage received command: INITIALIZE for agent __hyperfoil.agent.0000.in-vm.in-vm.2, runner is null: true
+14:03:01,375 INFO  (vert.x-eventloop-thread-2) [i.h.c.AgentVerticle] Initializing agent, runner is null: true
+14:03:01,375 INFO  (vert.x-eventloop-thread-2) [i.h.c.AgentVerticle] initBenchmark called for 0, current runner status: NULL
+14:03:01,375 INFO  (vert.x-eventloop-thread-2) [i.h.c.AgentVerticle] Creating SimulationRunner for 0
+14:03:01,389 INFO  (vert.x-eventloop-thread-2) [i.h.h.c.HttpClientPoolImpl] Allocating 100 connections (max 100, buffer 0) in 2 executors to http://localhost:8080
+14:03:01,520 INFO  (vert.x-eventloop-thread-2) [i.h.c.i.SimulationRunner] GC execution took 103 ms
+14:03:01,520 INFO  (vert.x-eventloop-thread-2) [i.h.c.i.SimulationRunner] Overall GC run took 103 ms
+14:03:01,525 INFO  (vert.x-eventloop-thread-2) [i.h.c.i.SimulationRunner] Simulation initialization took 129 ms
+14:03:01,529 INFO  (vert.x-eventloop-thread-2) [i.h.c.AgentVerticle] Initialization completed for __hyperfoil.agent.0000.in-vm.in-vm.2
+14:03:01,580 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 warmup changing status NOT_STARTED to STARTING
+14:03:01,588 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 warmup changing status STARTING to RUNNING
+14:05:01,578 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 warmup changing status RUNNING to FINISHING
+14:05:01,581 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 warmup changing status FINISHING to FINISHED
+14:05:01,582 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 cooldown changing status NOT_STARTED to STARTING
+14:05:01,583 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 cooldown changing status STARTING to RUNNING
+14:05:01,583 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 cooldown changing status RUNNING to FINISHED
+14:05:01,586 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000: completing stats for phase cooldown
+14:05:01,587 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 cooldown changing status FINISHED to TERMINATED
+14:05:01,620 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000: completing stats for phase warmup
+14:05:01,634 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 warmup changing status FINISHED to TERMINATED
+14:05:01,635 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 logStart changing status NOT_STARTED to STARTING
+14:05:01,638 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 logStart changing status STARTING to RUNNING
+14:05:01,639 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 logStart changing status RUNNING to FINISHING
+14:05:01,639 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 logStart changing status FINISHING to FINISHED
+14:05:01,639 INFO  (epollEventLoopGroup-2-1) [i.h.c.s.LogAction] loadTest started at 2026-11-03T14:05:01.638Z
+14:05:01,640 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000: completing stats for phase logStart
+14:05:01,640 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 logStart changing status FINISHED to TERMINATED
+14:05:01,640 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 loadTest changing status NOT_STARTED to STARTING
+14:05:01,642 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 loadTest changing status STARTING to RUNNING
+14:05:31,641 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 loadTest changing status RUNNING to FINISHING
+14:05:31,642 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 loadTest changing status FINISHING to FINISHED
+14:05:31,681 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000: completing stats for phase loadTest
+14:05:31,688 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerPhase] 0000 loadTest changing status FINISHED to TERMINATED
+14:05:31,688 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] 0000 All phases are terminated.
+14:05:31,688 INFO  (vert.x-eventloop-thread-2) [i.h.c.AgentVerticle] handleAgentControlMessage received command: STOP for agent __hyperfoil.agent.0000.in-vm.in-vm.2, runner is null: false
+14:05:31,688 INFO  (vert.x-eventloop-thread-2) [i.h.c.AgentVerticle] Received agent reset, runner is null: false
+14:05:31,689 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000: completing stats for phase logStart
+14:05:31,689 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000: completing stats for phase cooldown
+14:05:31,690 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000: completing stats for phase loadTest
+14:05:31,690 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000: completing stats for phase warmup
+14:05:31,691 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Agent in-vm/__hyperfoil.agent.0000.in-vm.in-vm.2 stopped successfully.
+14:05:31,691 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Run 0000 completed
+14:05:31,802 INFO  (vert.x-eventloop-thread-0) [i.h.c.ControllerVerticle] Successfully persisted run 0000

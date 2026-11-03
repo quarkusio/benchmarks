@@ -1,0 +1,47 @@
+[0.001s][warning][os] NUMA support disabled: The process memory and cpu node configuration does not match
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J(W): Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J(W): Ignoring binding found at [jar:file:/home/jenkins/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.26.1/log4j-slf4j-impl-2.26.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J(W): See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::loadLibrary has been called by io.netty.util.internal.NativeLibraryUtil in an unnamed module (file:/home/jenkins/.m2/repository/io/netty/netty-common/4.2.18.Final/netty-common-4.2.18.Final.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Loaded benchmark template load-test-fixed-threads-read-all with these parameters (with defaults): 
+[1mNAME                    DEFAULT    CURRENT (CONTEXT)[0m
+PATH                    /fruits    (not set)        
+PORT                    8080       (not set)        
+THREADS                 2          (not set)        
+LOAD_REQUEST_TIMEOUT    30s        (not set)        
+PROTOCOL                http       (not set)        
+HOST                    localhost  (not set)        
+WARMUP_DURATION         2m         (not set)        
+WARMUP_REQUEST_TIMEOUT  2m         (not set)        
+CONNECTIONS             100        (not set)        
+HIDE_WARMUP_PHASE       false      (not set)        
+LOAD_MAX_DURATION       1m         (not set)        
+LOAD_DURATION           30s        (not set)        
+WARMUP_PAUSE_DURATION   30s        (not set)        
+WARMUP_MAX_DURATION     4m         (not set)        
+Uploading...
+... done.
+Started run 0000
+Monitoring run 0000, benchmark load-test-fixed-threads-read-all
+spring3-leyden-1
+Started:    2026/11/03 11:41:05.968
+Terminated: 2026/11/03 11:43:36.048
+Run statistics persisted in the local filesystem
+[2KTotal stats from run 0000
+[1mPHASE     METRIC        THROUGHPUT     REQUESTS  MEAN      STD_DEV   MAX        p50       p90       p99        p99.9      p99.99     INVALID  TIMEOUTS  ERRORS[0m
+[1m                        BLOCKED        2xx       3xx       4xx       5xx        CACHE     [0m
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+warmup    getAllFruits  2438.50 req/s    292727  40.99 ms  47.23 ms  864.03 ms  28.44 ms  99.09 ms  212.86 ms  362.81 ms  780.14 ms        0         0       0[0m
+                                 0 ns    292727         0         0          0         0  [0m
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+loadTest  getAllFruits  3352.58 req/s    100688  29.80 ms  30.92 ms  383.78 ms  23.20 ms  66.32 ms  147.85 ms  222.30 ms  310.38 ms        0         0       0[0m
+                                 0 ns    100688         0         0          0         0  [0m
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Report written to /home/jenkins/spring-quarkus-perf-comparison/logs/hyperfoil/spring3-leyden-1/0000.html

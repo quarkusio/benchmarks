@@ -1,0 +1,45 @@
+[INFO] Scanning for projects...
+[INFO] Loaded 24349 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Loaded 50 auto-discovered prefixes for remote repository ow2-snapshot (prefixes-ow2-snapshot.txt)
+[INFO] 
+[INFO] ---------------------< org.acme:quarkus3-virtual >----------------------
+[INFO] Building quarkus3-virtual 1.0
+[INFO]   from pom.xml
+[INFO] ------------------------------[ quarkus ]-------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ quarkus3-virtual ---
+[INFO] Deleting /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3-virtual/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ quarkus3-virtual ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- quarkus:3.40.1.1:generate-code (default-generate-code) @ quarkus3-virtual ---
+[INFO] 
+[INFO] --- compiler:3.16.0:compile (default-compile) @ quarkus3-virtual ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 16 source files with javac [debug release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ quarkus3-virtual ---
+[INFO] skip non existing resourceDirectory /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3-virtual/src/test/resources
+[INFO] 
+[INFO] --- quarkus:3.40.1.1:generate-code-tests (default-generate-code-tests) @ quarkus3-virtual ---
+[INFO] Loaded 24349 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 50 auto-discovered prefixes for remote repository ow2-snapshot (prefixes-ow2-snapshot.txt)
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] 
+[INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ quarkus3-virtual ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 4 source files with javac [debug release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.6.1:test (default-test) @ quarkus3-virtual ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- quarkus:3.40.1.1:build (default-build) @ quarkus3-virtual ---
+[INFO] [io.quarkus.deployment.QuarkusAugmentor] Quarkus augmentation completed in 4655ms
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.680 s
+[INFO] Finished at: 2026-11-03T08:23:16-05:00
+[INFO] ------------------------------------------------------------------------

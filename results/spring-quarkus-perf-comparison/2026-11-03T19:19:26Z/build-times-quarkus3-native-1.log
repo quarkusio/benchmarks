@@ -1,0 +1,143 @@
+[INFO] Scanning for projects...
+[INFO] Loaded 24349 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 50 auto-discovered prefixes for remote repository ow2-snapshot (prefixes-ow2-snapshot.txt)
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] 
+[INFO] -------------------------< org.acme:quarkus3 >--------------------------
+[INFO] Building quarkus3 1.0
+[INFO]   from pom.xml
+[INFO] ------------------------------[ quarkus ]-------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ quarkus3 ---
+[INFO] Deleting /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ quarkus3 ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- quarkus:3.40.1.1:generate-code (default-generate-code) @ quarkus3 ---
+[INFO] 
+[INFO] --- compiler:3.16.0:compile (default-compile) @ quarkus3 ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 16 source files with javac [debug release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ quarkus3 ---
+[INFO] skip non existing resourceDirectory /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/src/test/resources
+[INFO] 
+[INFO] --- quarkus:3.40.1.1:generate-code-tests (default-generate-code-tests) @ quarkus3 ---
+[INFO] Loaded 24349 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 50 auto-discovered prefixes for remote repository ow2-snapshot (prefixes-ow2-snapshot.txt)
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] 
+[INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ quarkus3 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 4 source files with javac [debug release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.6.1:test (default-test) @ quarkus3 ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- quarkus:3.40.1.1:build (default-build) @ quarkus3 ---
+[INFO] [io.quarkus.deployment.pkg.jar.NativeImageSourceJarBuilder] Building native image source jar: /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus3-native-image-source-jar/quarkus3-runner.jar
+[WARNING] [io.quarkus.deployment.pkg.jar.ParallelCommonsCompressArchiveCreator] Duplicate entry 'io/quarkus/hibernate/orm/panache/PanacheEntity.class': already added from 'Unknown source', ignoring entry from 'Current application'
+[INFO] [io.quarkus.deployment.pkg.steps.NativeImageBuildStep] Building native image from /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus3-native-image-source-jar/quarkus3-runner.jar
+[INFO] [io.quarkus.deployment.pkg.steps.NativeImageBuildStep] Running Quarkus native-image plugin on GRAALVM 25.4.4.1.1 JDK 25.0.4.1.1+1-jvmci-25.4-b23
+[INFO] [io.quarkus.deployment.pkg.steps.NativeImageBuildRunner] /home/jenkins/.sdkman/candidates/java/25.4.4.1+1-graalce/bin/native-image -J-DCoordinatorEnvironmentBean.transactionStatusManagerEnable=false -J-Dsun.nio.ch.maxUpdateArraySize=100 -J-Djava.util.logging.manager=org.jboss.logmanager.LogManager -J-Dvertx.logger-delegate-factory-class-name=io.quarkus.vertx.core.runtime.VertxLogDelegateFactory -J-Dvertx.disableDnsResolver=true -J-Dio.netty.tryReflectionSetAccessible=true -J-Dio.netty.noUnsafe=false -J-Dio.netty.leakDetection.level=DISABLED -J-Dio.netty.allocator.maxOrder=3 -J-Duser.language=en -J-Duser.country=US -J-Dlogging.initial-configurator.min-level=500 -J-Dio.quarkus.caffeine.graalvm.recordStats=true -H:+UnlockExperimentalVMOptions -H:IncludeLocales=en-US -H:-UnlockExperimentalVMOptions --enable-native-access=ALL-UNNAMED -J-Dfile.encoding=UTF-8 -J--add-exports=org.graalvm.nativeimage.builder/com.oracle.svm.core.jdk=ALL-UNNAMED --features=io.quarkus.jdbc.postgresql.runtime.graal.SQLXMLFeature,io.quarkus.opentelemetry.runtime.graal.UnsignedFeature,io.quarkus.hibernate.validator.runtime.DisableLoggingFeature,io.quarkus.hibernate.orm.runtime.graal.RegisterStateManagementForReflectionFeature,io.quarkus.hibernate.orm.runtime.graal.RegisterServicesForReflectionFeature,io.quarkus.hibernate.orm.runtime.graal.DisableLoggingFeature,org.hibernate.graalvm.internal.GraalVMStaticFeature,io.quarkus.caffeine.runtime.graal.CacheConstructorsFeature,io.quarkus.runner.Feature,io.quarkus.runtime.graal.DisableLoggingFeature,io.quarkus.runtime.graal.JVMChecksFeature,io.quarkus.runtime.graal.SkipConsoleServiceProvidersFeature,io.quarkus.jackson.runtime.graal.JacksonSerializerRegistrationFeature -J--add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED -J--add-exports=java.security.jgss/sun.security.jgss=ALL-UNNAMED -J--add-opens=java.base/java.text=ALL-UNNAMED -J--add-opens=java.base/java.io=ALL-UNNAMED -J--add-opens=java.base/java.lang.invoke=ALL-UNNAMED -J--add-opens=java.base/java.util=ALL-UNNAMED -H:+UnlockExperimentalVMOptions -H:BuildOutputJSONFile=quarkus3-runner-build-output-stats.json -H:-UnlockExperimentalVMOptions -H:+UnlockExperimentalVMOptions -H:+GenerateBuildArtifactsFile -H:-UnlockExperimentalVMOptions -H:+UnlockExperimentalVMOptions -H:+AllowFoldMethods -H:-UnlockExperimentalVMOptions -J-Djava.awt.headless=true --no-fallback --link-at-build-time -H:+UnlockExperimentalVMOptions -H:+ReportExceptionStackTraces -H:-UnlockExperimentalVMOptions -H:-AddAllCharsets --enable-url-protocols=http,https -H:NativeLinkerOption=-no-pie --enable-monitoring=jfr,heapdump,threaddump -H:+UnlockExperimentalVMOptions -H:-UseServiceLoaderFeature -H:-UnlockExperimentalVMOptions --exclude-config io\.netty\.netty-codec /META-INF/native-image/io\.netty/netty-codec/generated/handlers/reflect-config\.json --exclude-config io\.netty\.netty-handler /META-INF/native-image/io\.netty/netty-handler/generated/handlers/reflect-config\.json -o quarkus3-runner -jar quarkus3-runner.jar
+Warning: Using a deprecated option --no-fallback from command line. No effect, no replacement available
+Warning: Using a deprecated option --enable-url-protocols= from command line. Use reachability metadata instead.
+Warning: Option 'FallbackThreshold' is deprecated and might be removed in a future release: It no longer has any effect, and no replacement is available. Please refer to the GraalVM release notes.
+Warning: Option 'DynamicProxyConfigurationResources' is deprecated and might be removed in a future release: This can be caused by a proxy-config.json file in your META-INF directory. Consider including proxy configuration in the reflection section of reachability-metadata.json instead.. Please refer to the GraalVM release notes.
+Warning: Option 'DynamicProxyConfigurationResources' is deprecated and might be removed in a future release: This can be caused by a proxy-config.json file in your META-INF directory. Consider including proxy configuration in the reflection section of reachability-metadata.json instead.. Please refer to the GraalVM release notes.
+========================================================================================================================
+GraalVM Native Image: Generating 'quarkus3-runner' (executable)...
+========================================================================================================================
+For detailed information and explanations on the build output, visit:
+https://github.com/oracle/graal/blob/master/docs/reference-manual/native-image/BuildOutput.md
+------------------------------------------------------------------------------------------------------------------------
+[1/8] Initializing...                                                                                  (14.3s @ 0.95GiB)
+ Builder configuration:
+ - Java version: 25.0.4.1.1+1, vendor version: GraalVM CE 25.4.4.1.1+1.1
+ - Graal compiler: optimization level: 2, target machine: x86-64-v3
+ - C compiler: gcc (redhat, x86_64, 11.5.0)
+ - Assertions: disabled, system assertions: disabled
+ - 14 user-specific feature(s):
+   - io.quarkus.caffeine.runtime.graal.CacheConstructorsFeature
+   - io.quarkus.hibernate.orm.runtime.graal.DisableLoggingFeature: Disables INFO logging during the analysis phase
+   - io.quarkus.hibernate.orm.runtime.graal.RegisterServicesForReflectionFeature: Makes methods of reachable Hibernate services accessible through Class#getMethods()
+   - io.quarkus.hibernate.orm.runtime.graal.RegisterStateManagementForReflectionFeature: Makes fields of reachable Hibernate StateManagement implementations accessible through Class#getDeclaredField()
+   - io.quarkus.hibernate.validator.runtime.DisableLoggingFeature: Disables INFO logging during the analysis phase for the [org.hibernate.validator.internal.util.Version] categories
+   - io.quarkus.jackson.runtime.graal.JacksonSerializerRegistrationFeature: Conditionally registers Jackson SQL/XML serializers for reflection based on reachability
+   - io.quarkus.jdbc.postgresql.runtime.graal.SQLXMLFeature
+   - io.quarkus.opentelemetry.runtime.graal.UnsignedFeature
+   - io.quarkus.runner.Feature: Auto-generated class by Quarkus from the existing extensions
+   - io.quarkus.runtime.graal.DisableLoggingFeature: Adapts logging during the analysis phase
+   - io.quarkus.runtime.graal.JVMChecksFeature
+   - io.quarkus.runtime.graal.SkipConsoleServiceProvidersFeature: Skip unsupported console service providers when quarkus.native.auto-service-loader-registration is false
+   - org.eclipse.angus.activation.nativeimage.AngusActivationFeature
+   - org.hibernate.graalvm.internal.GraalVMStaticFeature: Hibernate ORM's static reflection registrations for GraalVM
+ Image configuration:
+ - Garbage collector: Serial GC (max heap size: 80% of RAM)
+ - Assertions: disabled (class-specific config may apply), system assertions: disabled
+------------------------------------------------------------------------------------------------------------------------
+ 5 experimental option(s) unlocked:
+ - '-H:+AllowFoldMethods' (origin(s): command line)
+ - '-H:BuildOutputJSONFile' (origin(s): command line)
+ - '-H:-UseServiceLoaderFeature' (origin(s): command line)
+ - '-H:+GenerateBuildArtifactsFile' (origin(s): command line)
+ - '-H:AddOpens' (alternative API option(s): --add-opens java.base/java.lang=ALL-UNNAMED, --add-opens java.base/java.nio=ALL-UNNAMED, --add-opens java.base/jdk.internal.misc=ALL-UNNAMED; origin(s): command line)
+------------------------------------------------------------------------------------------------------------------------
+Build resources:
+ - 30.00GiB of memory (8.0% of system memory, capped at 30GiB)
+ - 4 thread(s) (100.0% of 4 available processor(s), determined at start)
+[2/8] Performing analysis...  [*****]                                                                  (96.0s @ 2.60GiB)
+   28,408 types,  38,477 fields, and 139,498 methods found reachable
+    1,694 types,   1,930 fields, and  15,918 methods registered for reflection
+       63 types,      69 fields, and      55 methods registered for JNI access
+       86 resource accesses registered with 215.43KiB total size
+        6 native libraries: dl, m, pthread, rt, z
+[3/8] Building universe...                                                                             (13.8s @ 2.92GiB)
+[4/8] Parsing methods...      [***]                                                                     (9.8s @ 3.00GiB)
+[5/8] Inlining methods...     [****]                                                                    (8.5s @ 2.21GiB)
+[6/8] Compiling methods...    [**********]                                                            (111.7s @ 2.57GiB)
+[7/8] Laying out methods...   [****]                                                                   (13.8s @ 3.13GiB)
+[8/8] Creating image...       [****]                                                                   (12.5s @ 3.62GiB)
+  38.98MiB (40.98%) for code area:    96,050 compilation units
+  47.81MiB (50.26%) for image heap:  680,507 objects and 25 resources
+   8.33MiB ( 8.76%) for other data
+  95.12MiB in total image size, 87.23MiB in total file size
+------------------------------------------------------------------------------------------------------------------------
+Top 10 origins of code area:                                Top 10 object types in image heap:
+   1.86MiB com.google.protobuf                                11.01MiB byte[] for code metadata
+   1.16MiB java.base/sun.security.ssl                         10.67MiB byte[] for string data
+   1.05MiB java.base/java.util                                 4.71MiB java.base/java.lang.String
+ 981.60KiB o.g.n.runtime/com.oracle.svm.core.code              4.04MiB java.base/java.lang.Class
+ 609.56KiB java.base/com.sun.crypto.provider                   3.25MiB o.g.n.runtime/c.o.s.core.hub.DynamicHubCompanion
+ 604.48KiB jdk.proxy4/jdk.proxy4                               2.36MiB byte[] for reflection metadata
+ 510.42KiB java.base/java.lang                                 1.98MiB byte[] for general heap data
+ 486.16KiB java.base/java.lang.invoke                        872.98KiB java.base/java.lang.Object[]
+ 477.66KiB io.netty.buffer                                   671.11KiB o.g.n.runtime/c.o.s.c.r.SubstrateMethodAccessor
+ 476.18KiB java.base/java.util.concurrent                    650.22KiB java.base/java.lang.String[]
+  30.86MiB for 1245 more packages                              7.63MiB for 6836 more object types
+------------------------------------------------------------------------------------------------------------------------
+Recommendations:
+ FUTR: Use '--future-defaults=all' to prepare for future releases.
+ HEAP: Set max heap for improved and more predictable memory usage.
+ CPU:  Enable more CPU features with '-march=native' for improved performance.
+------------------------------------------------------------------------------------------------------------------------
+                       18.7s (6.5% of total time) in 272 GCs | Peak RSS: 4.79GiB | CPU load: 3.57
+------------------------------------------------------------------------------------------------------------------------
+Build artifacts:
+ /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus3-native-image-source-jar/build-artifacts.json (build_info, 92B)
+ /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus3-native-image-source-jar/quarkus3-runner (executable, 87.23MiB)
+ /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3/target/quarkus3-native-image-source-jar/quarkus3-runner-build-output-stats.json (build_info, 1.01KiB)
+========================================================================================================================
+Finished generating 'quarkus3-runner' in 4m 46s.
+
+The build process encountered 5 warnings.
+
+[INFO] [io.quarkus.deployment.pkg.steps.NativeImageBuildRunner] objcopy --strip-debug quarkus3-runner
+[INFO] [io.quarkus.deployment.QuarkusAugmentor] Quarkus augmentation completed in 295360ms
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  05:05 min
+[INFO] Finished at: 2026-11-03T08:37:27-05:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,53 @@
+[0.018s][warning][os] NUMA support disabled: The process memory and cpu node configuration does not match
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-03T13:52:16.389-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] org.acme.SpringBoot4Application          : Starting SpringBoot4Application v1.0 using Java 25.0.5 with PID 811103 (/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4/target/springboot4.jar started by jenkins in /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4)
+2026-11-03T13:52:16.394-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] org.acme.SpringBoot4Application          : No active profile set, falling back to 1 default profile: "default"
+2026-11-03T13:52:17.419-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-03T13:52:17.485-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
+2026-11-03T13:52:18.341-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-11-03T13:52:18.357-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-03T13:52:18.357-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-03T13:52:18.387-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1904 ms
+2026-11-03T13:52:18.899-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] i.m.c.instrument.push.PushMeterRegistry  : Publishing metrics for OtlpMeterRegistry every 1m to http://localhost:4318/v1/metrics with resource attributes {service.name=springboot4}
+2026-11-03T13:52:19.487-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-03T13:52:19.573-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3dd2b9c1
+2026-11-03T13:52:19.574-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-03T13:52:19.608-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-03T13:52:19.676-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-03T13:52:19.705-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] org.hibernate.orm.cache                  : HHH90001028: Second-level cache region factory [org.hibernate.cache.jcache.internal.JCacheRegionFactory]
+2026-11-03T13:52:20.021-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-03T13:52:20.087-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/fruits]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.9
+	Default catalog/schema: fruits/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-03T13:52:20.749-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-03T13:52:20.757-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-03T13:52:20.913-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-03T13:52:22.270-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-11-03T13:52:22.377-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-11-03T13:52:22.389-05:00  INFO 811103 --- [springboot4] [           main] [                                                 ] org.acme.SpringBoot4Application          : Started SpringBoot4Application in 6.69 seconds (process running for 7.61)
+2026-11-03T13:52:26.891-05:00  INFO 811103 --- [springboot4] [mcat-handler-27] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-03T13:52:26.892-05:00  INFO 811103 --- [springboot4] [mcat-handler-27] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-03T13:52:26.895-05:00  INFO 811103 --- [springboot4] [mcat-handler-27] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-11-03T13:54:59.201-05:00  INFO 811103 --- [springboot4] [ionShutdownHook] [                                                 ] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-11-03T13:54:59.206-05:00  INFO 811103 --- [springboot4] [tomcat-shutdown] [                                                 ] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-11-03T13:54:59.212-05:00  INFO 811103 --- [springboot4] [ionShutdownHook] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-03T13:54:59.218-05:00  INFO 811103 --- [springboot4] [ionShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-03T13:54:59.222-05:00  INFO 811103 --- [springboot4] [ionShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

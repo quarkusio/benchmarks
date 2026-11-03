@@ -1,0 +1,73 @@
+[0.018s][warning][os] NUMA support disabled: The process memory and cpu node configuration does not match
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-03T12:57:12.162-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] org.acme.SpringBoot4Application          : Starting SpringBoot4Application v1.0 using Java 25.0.5 with PID 767289 (/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/builds/spring4-jvm/springboot4.jar started by jenkins in /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/springboot4)
+2026-11-03T12:57:12.168-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] org.acme.SpringBoot4Application          : No active profile set, falling back to 1 default profile: "default"
+2026-11-03T12:57:13.517-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-03T12:57:13.596-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 1 JPA repository interface.
+2026-11-03T12:57:14.857-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-11-03T12:57:14.879-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-03T12:57:14.879-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-03T12:57:14.916-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2660 ms
+2026-11-03T12:57:15.735-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] i.m.c.instrument.push.PushMeterRegistry  : Publishing metrics for OtlpMeterRegistry every 1m to http://localhost:4318/v1/metrics with resource attributes {service.name=springboot4}
+2026-11-03T12:57:16.524-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-03T12:57:16.662-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1d67348a
+2026-11-03T12:57:16.663-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-03T12:57:16.715-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-03T12:57:16.797-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-03T12:57:16.827-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] org.hibernate.orm.cache                  : HHH90001028: Second-level cache region factory [org.hibernate.cache.jcache.internal.JCacheRegionFactory]
+2026-11-03T12:57:17.337-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-03T12:57:17.458-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/fruits]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.9
+	Default catalog/schema: fruits/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-03T12:57:18.571-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-03T12:57:18.579-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-03T12:57:18.777-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-03T12:57:20.403-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-11-03T12:57:20.514-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-11-03T12:57:20.527-05:00  INFO 767289 --- [springboot4] [           main] [                                                 ] org.acme.SpringBoot4Application          : Started SpringBoot4Application in 9.356 seconds (process running for 10.216)
+2026-11-03T12:57:24.819-05:00  INFO 767289 --- [springboot4] [io-8080-exec-36] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-03T12:57:24.820-05:00  INFO 767289 --- [springboot4] [io-8080-exec-36] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-03T12:57:24.822-05:00  INFO 767289 --- [springboot4] [io-8080-exec-36] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-11-03T12:57:36.566-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 468 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:57:38.854-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 749 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:57:40.533-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 368 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:57:42.348-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 461 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:57:43.469-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 46 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:57:45.245-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 615 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:57:46.342-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 119 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:57:47.534-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 226 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:57:48.521-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 226 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:57:49.562-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 328 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:57:50.964-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 54 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:58:16.574-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 151 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:58:17.104-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 178 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:58:17.571-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 84 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:58:18.029-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 152 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:58:18.546-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 110 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:58:19.116-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 335 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:58:19.725-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 196 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:58:20.145-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 30 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:58:20.606-05:00  WARN 767289 --- [springboot4] [_WorkerThread-1] [                                                 ] i.o.sdk.trace.export.BatchSpanProcessor  : BatchSpanProcessor dropped 176 span(s) since the last export because the queue is full (maxQueueSize=2048)
+2026-11-03T12:59:57.308-05:00  INFO 767289 --- [springboot4] [ionShutdownHook] [                                                 ] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-11-03T12:59:57.312-05:00  INFO 767289 --- [springboot4] [tomcat-shutdown] [                                                 ] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-11-03T12:59:57.324-05:00  INFO 767289 --- [springboot4] [ionShutdownHook] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-03T12:59:57.329-05:00  INFO 767289 --- [springboot4] [ionShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-03T12:59:57.334-05:00  INFO 767289 --- [springboot4] [ionShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

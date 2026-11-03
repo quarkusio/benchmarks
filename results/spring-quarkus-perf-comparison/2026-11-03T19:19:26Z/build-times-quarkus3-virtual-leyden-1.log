@@ -1,0 +1,107 @@
+[INFO] Scanning for projects...
+[INFO] Loaded 24349 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Loaded 50 auto-discovered prefixes for remote repository ow2-snapshot (prefixes-ow2-snapshot.txt)
+[INFO] 
+[INFO] ---------------------< org.acme:quarkus3-virtual >----------------------
+[INFO] Building quarkus3-virtual 1.0
+[INFO]   from pom.xml
+[INFO] ------------------------------[ quarkus ]-------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ quarkus3-virtual ---
+[INFO] Deleting /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3-virtual/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ quarkus3-virtual ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- quarkus:3.40.1.1:generate-code (default-generate-code) @ quarkus3-virtual ---
+[INFO] 
+[INFO] --- compiler:3.16.0:compile (default-compile) @ quarkus3-virtual ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 16 source files with javac [debug release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ quarkus3-virtual ---
+[INFO] skip non existing resourceDirectory /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3-virtual/src/test/resources
+[INFO] 
+[INFO] --- quarkus:3.40.1.1:generate-code-tests (default-generate-code-tests) @ quarkus3-virtual ---
+[INFO] Loaded 24349 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 50 auto-discovered prefixes for remote repository ow2-snapshot (prefixes-ow2-snapshot.txt)
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] 
+[INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ quarkus3-virtual ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 4 source files with javac [debug release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.6.1:test (default-test) @ quarkus3-virtual ---
+[INFO] 
+[INFO] --- quarkus:3.40.1.1:build (default-build) @ quarkus3-virtual ---
+[INFO] [io.quarkus.deployment.pkg.steps.JvmStartupOptimizerArchiveBuildStep] Launching AppCDS creation process.
+[INFO] [io.quarkus.deployment.pkg.steps.JvmStartupOptimizerArchiveBuildStep] AppCDS archive successfully created at: '/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3-virtual/target/quarkus-app/app-cds.jsa'.
+[INFO] [io.quarkus.deployment.pkg.steps.JvmStartupOptimizerArchiveBuildStep] To ensure they are loaded properly, run the application jar from its directory and also add the '-XX:SharedArchiveFile=app-cds.jsa' JVM flag.
+Moreover, make sure to use the exact same Java version (25.0.5) to run the application as was used to build it.
+[INFO] [io.quarkus.deployment.QuarkusAugmentor] Quarkus augmentation completed in 14964ms
+[INFO] 
+[INFO] --- failsafe:3.6.1:integration-test (default) @ quarkus3-virtual ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.acme.e2e.FruitControllerIT
+2026-11-03 08:25:10,340 INFO  [org.testcontainers.DockerClientFactory] (build-3) Testcontainers version: 2.0.5
+2026-11-03 08:25:10,540 INFO  [org.testcontainers.dockerclient.DockerClientProviderStrategy] (build-3) Loaded org.testcontainers.dockerclient.RootlessDockerClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2026-11-03 08:25:11,280 INFO  [org.testcontainers.dockerclient.DockerClientProviderStrategy] (build-3) Found Docker environment with Environment variables, system properties and defaults. Resolved dockerHost=unix:///run/user/1000/podman/podman.sock
+2026-11-03 08:25:11,297 INFO  [org.testcontainers.images.PullPolicy] (build-3) Image pull policy will be performed by: DefaultPullPolicy()
+2026-11-03 08:25:11,300 INFO  [org.testcontainers.utility.ImageNameSubstitutor] (build-3) Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2026-11-03 08:25:11,309 INFO  [io.quarkus.hibernate.orm.deployment.dev.HibernateOrmDevServicesProcessor] (build-6) Setting [quarkus.hibernate-orm.schema-management.strategy]=drop-and-create to initialize Dev Services managed database
+2026-11-03 08:25:11,316 INFO  [org.testcontainers.DockerClientFactory] (ForkJoinPool.commonPool-worker-1) Docker host IP address is localhost
+2026-11-03 08:25:11,408 INFO  [org.testcontainers.DockerClientFactory] (ForkJoinPool.commonPool-worker-1) Connected to docker: 
+  Server Version: 5.8.2
+  API Version: 1.44
+  Operating System: rhel
+  Total Memory: 385050 MB
+2026-11-03 08:25:11,541 INFO  [tc.testcontainers/ryuk:0.14.0] (ForkJoinPool.commonPool-worker-1) Creating container for image: testcontainers/ryuk:0.14.0
+2026-11-03 08:25:11,548 INFO  [org.testcontainers.utility.RegistryAuthLocator] (ForkJoinPool.commonPool-worker-1) Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.14.0, configFile: /home/jenkins/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /home/jenkins/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+2026-11-03 08:25:11,661 INFO  [tc.testcontainers/ryuk:0.14.0] (ForkJoinPool.commonPool-worker-1) Container testcontainers/ryuk:0.14.0 is starting: 0a50ada6e5146110dbdb9ed5ce35f0594dc8eddcdbce965341a04e1596562ebe
+2026-11-03 08:25:12,302 INFO  [tc.testcontainers/ryuk:0.14.0] (ForkJoinPool.commonPool-worker-1) Container testcontainers/ryuk:0.14.0 started in PT0.761177233S
+2026-11-03 08:25:12,308 INFO  [org.testcontainers.utility.RyukResourceReaper] (ForkJoinPool.commonPool-worker-1) Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2026-11-03 08:25:12,308 INFO  [org.testcontainers.DockerClientFactory] (ForkJoinPool.commonPool-worker-1) Checking the system...
+2026-11-03 08:25:12,310 INFO  [org.testcontainers.DockerClientFactory] (ForkJoinPool.commonPool-worker-1) ✔︎ Docker server version should be at least 1.6.0
+2026-11-03 08:25:12,311 INFO  [tc.ghcr.io/quarkusio/postgres-17-perf:main] (ForkJoinPool.commonPool-worker-1) Creating container for image: ghcr.io/quarkusio/postgres-17-perf:main
+2026-11-03 08:25:12,312 INFO  [org.testcontainers.utility.RegistryAuthLocator] (ForkJoinPool.commonPool-worker-1) Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: ghcr.io/quarkusio/postgres-17-perf:main, configFile: /home/jenkins/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /home/jenkins/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+2026-11-03 08:25:12,313 WARN  [tc.ghcr.io/quarkusio/postgres-17-perf:main] (ForkJoinPool.commonPool-worker-1) Reuse was requested but the environment does not support the reuse of containers
+To enable reuse of containers, you must set 'testcontainers.reuse.enable=true' in a file located at /home/jenkins/.testcontainers.properties
+2026-11-03 08:25:12,340 INFO  [tc.ghcr.io/quarkusio/postgres-17-perf:main] (ForkJoinPool.commonPool-worker-1) Container ghcr.io/quarkusio/postgres-17-perf:main is starting: 2bb6edcd1d732a6980f53c833777c316550d29c71aee76741aec66912cce66c9
+2026-11-03 08:25:14,139 INFO  [tc.ghcr.io/quarkusio/postgres-17-perf:main] (ForkJoinPool.commonPool-worker-1) Container ghcr.io/quarkusio/postgres-17-perf:main started in PT1.827535458S
+2026-11-03 08:25:14,141 INFO  [tc.ghcr.io/quarkusio/postgres-17-perf:main] (ForkJoinPool.commonPool-worker-1) Container is started (JDBC URL: jdbc:postgresql://localhost:36811/quarkus?loggerLevel=OFF)
+2026-11-03 08:25:14,145 INFO  [io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor] (ForkJoinPool.commonPool-worker-1) Dev Services for default datasource (postgresql) started - container ID is 2bb6edcd1d73
+Executing "/home/jenkins/.sdkman/candidates/java/25.0.5.0+8-tem/bin/java -XX:AOTMode=record -XX:AOTConfiguration=/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3-virtual/target/quarkus-app/app.aotconf -Dquarkus.http.port=8081 -Dquarkus.http.ssl-port=8444 -Dtest.url=http://localhost:${quarkus.http.test-port:8081} -Dquarkus.log.file.path=/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3-virtual/target/quarkus.log -Dquarkus.log.file.enabled=true -Dquarkus.log.category."io.quarkus".level=INFO -Dquarkus.profile=prod -Dquarkus.datasource.password=quarkus -Dquarkus.datasource.jdbc.url=jdbc:postgresql://localhost:36811/quarkus?loggerLevel=OFF -Dquarkus.datasource.username=quarkus -Dquarkus.hibernate-orm.schema-management.strategy=drop-and-create -Dquarkus.package.jar.aot.enabled=true -jar /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3-virtual/target/quarkus-app/quarkus-run.jar"
+[4.809s][warning][aot] class org/postgresql/util/LazyCleanerImpl$CleanableWrapper cannot be archived because it was not defined from /home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3-virtual/target/quarkus-app/lib/main/org.postgresql.postgresql-42.7.13.jar as claimed
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2026-11-03 08:25:21,637 INFO  [io.quarkus] (main) quarkus3-virtual 1.0 on JVM (powered by Quarkus 3.40.1.1) started in 6.096s. Listening on: http://0.0.0.0:8081
+2026-11-03 08:25:21,681 INFO  [io.quarkus] (main) Profile prod activated. 
+2026-11-03 08:25:21,682 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, config-yaml, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-postgresql, micrometer, narayana-jta, opentelemetry, rest, rest-jackson, smallrye-context-propagation, smallrye-health, vertx]
+2026-11-03 08:25:23,527 WARNING [io.quarkus.opentelemetry.runtime.exporter.otlp.sender.VertxGrpcSender] (vert.x-eventloop-thread-0) Failed to export . The request could not be executed. Full error message: Connection refused (connect failed): localhost/127.0.0.1:4317
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.63 s -- in org.acme.e2e.FruitControllerIT
+2026-11-03 08:25:43,051 INFO  [io.quarkus.test.common.DefaultJarLauncher] (main) AOT file '/home/jenkins/spring-quarkus-perf-comparison/spring-quarkus-perf-comparison/quarkus3-virtual/target/quarkus-app/app.aot' created
+2026-11-03 08:25:43,064 INFO  [com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec] (main) ex-0000000022 recoverable I/O exception (java.io.IOException) caught when sending request to unix://localhost:2375;request will be automatically re-executed in 0 MILLISECONDS (exec count 2)
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- quarkus:3.40.1.1:native-image-agent (default-native-image-agent) @ quarkus3-virtual ---
+[INFO] 
+[INFO] --- quarkus:3.40.1.1:build-enhanced-artifact (default-build-enhanced-artifact) @ quarkus3-virtual ---
+[INFO] 
+[INFO] --- failsafe:3.6.1:verify (default) @ quarkus3-virtual ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:03 min
+[INFO] Finished at: 2026-11-03T08:25:43-05:00
+[INFO] ------------------------------------------------------------------------
