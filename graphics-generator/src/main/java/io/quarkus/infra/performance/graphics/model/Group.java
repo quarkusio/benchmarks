@@ -104,4 +104,16 @@ public enum Group {
         }
         return false;
     }
+
+    /**
+     * True if any framework in this group has {@code category} but not {@code exclusion}.
+     */
+    public boolean containsAnyExcluding(Category category, Category exclusion) {
+        for (Framework f : frameworks) {
+            if (f.hasCategory(category) && !f.hasCategory(exclusion)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

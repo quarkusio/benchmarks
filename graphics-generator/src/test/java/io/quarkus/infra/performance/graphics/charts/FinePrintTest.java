@@ -117,6 +117,55 @@ class FinePrintTest extends ElasticElementTest {
     }
 
     @Test
+    public void quarkusVersionsAreDistinctlyLabelledWhenQuarkus4IsPresent() {
+        Config config = mock(Config.class);
+        when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "1234"));
+        when(config.quarkus()).thenReturn(new FrameworkBuild("", "3.28.3"));
+        when(config.quarkus4()).thenReturn(new FrameworkBuild("", "4.0.1"));
+
+        String s = drawSvg(new FinePrint(new BenchmarkData(null, null, config)));
+        assertSvgContainsText("Quarkus 3: 3.28.3", s);
+        assertSvgContainsText("Quarkus 4: 4.0.1", s);
+    }
+
+    @Test
+    public void quarkusVersionIsUnqualifiedWhenNoQuarkus4Metadata() {
+        Config config = mock(Config.class);
+        when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "1234"));
+        when(config.quarkus()).thenReturn(new FrameworkBuild("", "3.28.3"));
+
+        String s = drawSvg(new FinePrint(new BenchmarkData(null, null, config)));
+        assertSvgContainsText("Quarkus: 3.28.3", s);
+        assertSvgDoesNotContainText("Quarkus 4", s);
+    }
+
+    @Test
+    public void quarkus4VersionIsHiddenWhenGroupHasNoQuarkus4() {
+        Config config = mock(Config.class);
+        when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "1234"));
+        when(config.quarkus()).thenReturn(new FrameworkBuild("", "3.28.3"));
+        when(config.quarkus4()).thenReturn(new FrameworkBuild("", "4.0.1"));
+
+        String s = drawSvg(new FinePrint(new BenchmarkData(null, null, config, Group.MAIN_COMPARISON)));
+        assertSvgContainsText("Quarkus: 3.28.3", s);
+        assertSvgDoesNotContainText("Quarkus 4", s);
+    }
+
+    @Test
+    public void quarkus3FooterIsUnchangedForEveryExistingGroup() {
+        for (Group group : Group.values()) {
+            Config config = mock(Config.class);
+            when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "1234"));
+            when(config.quarkus()).thenReturn(new FrameworkBuild("", "3.28.3"));
+
+            String s = drawSvg(new FinePrint(new BenchmarkData(null, null, config, group)));
+            assertSvgContainsText("Quarkus: 3.28.3", s);
+            assertSvgDoesNotContainText("Quarkus 3:", s);
+            assertSvgDoesNotContainText("Quarkus 4", s);
+        }
+    }
+
+    @Test
     public void graalvmVersionIsPresent() {
         Config config = mock(Config.class);
         when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "1234"));

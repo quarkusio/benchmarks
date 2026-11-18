@@ -23,6 +23,7 @@ import static io.quarkus.infra.performance.graphics.model.Category.JVM;
 import static io.quarkus.infra.performance.graphics.model.Category.NATIVE;
 import static io.quarkus.infra.performance.graphics.model.Category.OLD;
 import static io.quarkus.infra.performance.graphics.model.Category.QUARKUS;
+import static io.quarkus.infra.performance.graphics.model.Category.QUARKUS4;
 import static io.quarkus.infra.performance.graphics.model.Category.SPRING;
 
 public class FinePrint implements ElasticElement {
@@ -60,11 +61,16 @@ public class FinePrint implements ElasticElement {
             }
         }
 
-        if (bmData.group().containsAny(QUARKUS)) {
-            if (metadata.quarkus() != null) {
-                leftColumn.add("Quarkus: "
-                        + metadata.quarkus().version());
-            }
+        // Quarkus 3 line: group has a Quarkus 3 framework. Quarkus 4 line: group has a Quarkus 4 framework.
+        boolean showQuarkus3 = metadata.quarkus() != null && bmData.group().containsAnyExcluding(QUARKUS, QUARKUS4);
+        boolean showQuarkus4 = metadata.quarkus4() != null && bmData.group().containsAny(QUARKUS4);
+        if (showQuarkus3) {
+            leftColumn.add((showQuarkus4 ? "Quarkus 3: " : "Quarkus: ")
+                    + metadata.quarkus().version());
+        }
+        if (showQuarkus4) {
+            leftColumn.add("Quarkus 4: "
+                    + metadata.quarkus4().version());
         }
         if (bmData.group().containsAny(SPRING)) {
             // This is a bit brittle, but it seems to be the best way of checking if we are plotting two springs or one; the metadata is not sufficient

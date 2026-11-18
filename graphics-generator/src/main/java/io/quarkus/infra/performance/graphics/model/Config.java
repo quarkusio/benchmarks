@@ -11,6 +11,9 @@ public record Config(
 
         FrameworkBuild quarkus,
 
+        // Only present when the run includes Quarkus 4 variants
+        FrameworkBuild quarkus4,
+
         @JsonProperty("repo") Repo repo,
 
         @JsonProperty("profiler") Profiler profiler,
