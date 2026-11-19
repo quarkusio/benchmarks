@@ -499,9 +499,9 @@ public class GraphicsCommandTest {
             for (String mode : BOTH_MODES) {
                 for (String group : List.of("all", "quarkus")) {
                     String svg = svg("quarkus4-only", "data-quarkus4-only", group, mode);
-                    assertTrue(svg.contains("Quarkus 4"), group + " " + mode);
-                    assertTrue(svg.contains("Quarkus 4: ") && svg.contains(">4.0.1<"), group + " " + mode);
+                    assertFalse(svg.contains("Quarkus 4"), group + " " + mode);
                     assertFalse(svg.contains("Quarkus 3"), group + " " + mode);
+                    assertTrue(svg.contains("Quarkus: ") && svg.contains(">4.0.1<"), group + " " + mode);
                 }
             }
         }

@@ -67,9 +67,11 @@ public class Results {
             swap(KnownFramework.QUARKUS3_SPRING4_COMPAT, KnownFramework.QUARKUS3_SPRING_COMPAT);
         }
 
-        // Adjust Quarkus to unqualified entries when there is no Quarkus 4 to distinguish it from.
+        // Adjust Quarkus to unqualified entries when there is only one Quarkus version to distinguish.
         // Must run after the Spring-version swap above (it produces QUARKUS3_SPRING_COMPAT).
-        if (!hasQuarkus4()) {
+        boolean hasQuarkus3 = hasQuarkus3();
+        boolean hasQuarkus4 = hasQuarkus4();
+        if (!hasQuarkus4) {
             swap(KnownFramework.QUARKUS3_JVM, KnownFramework.QUARKUS_JVM);
             swap(KnownFramework.QUARKUS3_LEYDEN, KnownFramework.QUARKUS_LEYDEN);
             swap(KnownFramework.QUARKUS3_VIRTUAL, KnownFramework.QUARKUS_VIRTUAL);
@@ -78,6 +80,13 @@ public class Results {
             swap(KnownFramework.QUARKUS3_SPRING_COMPAT, KnownFramework.QUARKUS_SPRING_COMPAT);
             swap(KnownFramework.QUARKUS3_SPRING4_COMPAT, KnownFramework.QUARKUS_SPRING4_COMPAT);
             swap(KnownFramework.QUARKUS3_SPRING3_COMPAT, KnownFramework.QUARKUS_SPRING3_COMPAT);
+        } else if (!hasQuarkus3) {
+            swap(KnownFramework.QUARKUS4_JVM, KnownFramework.QUARKUS_JVM);
+            swap(KnownFramework.QUARKUS4_LEYDEN, KnownFramework.QUARKUS_LEYDEN);
+            swap(KnownFramework.QUARKUS4_VIRTUAL, KnownFramework.QUARKUS_VIRTUAL);
+            swap(KnownFramework.QUARKUS4_VIRTUAL_LEYDEN, KnownFramework.QUARKUS_VIRTUAL_LEYDEN);
+            swap(KnownFramework.QUARKUS4_NATIVE, KnownFramework.QUARKUS_NATIVE);
+            swap(KnownFramework.QUARKUS4_SPRING4_COMPAT, KnownFramework.QUARKUS_SPRING4_COMPAT);
         }
 
         // Sort frameworks: known frameworks by enum order, unknown frameworks at the end in insertion order
@@ -86,6 +95,10 @@ public class Results {
                 .map(e -> getDatapoint(e, fun))
                 .toList();
 
+    }
+
+    private boolean hasQuarkus3() {
+        return frameworks.keySet().stream().anyMatch(f -> f instanceof KnownFramework k && k.name().startsWith("QUARKUS3_"));
     }
 
     private boolean hasQuarkus4() {

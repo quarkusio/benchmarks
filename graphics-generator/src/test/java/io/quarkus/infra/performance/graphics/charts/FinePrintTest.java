@@ -129,6 +129,17 @@ class FinePrintTest extends ElasticElementTest {
     }
 
     @Test
+    public void quarkus4VersionIsUnqualifiedWhenThereIsNoQuarkus3() {
+        Config config = mock(Config.class);
+        when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "1234"));
+        when(config.quarkus4()).thenReturn(new FrameworkBuild("", "4.0.1"));
+
+        String s = drawSvg(new FinePrint(new BenchmarkData(null, null, config)));
+        assertSvgContainsText("Quarkus: 4.0.1", s);
+        assertSvgDoesNotContainText("Quarkus 4", s);
+    }
+
+    @Test
     public void quarkusVersionIsUnqualifiedWhenNoQuarkus4Metadata() {
         Config config = mock(Config.class);
         when(config.repo()).thenReturn(new Repo("main", "somerepo", "ootb", "1234"));

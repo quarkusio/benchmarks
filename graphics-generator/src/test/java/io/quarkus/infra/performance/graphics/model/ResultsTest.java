@@ -191,11 +191,21 @@ class ResultsTest {
     }
 
     @Test
-    void quarkus4OnlyIsLeftAlone() {
+    void quarkus4OnlyIsSwappedToUnqualifiedEntries() {
+        Results results = new Results();
+        addDatapoint(results, QUARKUS4_JVM, 600.0);
+        addDatapoint(results, QUARKUS4_SPRING4_COMPAT, 500.0);
+
+        assertEquals(List.of(QUARKUS_JVM, QUARKUS_SPRING4_COMPAT),
+                results.getDatasets(f -> f.load().avThroughput()).stream().map(Datapoint::framework).toList());
+    }
+
+    @Test
+    void quarkus4OnlySingleDatapointIsUnqualified() {
         Results results = new Results();
         addDatapoint(results, QUARKUS4_JVM, 600.0);
 
-        assertEquals(QUARKUS4_JVM, results.getDatasets(f -> f.load().avThroughput()).get(0).framework());
+        assertEquals(QUARKUS_JVM, results.getDatasets(f -> f.load().avThroughput()).get(0).framework());
     }
 
     @Test

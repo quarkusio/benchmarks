@@ -69,7 +69,8 @@ public class FinePrint implements ElasticElement {
                     + metadata.quarkus().version());
         }
         if (showQuarkus4) {
-            leftColumn.add("Quarkus 4: "
+            // Qualify the version only when there is a Quarkus 3 line to distinguish it from
+            leftColumn.add((showQuarkus3 ? "Quarkus 4: " : "Quarkus: ")
                     + metadata.quarkus4().version());
         }
         if (bmData.group().containsAny(SPRING)) {
