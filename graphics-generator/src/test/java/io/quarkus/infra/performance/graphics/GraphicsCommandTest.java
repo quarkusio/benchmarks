@@ -9,6 +9,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Stream;
 
 import io.quarkus.test.junit.main.Launch;
 import io.quarkus.test.junit.main.LaunchResult;
@@ -19,6 +21,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -437,5 +441,124 @@ public class GraphicsCommandTest {
         }
     }
 
-}
+    @Nested
+    class Quarkus4Test {
+        private static final List<String> BOTH_MODES = List.of("light", "dark");
 
+        private static String svg(String dir, String file, String group, String mode) throws IOException {
+            File f = new File("target/test-output/" + dir + "/" + file + "-tuned-throughput-for-" + group + "-" + mode + ".svg");
+            assertTrue(f.exists(), f + " should exist");
+            assertTrue(new File(f.getPath().replace(".svg", ".png")).exists(), f + " should have a png");
+            return Files.readString(f.toPath());
+        }
+
+        @Test
+        @Launch({"src/test/resources/data-quarkus4.json", "target/test-output/quarkus4"})
+        public void testQuarkus3And4TogetherAreDistinguished(LaunchResult result) throws IOException {
+            assertEquals(0, result.exitCode(), result.getOutput());
+            assertTrue(result.getOutput().contains("data-quarkus4.json"), result.getOutput());
+
+            for (String mode : BOTH_MODES) {
+                for (String group : List.of("all", "quarkus")) {
+                    String svg = svg("quarkus4", "data-quarkus4", group, mode);
+                    assertTrue(svg.contains("Quarkus 3"), group + " " + mode);
+                    assertTrue(svg.contains("Quarkus 4"), group + " " + mode);
+                    assertTrue(svg.contains("Quarkus 3: ") && svg.contains(">3.34.3<"), group + " " + mode);
+                    assertTrue(svg.contains("Quarkus 4: ") && svg.contains(">4.0.1<"), group + " " + mode);
+                }
+                for (String group : List.of("java-and-native-frameworks", "virtual-threads", "leyden-comparison",
+                        "java-and-native-and-leyden-frameworks", "java-frameworks-with-compatibility")) {
+                    String svg = svg("quarkus4", "data-quarkus4", group, mode);
+                    assertTrue(svg.contains("Quarkus 4"), group + " " + mode);
+                }
+            }
+            assertTrue(svg("quarkus4", "data-quarkus4", "leyden-comparison", "light").contains("Leyden"));
+            assertTrue(svg("quarkus4", "data-quarkus4", "virtual-threads", "light").contains("Quarkus 4 w/Virtual Threads"));
+            String compat = svg("quarkus4", "data-quarkus4", "java-frameworks-with-compatibility", "light");
+            assertTrue(compat.contains("compatibility libraries"));
+            assertTrue(compat.contains("Quarkus 3"));
+        }
+
+        @Test
+        @Launch({"src/test/resources/data-quarkus4.json", "target/test-output/quarkus4-main"})
+        public void testMainComparisonIsUnaffectedByQuarkus4(LaunchResult result) throws IOException {
+            assertEquals(0, result.exitCode(), result.getOutput());
+            for (String mode : BOTH_MODES) {
+                String svg = svg("quarkus4-main", "data-quarkus4", "main-comparison", mode);
+                assertTrue(svg.contains("Quarkus"), mode);
+                assertFalse(svg.contains("Quarkus 4"), mode);
+                assertFalse(svg.contains("Quarkus 3"), mode);
+                assertTrue(svg.contains("Quarkus: ") && svg.contains(">3.34.3<"), mode);
+            }
+        }
+
+        @Test
+        @Launch({"src/test/resources/data-quarkus4-only.json", "target/test-output/quarkus4-only"})
+        public void testQuarkus4OnlyData(LaunchResult result) throws IOException {
+            assertEquals(0, result.exitCode(), result.getOutput());
+            for (String mode : BOTH_MODES) {
+                for (String group : List.of("all", "quarkus")) {
+                    String svg = svg("quarkus4-only", "data-quarkus4-only", group, mode);
+                    assertFalse(svg.contains("Quarkus 4"), group + " " + mode);
+                    assertFalse(svg.contains("Quarkus 3"), group + " " + mode);
+                    assertTrue(svg.contains("Quarkus: ") && svg.contains(">4.0.1<"), group + " " + mode);
+                }
+            }
+        }
+
+        @Test
+        @Launch({"src/test/resources/data-quarkus4-both-spring.json", "target/test-output/quarkus4-both-spring"})
+        public void testQuarkus4WithBothSpringVersions(LaunchResult result) throws IOException {
+            assertEquals(0, result.exitCode(), result.getOutput());
+            String svg = svg("quarkus4-both-spring", "data-quarkus4-both-spring", "java-frameworks-with-compatibility", "light");
+            assertTrue(svg.contains("Quarkus 4"));
+            assertTrue(svg.contains("Quarkus 3"));
+            assertTrue(svg.contains("Spring Boot 3 compatibility libraries"));
+            assertTrue(svg.contains("Spring Boot 4 compatibility libraries"));
+        }
+
+        @Test
+        @Launch({"src/test/resources/data-quarkus3-compat.json", "target/test-output/quarkus3-compat"})
+        public void testQuarkus3CompatWithoutQuarkus4KeepsUnqualifiedLabel(LaunchResult result) throws IOException {
+            assertEquals(0, result.exitCode(), result.getOutput());
+            for (String group : List.of("all", "java-frameworks-with-compatibility")) {
+                String svg = svg("quarkus3-compat", "data-quarkus3-compat", group, "light");
+                assertTrue(svg.contains("with Spring compatibility libraries"), group);
+                assertFalse(svg.contains("Quarkus 3"), group);
+                assertFalse(svg.contains("Quarkus 4"), group);
+            }
+        }
+
+        @Test
+        @Launch({"src/test/resources/data.json", "target/test-output/quarkus4-regression"})
+        public void testQuarkus3OnlyDataKeepsPlainQuarkusLabels(LaunchResult result) throws IOException {
+            assertEquals(0, result.exitCode(), result.getOutput());
+            for (String group : List.of("all", "quarkus")) {
+                String svg = svg("quarkus4-regression", "data", group, "light");
+                assertTrue(svg.contains("Quarkus"), group);
+                assertFalse(svg.contains("Quarkus 3"), group);
+                assertFalse(svg.contains("Quarkus 4"), group);
+                assertTrue(svg.contains("Quarkus: "), group);
+            }
+        }
+
+        @ParameterizedTest
+        @ValueSource(strings = {"data-leyden", "eight-framework", "single-spring-version", "data-no-cpu"})
+        public void testExistingFixturesNeverMentionQuarkusVersions(String name, QuarkusMainLauncher launcher) throws Exception {
+            Path out = Path.of("target/test-output/quarkus4-regression-" + name);
+            deleteDir(out);
+            Files.createDirectories(out);
+            assertEquals(0, launcher.launch("src/test/resources/" + name + ".json", out.toString()).exitCode());
+            try (Stream<Path> files = Files.list(out)) {
+                List<Path> svgs = files.filter(f -> f.toString().endsWith(".svg")).toList();
+                assertFalse(svgs.isEmpty(), name);
+                for (Path svg : svgs) {
+                    String content = Files.readString(svg);
+                    assertFalse(content.contains("Quarkus 4"), svg.toString());
+                    assertFalse(content.contains("Quarkus 3"), svg.toString());
+                }
+            }
+        }
+    }
+
+}

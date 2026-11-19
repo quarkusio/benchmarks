@@ -1,0 +1,357 @@
+{
+  "timing": {
+    "start": "2026-04-17T14:27:06Z",
+    "stop": "2026-04-17T21:03:07Z"
+  },
+  "results": {
+    "quarkus3-jvm": {
+      "build": {
+        "timings": [
+          14.13,
+          14.11,
+          13.93
+        ],
+        "avBuildTime": 14.056666666666667
+      },
+      "startup": {
+        "timings": [
+          4417.482539,
+          4453.227876,
+          4379.032764
+        ],
+        "avStartTime": 4416.581059666666
+      },
+      "rss": {
+        "startup": [
+          277.72265625,
+          277.4296875,
+          283.55078125
+        ],
+        "firstRequest": [
+          303.4296875,
+          305.6484375,
+          303.94140625
+        ],
+        "avStartupRss": 279.5677083333333,
+        "avFirstRequestRss": 304.33984375
+      },
+      "load": {
+        "throughput": [
+          13243.16,
+          13266.65,
+          13284.27
+        ],
+        "connectionErrors": [
+          0,
+          0,
+          0
+        ],
+        "requestTimeouts": [
+          0,
+          0,
+          0
+        ],
+        "rss": [
+          778.93359375,
+          781.5703125,
+          778.3515625
+        ],
+        "throughputDensity": [
+          17.001654706203894,
+          16.974352515468656,
+          17.067184855815075
+        ],
+        "avThroughput": 13264.693333333335,
+        "avMaxRss": 779.6184895833334,
+        "maxThroughputDensity": 17.067184855815075,
+        "avConnectionErrors": 0,
+        "avRequestTimeouts": 0
+      }
+    },
+    "quarkus3-native": {
+      "build": {
+        "timings": [
+          251.46,
+          251.76,
+          256.01
+        ],
+        "native": {
+          "rss": [
+            5.46,
+            5.41,
+            5.45
+          ],
+          "binarySize": 121.82
+        },
+        "avBuildTime": 253.07666666666668,
+        "avNativeRSS": 5.44,
+        "classCount": "27,587",
+        "fieldCount": "37,248",
+        "methodCount": "135,481",
+        "reflectionClassCount": "9,051",
+        "reflectionFieldCount": "1,816",
+        "reflectionMethodCount": "17,176"
+      },
+      "startup": {
+        "timings": [
+          582.583944,
+          580.483976,
+          579.456276
+        ],
+        "avStartTime": 580.8413986666666
+      },
+      "rss": {
+        "startup": [
+          89.60546875,
+          89.625,
+          87.625
+        ],
+        "firstRequest": [
+          97.46484375,
+          95.48828125,
+          93.4921875
+        ],
+        "avStartupRss": 88.95182291666667,
+        "avFirstRequestRss": 95.48177083333333
+      },
+      "load": {
+        "throughput": [
+          5420.94,
+          5411.9,
+          5400.75
+        ],
+        "connectionErrors": [
+          0,
+          0,
+          0
+        ],
+        "requestTimeouts": [
+          0,
+          0,
+          0
+        ],
+        "rss": [
+          308.64453125,
+          297.1015625,
+          297.66796875
+        ],
+        "throughputDensity": [
+          17.563700150608128,
+          18.21565647269189,
+          18.143537655997797
+        ],
+        "avThroughput": 5411.196666666667,
+        "avMaxRss": 301.1380208333333,
+        "maxThroughputDensity": 18.21565647269189,
+        "avConnectionErrors": 0,
+        "avRequestTimeouts": 0
+      }
+    },
+    "quarkus3-spring-compat": {
+      "build": {
+        "timings": [
+          14.13,
+          14.11,
+          13.93
+        ],
+        "avBuildTime": 14.056666666666667
+      },
+      "startup": {
+        "timings": [
+          4417.482539,
+          4453.227876,
+          4379.032764
+        ],
+        "avStartTime": 4416.581059666666
+      },
+      "rss": {
+        "startup": [
+          277.72265625,
+          277.4296875,
+          283.55078125
+        ],
+        "firstRequest": [
+          303.4296875,
+          305.6484375,
+          303.94140625
+        ],
+        "avStartupRss": 279.5677083333333,
+        "avFirstRequestRss": 304.33984375
+      },
+      "load": {
+        "throughput": [
+          13243.16,
+          13266.65,
+          13284.27
+        ],
+        "connectionErrors": [
+          0,
+          0,
+          0
+        ],
+        "requestTimeouts": [
+          0,
+          0,
+          0
+        ],
+        "rss": [
+          778.93359375,
+          781.5703125,
+          778.3515625
+        ],
+        "throughputDensity": [
+          17.001654706203894,
+          16.974352515468656,
+          17.067184855815075
+        ],
+        "avThroughput": 13264.693333333335,
+        "avMaxRss": 779.6184895833334,
+        "maxThroughputDensity": 17.067184855815075,
+        "avConnectionErrors": 0,
+        "avRequestTimeouts": 0
+      }
+    },
+    "spring4-jvm": {
+      "build": {
+        "timings": [
+          6.98,
+          6.93,
+          6.98
+        ],
+        "avBuildTime": 6.963333333333334
+      },
+      "startup": {
+        "timings": [
+          10680.408974,
+          10856.726054,
+          10703.313766
+        ],
+        "avStartTime": 10746.816264666666
+      },
+      "rss": {
+        "startup": [
+          630.73046875,
+          633.3671875,
+          623.06640625
+        ],
+        "firstRequest": [
+          643.17578125,
+          658.2890625,
+          651.91796875
+        ],
+        "avStartupRss": 629.0546875,
+        "avFirstRequestRss": 651.1276041666666
+      },
+      "load": {
+        "throughput": [
+          7508.54,
+          7733.34,
+          7604.8
+        ],
+        "connectionErrors": [
+          0,
+          0,
+          0
+        ],
+        "requestTimeouts": [
+          0,
+          0,
+          0
+        ],
+        "rss": [
+          808.43359375,
+          816.76171875,
+          824.83984375
+        ],
+        "throughputDensity": [
+          9.287763470059287,
+          9.468293900741783,
+          9.219729208795268
+        ],
+        "avThroughput": 7615.56,
+        "avMaxRss": 816.6783854166666,
+        "maxThroughputDensity": 9.468293900741783,
+        "avConnectionErrors": 0,
+        "avRequestTimeouts": 0
+      }
+    }
+  },
+  "config": {
+    "jvm": {
+      "args": "-XX:+UseNUMA",
+      "memory": "-Xmx512m -Xms512m",
+      "graalvm": {
+        "version": "25.0.2-graalce"
+      },
+      "version": "25.0.2-tem"
+    },
+    "num_iterations": 3,
+    "quarkus": {
+      "build_config_args": "",
+      "native_build_options": "",
+      "version": "3.34.3"
+    },
+    "repo": {
+      "short_commit": "b9a5812",
+      "scenario": "tuned",
+      "commit": "b9a58123c105a74620665a6bea27a3c93cf2dad7",
+      "branch": "main",
+      "scenarioName": "Tuned",
+      "url": "https://github.com/quarkusio/spring-quarkus-perf-comparison.git"
+    },
+    "springboot4": {
+      "native_build_options": "",
+      "version": "4.0.5"
+    },
+    "resources": {
+      "cpu": {
+        "app": "2,4,6,8",
+        "1st_request": 22,
+        "otel": "16,18,20",
+        "monitor": 28,
+        "load_generator": "22,24,26",
+        "db": "10,12,14"
+      },
+      "app_cpus": 4
+    },
+    "run": {
+      "identifier": "jenkins-Products-Quarkus-Competitors-spring-quarkus-perf-comparison-276",
+      "dropOsFilesystemCaches": "true",
+      "description": "First run with new server profile",
+      "useContainerHostNetwork": "true"
+    },
+    "units": {
+      "rss": {
+        "load": "MiB",
+        "startup": "MiB",
+        "firstRequest": "MiB"
+      },
+      "load": {
+        "throughputDensity": "tps per MiB",
+        "throughput": "tps",
+        "errors": {
+          "connectionErrors": "absolute number",
+          "requestTimeouts": "absolute number"
+        }
+      },
+      "timings": {
+        "build": "sec",
+        "startup": "ms"
+      }
+    },
+    "profiler": {
+      "name": "none",
+      "events": "cpu"
+    }
+  },
+  "env": {
+    "host": {
+      "memory": "376Gi",
+      "os": "Red Hat Enterprise Linux 9.6 (Plow)",
+      "kernel": "5.14.0-570.60.1.el9_6.x86_64",
+      "cpu": "Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz (64 cpus)",
+      "type": "Dell Inc. PowerEdge FC640",
+      "gpu": "Matrox Electronics Systems Ltd. Integrated Matrox G200eW3 Graphics Controller"
+    }
+  }
+}

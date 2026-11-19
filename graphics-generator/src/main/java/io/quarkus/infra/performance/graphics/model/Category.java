@@ -4,6 +4,7 @@ public enum Category {
     JVM,
     VANILLA_JIT(true),
     QUARKUS,
+    QUARKUS4,
     NATIVE(true),
     AOT(true),
     LEYDEN(true),

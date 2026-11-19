@@ -6,12 +6,28 @@ import java.util.Map;
 import io.quarkus.infra.performance.graphics.charts.fonts.EmbeddableFont;
 import io.quarkus.infra.performance.graphics.model.Framework;
 
+import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS_JVM;
+import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS_LEYDEN;
+import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS_NATIVE;
+import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS_SPRING3_COMPAT;
+import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS_SPRING4_COMPAT;
+import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS_SPRING_COMPAT;
+import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS_VIRTUAL;
+import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS_VIRTUAL_LEYDEN;
 import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS3_JVM;
 import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS3_LEYDEN;
 import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS3_NATIVE;
+import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS3_SPRING3_COMPAT;
+import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS3_SPRING4_COMPAT;
 import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS3_SPRING_COMPAT;
 import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS3_VIRTUAL;
 import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS3_VIRTUAL_LEYDEN;
+import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS4_JVM;
+import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS4_LEYDEN;
+import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS4_NATIVE;
+import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS4_SPRING4_COMPAT;
+import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS4_VIRTUAL;
+import static io.quarkus.infra.performance.graphics.model.KnownFramework.QUARKUS4_VIRTUAL_LEYDEN;
 import static io.quarkus.infra.performance.graphics.model.KnownFramework.SPRING3_JVM;
 import static io.quarkus.infra.performance.graphics.model.KnownFramework.SPRING3_JVM_AOT;
 import static io.quarkus.infra.performance.graphics.model.KnownFramework.SPRING3_LEYDEN;
@@ -50,13 +66,33 @@ public record Theme(String name, Color background, Color text, Color divider, Co
     public static final Color OFF_BLACK = decode("#212121");
 
     private static final Map<Framework, Color> DEFAULT_CHART_ELEMENTS = Map.ofEntries(
-            // Quarkus
+            // Quarkus 3
             Map.entry(QUARKUS3_JVM, QUARKUS_BLUE),
             Map.entry(QUARKUS3_VIRTUAL, QUARKUS_BLUE),
             Map.entry(QUARKUS3_NATIVE, QUARKUS_BLUE),
             Map.entry(QUARKUS3_SPRING_COMPAT, QUARKUS_BLUE),
             Map.entry(QUARKUS3_LEYDEN, QUARKUS_BLUE),
             Map.entry(QUARKUS3_VIRTUAL_LEYDEN, QUARKUS_BLUE),
+
+            // Quarkus 4
+            Map.entry(QUARKUS4_JVM, QUARKUS_BLUE),
+            Map.entry(QUARKUS4_VIRTUAL, QUARKUS_BLUE),
+            Map.entry(QUARKUS4_NATIVE, QUARKUS_BLUE),
+            Map.entry(QUARKUS4_LEYDEN, QUARKUS_BLUE),
+            Map.entry(QUARKUS4_VIRTUAL_LEYDEN, QUARKUS_BLUE),
+            Map.entry(QUARKUS4_SPRING4_COMPAT, QUARKUS_BLUE),
+
+            // Quarkus
+            Map.entry(QUARKUS_JVM, QUARKUS_BLUE),
+            Map.entry(QUARKUS_VIRTUAL, QUARKUS_BLUE),
+            Map.entry(QUARKUS_NATIVE, QUARKUS_BLUE),
+            Map.entry(QUARKUS_SPRING_COMPAT, QUARKUS_BLUE),
+            Map.entry(QUARKUS_LEYDEN, QUARKUS_BLUE),
+            Map.entry(QUARKUS_VIRTUAL_LEYDEN, QUARKUS_BLUE),
+            Map.entry(QUARKUS_SPRING3_COMPAT, QUARKUS_BLUE),
+            Map.entry(QUARKUS_SPRING4_COMPAT, QUARKUS_BLUE),
+            Map.entry(QUARKUS3_SPRING3_COMPAT, QUARKUS_BLUE),
+            Map.entry(QUARKUS3_SPRING4_COMPAT, QUARKUS_BLUE),
 
             // Spring 3
             Map.entry(SPRING3_JVM, SPRING_LIGHT_GREEN),
@@ -90,6 +126,22 @@ public record Theme(String name, Color background, Color text, Color divider, Co
             Map.entry(QUARKUS3_SPRING_COMPAT, QUARKUS_MID_BLUE),
             Map.entry(QUARKUS3_LEYDEN, QUARKUS_MID_BLUE),
             Map.entry(QUARKUS3_VIRTUAL_LEYDEN, QUARKUS_BLUE),
+            Map.entry(QUARKUS4_JVM, QUARKUS_MID_BLUE),
+            Map.entry(QUARKUS4_VIRTUAL, QUARKUS_BLUE),
+            Map.entry(QUARKUS4_NATIVE, QUARKUS_LIGHT_BLUE),
+            Map.entry(QUARKUS4_LEYDEN, QUARKUS_MID_BLUE),
+            Map.entry(QUARKUS4_VIRTUAL_LEYDEN, QUARKUS_BLUE),
+            Map.entry(QUARKUS4_SPRING4_COMPAT, QUARKUS_MID_BLUE),
+            Map.entry(QUARKUS_JVM, QUARKUS_MID_BLUE),
+            Map.entry(QUARKUS_VIRTUAL, QUARKUS_BLUE),
+            Map.entry(QUARKUS_NATIVE, QUARKUS_LIGHT_BLUE),
+            Map.entry(QUARKUS_SPRING_COMPAT, QUARKUS_MID_BLUE),
+            Map.entry(QUARKUS_LEYDEN, QUARKUS_MID_BLUE),
+            Map.entry(QUARKUS_VIRTUAL_LEYDEN, QUARKUS_BLUE),
+            Map.entry(QUARKUS_SPRING3_COMPAT, QUARKUS_MID_BLUE),
+            Map.entry(QUARKUS_SPRING4_COMPAT, QUARKUS_MID_BLUE),
+            Map.entry(QUARKUS3_SPRING3_COMPAT, QUARKUS_MID_BLUE),
+            Map.entry(QUARKUS3_SPRING4_COMPAT, QUARKUS_MID_BLUE),
 
             // Spring 3 - JVM variants get mid green, Native gets light green
             Map.entry(SPRING3_JVM, SPRING_MID_GREEN),
